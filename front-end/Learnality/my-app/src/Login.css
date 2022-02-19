@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-login{
+  text-align: center;
+}
+
+.main-login-container{
+  background-image:url('./images/FirstLoginPage/loginPage1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.container{
+  position: absolute;
+  width: 470px;
+  height: 450px;
+  left: 450px;
+  top: 70px;
+  background: #F5F5F5;
+  border: 1px solid #9A9898;
+  border-radius: 50px;
+
+}
+.container-heading,.container-sub-heading{
+  color:#111;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.image-student{
+  position: absolute;
+  width: 206px;
+  height: 200.17px;
+  left: 60px;
+  top: 190px;
+  background-image: url('./images/FirstLoginPage/studentLogin.png');
+  background-repeat: no-repeat;
+  
+}
+
+.image-instructor{
+  position: absolute;
+  width:206px;
+  height:200.17px;
+  left:260px;
+  top:190px;
+  background-image: url('./images/FirstLoginPage/instructorLogIn.png');
+  background-repeat: no-repeat;
+  
+}
+
+.student-button{
+  position: absolute;
+  width: 130px;
+  height: 46px;
+  left: 70px;
+  top: 360px;
+  padding-top:10px;
+  color:#F5F5F5;
+  text-decoration:none;
+  font-size:15px;
+  font-family: 'Poppins', sans-serif;
+  background: #0E0E0E;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  cursor:pointer
+}
+
+
+
+.instructor-button{
+  position: absolute;
+  width: 130px;
+  height: 46px;
+  left: 270px;
+  top: 360px;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  padding-top:10px;
+  color:#F5F5F5;
+  font-size:15px;
+  background: #0E0E0E;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.student-button:hover{
+  background-color:cadetblue;
+  border:none;
+  transition: 0.5s all;
+}
+.instructor-button:hover{
+  background-color:cadetblue;
+  border:none;
+  transition: 0.5s all;
+}
+
+
+
+
+.sub-container{
+  position: absolute;
+  width: 470px;
+  height: 70px;
+  left: 450px;
+  top: 550px;
+  background: #F5F5F5;
+  border: 1px solid #9A9898;
+  border-radius: 47px;
+}
+
+.sub-container p{
+  color: #3a3a3a;
+  font-size:20px;
+  font-weight:600;
+}
+
+.sign-up-link{
+  color:rgb(41, 41, 255);
+  text-decoration:none;
+}
+
+.sign-up-link:hover{
+  color:rgb(110, 119, 245);
+  transition:0.5s all;
+}
