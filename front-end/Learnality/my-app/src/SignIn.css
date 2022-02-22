@@ -40,6 +40,7 @@ input{
     outline: none;
     border: 1px solid #d6d1d5;
 }
+
 input::placeholder{
     width:200px;
     
@@ -84,7 +85,7 @@ input::placeholder{
 }
 
 .forgot-password{
-
+    font-size:15px;
     color:#3a3a3a;
     text-decoration: none;
 }
@@ -103,8 +104,9 @@ input::placeholder{
 
 .sign-in-sub-container p{
     color: #3a3a3a;
-    font-size:20px;
+    font-size:15px;
     font-weight:600;
+    margin-top:23px;
     
   }
 

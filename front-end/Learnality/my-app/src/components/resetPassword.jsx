@@ -4,8 +4,10 @@ import "../resetPassword.css";
 
 export class resetPassword extends React.Component{
     render(){
-        return( 
-           <h1>Reset Password</h1>
-        );
+        return(
+           <h1>This is a reset password page</h1>
+        )
     }
+        
+    
 }
