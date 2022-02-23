@@ -1,10 +1,8 @@
 import React from "react"
 import "../sideMenu.css";
 import logo from "../images/logo.png";
-
-
-
-
+import { GrHomeRounded } from 'react-icons/gr'
+import {MdOutlineDashboardCustomize } from 'react-icons/md'
 
 
 export class SideMenu extends React.Component{
@@ -18,7 +16,8 @@ export class SideMenu extends React.Component{
                 </div>
 
                 <div className="sidebar-menu">
-                    
+                    <GrHomeRounded/>
+                    <MdOutlineDashboardCustomize/>
                 </div>
 
 
