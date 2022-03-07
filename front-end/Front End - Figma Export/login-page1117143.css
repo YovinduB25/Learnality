@@ -1,0 +1,197 @@
+.login-page1117143-container {
+  min-height: 100vh;
+}
+.login-page1117143-login-page1117143 {
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  max-width: 1920px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.login-page1117143-image {
+  top: 0px;
+  left: 0px;
+  width: 1920px;
+  height: 1080px;
+  opacity: 0.80;
+  position: absolute;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+  object-fit: cover;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+.login-page1117143-svg {
+  top: 164px;
+  left: 632px;
+  width: 655;
+  height: 632;
+  position: absolute;
+}
+.login-page1117143-svg1 {
+  top: 682px;
+  left: 690px;
+  width: 216;
+  height: 76;
+  position: absolute;
+}
+.login-page1117143-text {
+  top: 222px;
+  left: 677px;
+  color: rgba(0, 0, 0, 1);
+  width: 566px;
+  height: auto;
+  position: absolute;
+  font-size: 96px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Sofia Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page1117143-text1 {
+  color: rgba(0, 0, 0, 1);
+  width: 566px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page1117143-image1 {
+  top: 237px;
+  left: -296px;
+  width: 1421px;
+  height: 653px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.login-page1117143-image2 {
+  top: 680px;
+  left: 1025px;
+  width: 219px;
+  height: 76px;
+  position: absolute;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+  object-fit: cover;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  background-color: rgba(13, 13, 13, 1);
+}
+.login-page1117143-text2 {
+  top: 705px;
+  left: 755px;
+  color: rgba(255, 255, 255, 1);
+  width: 97px;
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page1117143-text3 {
+  color: rgba(255, 255, 255, 1);
+  width: 97px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page1117143-text4 {
+  top: 703px;
+  left: 1076px;
+  color: rgba(255, 255, 255, 1);
+  width: 114px;
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page1117143-text5 {
+  color: rgba(255, 255, 255, 1);
+  width: 114px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page1117143-text6 {
+  top: 350px;
+  left: 865px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 36px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page1117143-text7 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page1117143-image3 {
+  top: 455px;
+  left: 699px;
+  width: 206px;
+  height: 200px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+  border-radius: 2048px;
+}
+.login-page1117143-image4 {
+  top: 449px;
+  left: 1022px;
+  width: 206px;
+  height: 192px;
+  position: absolute;
+  object-fit: cover;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 99px;
+}
