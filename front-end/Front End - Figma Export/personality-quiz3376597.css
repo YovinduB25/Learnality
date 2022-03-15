@@ -1,0 +1,650 @@
+.personality-quiz3376597-container {
+  min-height: 100vh;
+}
+.personality-quiz3376597-personality-quiz3376597 {
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  max-width: 1920px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+  box-sizing: border-box;
+  align-items: flex-start;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.personality-quiz3376597-image {
+  top: 614px;
+  left: 944px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.personality-quiz3376597-svg {
+  width: 1920;
+  height: 1080;
+  position: absolute;
+}
+.personality-quiz3376597-text {
+  top: 19px;
+  left: 15px;
+  color: rgba(255, 255, 255, 1);
+  width: 205px;
+  height: auto;
+  position: absolute;
+  font-size: 48px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Sofia Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text01 {
+  color: rgba(255, 255, 255, 1);
+  width: 205px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-image01 {
+  top: 321px;
+  left: 100px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.personality-quiz3376597-image02 {
+  top: 812px;
+  left: 1392px;
+  width: 71px;
+  height: 71px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.personality-quiz3376597-image03 {
+  top: 50px;
+  left: 231px;
+  width: 1655px;
+  height: 1006px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+  border-radius: 44px;
+  background-color: rgba(255, 255, 255, 1);
+}
+.personality-quiz3376597-frame1569376606 {
+  top: 958px;
+  left: 1773px;
+  width: 87px;
+  height: 68px;
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  align-items: flex-start;
+  border-color: transparent;
+}
+.personality-quiz3376597-frame1568376607 {
+  top: 0px;
+  left: 11px;
+  width: 67px;
+  height: 68px;
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  align-items: flex-start;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.personality-quiz3376597-svg1 {
+  width: 67;
+  height: 68;
+  position: absolute;
+}
+.personality-quiz3376597-image04 {
+  top: 12px;
+  left: 12px;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.personality-quiz3376597-image05 {
+  top: 277px;
+  left: 352px;
+  width: 1465px;
+  height: 446px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+  border-radius: 35px;
+  background-color: rgba(238, 237, 237, 1);
+}
+.personality-quiz3376597-text02 {
+  top: 472px;
+  left: 591px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text03 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text04 {
+  top: 472px;
+  left: 798px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text05 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text06 {
+  top: 472px;
+  left: 1011px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text07 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text08 {
+  top: 472px;
+  left: 1236px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text09 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text10 {
+  top: 468px;
+  left: 1458px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text11 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text12 {
+  top: 332px;
+  left: 425px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 36px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text13 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text14 {
+  top: 229px;
+  left: 352px;
+  color: rgba(113, 108, 108, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text15 {
+  color: rgba(113, 108, 108, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-image06 {
+  top: 97px;
+  left: 1692px;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.personality-quiz3376597-image07 {
+  top: 94px;
+  left: 1783px;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.personality-quiz3376597-image08 {
+  top: 216px;
+  left: 91px;
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.personality-quiz3376597-image09 {
+  top: 428px;
+  left: 94px;
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.personality-quiz3376597-image10 {
+  top: 728px;
+  left: 95px;
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.personality-quiz3376597-navlink {
+  display: contents;
+}
+.personality-quiz3376597-image11 {
+  top: 753px;
+  left: 1635px;
+  width: 166px;
+  height: 59px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+  border-radius: 50px;
+  background-color: rgba(43, 35, 35, 1);
+}
+.personality-quiz3376597-text16 {
+  top: 765px;
+  left: 1686px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text17 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-image12 {
+  top: 198px;
+  left: 0px;
+  width: 231px;
+  height: 79px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+  background-color: rgba(245, 245, 245, 0.10000000149011612);
+}
+.personality-quiz3376597-text18 {
+  top: 166px;
+  left: 349px;
+  color: rgba(0, 0, 0, 1);
+  width: 707px;
+  height: auto;
+  position: absolute;
+  font-size: 48px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text19 {
+  color: rgba(0, 0, 0, 1);
+  width: 707px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text20 {
+  top: 516px;
+  left: 425px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text21 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text22 {
+  top: 518px;
+  left: 1560px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text23 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-image13 {
+  top: 768px;
+  left: 441px;
+  width: 1168px;
+  height: 32px;
+  position: absolute;
+  object-fit: cover;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  background-color: rgba(221, 239, 222, 1);
+}
+.personality-quiz3376597-image14 {
+  top: 768px;
+  left: 441px;
+  width: 105px;
+  height: 32px;
+  position: absolute;
+  object-fit: cover;
+  border-color: rgba(0, 0, 0, 0.30000001192092896);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  background-color: rgba(9, 225, 173, 1);
+}
+.personality-quiz3376597-image15 {
+  top: 768px;
+  left: 441px;
+  width: 213px;
+  height: 32px;
+  position: absolute;
+  object-fit: cover;
+  border-color: rgba(0, 0, 0, 0.30000001192092896);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  background-color: rgba(9, 225, 173, 1);
+}
+.personality-quiz3376597-image16 {
+  top: 768px;
+  left: 441px;
+  width: 722px;
+  height: 32px;
+  position: absolute;
+  object-fit: cover;
+  border-color: rgba(0, 0, 0, 0.30000001192092896);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  background-color: rgba(9, 225, 173, 1);
+}
+.personality-quiz3376597-image17 {
+  top: 768px;
+  left: 441px;
+  width: 922px;
+  height: 32px;
+  position: absolute;
+  object-fit: cover;
+  border-color: rgba(0, 0, 0, 0.30000001192092896);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  background-color: rgba(9, 225, 173, 1);
+}
+.personality-quiz3376597-text24 {
+  top: 824px;
+  left: 955px;
+  color: rgba(121, 115, 115, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-text25 {
+  color: rgba(121, 115, 115, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.personality-quiz3376597-svg2 {
+  top: 517px;
+  left: 581px;
+  width: 38;
+  height: 38;
+  position: absolute;
+}
+.personality-quiz3376597-svg3 {
+  top: 517px;
+  left: 785px;
+  width: 38;
+  height: 38;
+  position: absolute;
+}
+.personality-quiz3376597-svg4 {
+  top: 517px;
+  left: 998px;
+  width: 38;
+  height: 38;
+  position: absolute;
+}
+.personality-quiz3376597-svg5 {
+  top: 517px;
+  left: 1217px;
+  width: 38;
+  height: 38;
+  position: absolute;
+}
+.personality-quiz3376597-svg6 {
+  top: 521px;
+  left: 585px;
+  width: 30;
+  height: 30;
+  position: absolute;
+}
+.personality-quiz3376597-svg7 {
+  top: 517px;
+  left: 1445px;
+  width: 38;
+  height: 38;
+  position: absolute;
+}
+.personality-quiz3376597-svg8 {
+  top: 628px;
+  left: 97px;
+  width: 31;
+  height: 30;
+  position: absolute;
+}
+.personality-quiz3376597-image18 {
+  top: 536px;
+  left: 98px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.personality-quiz3376597-image19 {
+  top: 955px;
+  left: 132px;
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}

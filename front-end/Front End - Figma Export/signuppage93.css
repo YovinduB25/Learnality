@@ -1,0 +1,315 @@
+.signuppage93-container {
+  min-height: 100vh;
+}
+.signuppage93-signuppage93 {
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  max-width: 1920px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.signuppage93-image {
+  top: 107px;
+  left: 1094px;
+  width: 732px;
+  height: 783px;
+  position: absolute;
+  object-fit: cover;
+  border-color: rgba(154, 152, 152, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 47px;
+  background-color: rgba(245, 245, 245, 1);
+}
+.signuppage93-text {
+  top: 118px;
+  left: 1211px;
+  color: rgba(0, 0, 0, 1);
+  width: 521px;
+  height: auto;
+  position: absolute;
+  font-size: 96px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Sofia Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text01 {
+  color: rgba(0, 0, 0, 1);
+  width: 521px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-svg {
+  top: 227px;
+  left: 1186px;
+  width: 574;
+  height: 75;
+  position: absolute;
+}
+.signuppage93-svg1 {
+  top: 348px;
+  left: 1186px;
+  width: 574;
+  height: 74;
+  position: absolute;
+}
+.signuppage93-svg2 {
+  top: 462px;
+  left: 1186px;
+  width: 574;
+  height: 74;
+  position: absolute;
+}
+.signuppage93-svg3 {
+  top: 582px;
+  left: 1186px;
+  width: 574;
+  height: 75;
+  position: absolute;
+}
+.signuppage93-image1 {
+  top: 705px;
+  left: 1186px;
+  width: 574px;
+  height: 75px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+  border-radius: 50px;
+  background-color: rgba(105, 161, 211, 1);
+}
+.signuppage93-text02 {
+  top: 248px;
+  left: 1232px;
+  color: rgba(140, 137, 137, 1);
+  width: 528px;
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text03 {
+  color: rgba(140, 137, 137, 1);
+  width: 528px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text04 {
+  top: 366px;
+  left: 1232px;
+  color: rgba(140, 137, 137, 1);
+  width: 528px;
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text05 {
+  color: rgba(140, 137, 137, 1);
+  width: 528px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text06 {
+  top: 481px;
+  left: 1232px;
+  color: rgba(140, 137, 137, 1);
+  width: 528px;
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text07 {
+  color: rgba(140, 137, 137, 1);
+  width: 528px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text08 {
+  top: 602px;
+  left: 1232px;
+  color: rgba(140, 137, 137, 1);
+  width: 528px;
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text09 {
+  color: rgba(140, 137, 137, 1);
+  width: 528px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text10 {
+  top: 725px;
+  left: 1394px;
+  color: rgba(252, 247, 247, 1);
+  width: 152px;
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text11 {
+  color: rgba(252, 247, 247, 1);
+  width: 152px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 700;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text12 {
+  top: 800px;
+  left: 1143px;
+  color: rgba(112, 111, 111, 1);
+  width: 662px;
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text13 {
+  color: rgba(112, 111, 111, 1);
+  width: 662px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 700;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-svg4 {
+  top: 921px;
+  left: 1094px;
+  width: 732;
+  height: 86;
+  position: absolute;
+}
+.signuppage93-text14 {
+  top: 947px;
+  left: 1295px;
+  color: rgba(112, 111, 111, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text15 {
+  color: rgba(112, 111, 111, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 700;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-text16 {
+  color: rgba(54, 96, 205, 1);
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 700;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.signuppage93-image2 {
+  top: 82px;
+  left: 47px;
+  width: 985px;
+  height: 907px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}

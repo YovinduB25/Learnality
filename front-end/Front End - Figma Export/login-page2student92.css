@@ -1,0 +1,363 @@
+.login-page2student92-container {
+  min-height: 100vh;
+}
+.login-page2student92-login-page2student92 {
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  max-width: 1920px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.login-page2student92-svg {
+  top: 95px;
+  left: 1110px;
+  width: 660;
+  height: 688;
+  position: absolute;
+}
+.login-page2student92-svg1 {
+  top: 248px;
+  left: 1151px;
+  width: 596;
+  height: 76;
+  position: absolute;
+}
+.login-page2student92-text {
+  top: 124px;
+  left: 1175px;
+  color: rgba(0, 0, 0, 1);
+  width: 566px;
+  height: auto;
+  position: absolute;
+  font-size: 96px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Sofia Sans;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-text01 {
+  color: rgba(0, 0, 0, 1);
+  width: 566px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-image {
+  top: 168px;
+  left: -296px;
+  width: 1421px;
+  height: 653px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.login-page2student92-navlink {
+  display: contents;
+}
+.login-page2student92-image1 {
+  top: 483px;
+  left: 1145px;
+  width: 596px;
+  height: 76px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+  border-radius: 50px;
+  background-color: rgba(105, 161, 211, 1);
+}
+.login-page2student92-image2 {
+  top: 363px;
+  left: 1151px;
+  width: 596px;
+  height: 76px;
+  position: absolute;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+  object-fit: cover;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 1);
+}
+.login-page2student92-text02 {
+  top: 273px;
+  left: 1181px;
+  color: rgba(123, 119, 119, 1);
+  width: 548px;
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-text03 {
+  color: rgba(123, 119, 119, 1);
+  width: 548px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-image3 {
+  top: 237px;
+  left: 1162px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.login-page2student92-text04 {
+  top: 504px;
+  left: 1376px;
+  color: rgba(252, 247, 247, 1);
+  width: 158px;
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-text05 {
+  color: rgba(252, 247, 247, 1);
+  width: 158px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 700;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-text06 {
+  top: 390px;
+  left: 1181px;
+  color: rgba(123, 119, 119, 1);
+  width: 548px;
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-text07 {
+  color: rgba(123, 119, 119, 1);
+  width: 548px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-svg2 {
+  top: 609.5px;
+  left: 1145px;
+  width: 256;
+  height: 0;
+  position: absolute;
+}
+.login-page2student92-svg3 {
+  top: 609px;
+  left: 1485px;
+  width: 256;
+  height: 0;
+  position: absolute;
+}
+.login-page2student92-text08 {
+  top: 594px;
+  left: 1389px;
+  color: rgba(141, 134, 134, 1);
+  width: 102px;
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-text09 {
+  color: rgba(141, 134, 134, 1);
+  width: 102px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 400;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-link {
+  display: contents;
+}
+.login-page2student92-component1326156 {
+  top: 636px;
+  left: 1305px;
+  width: 291px;
+  height: 38px;
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  align-items: flex-start;
+  border-color: transparent;
+}
+.login-page2student92-image4 {
+  top: 0px;
+  left: 0px;
+  width: 36px;
+  height: 35px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
+.login-page2student92-text10 {
+  top: 3px;
+  left: 21px;
+  color: rgba(85, 81, 81, 1);
+  width: 270px;
+  height: auto;
+  position: absolute;
+  font-size: 26px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-text11 {
+  color: rgba(85, 81, 81, 1);
+  width: 270px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 600;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-text12 {
+  top: 711px;
+  left: 1219px;
+  color: rgba(56, 55, 55, 1);
+  width: 465px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-text13 {
+  color: rgba(56, 55, 55, 1);
+  width: 465px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 500;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-svg4 {
+  top: 836px;
+  left: 1110px;
+  width: 660;
+  height: 102;
+  position: absolute;
+}
+.login-page2student92-text14 {
+  top: 871px;
+  left: 1208px;
+  color: rgba(112, 111, 111, 1);
+  width: 482px;
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-text15 {
+  color: rgba(112, 111, 111, 1);
+  width: 482px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 700;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-text16 {
+  color: rgba(54, 96, 205, 1);
+  width: 482px;
+  height: auto;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-weight: 700;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-page2student92-image5 {
+  top: 248px;
+  left: 31px;
+  width: 1044px;
+  height: 637px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+}
