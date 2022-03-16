@@ -9,7 +9,7 @@ export class SignIn extends React.Component{
            <div className="sign-in-pic"></div>
            <div className="sign-in-container">
                <h1 className="container-heading">Learnality</h1>
-               <form> 
+               <form method="POST"> 
                    <div className="username-email">
                        <input type="text" name="userName_email"  placeholder="Username or Email Address"/>
                    </div>
@@ -31,7 +31,7 @@ export class SignIn extends React.Component{
 
 
                <div className="forgot-password">
-                   <Link to="/resetPassword" className="forgot-password">Forgotten your password?</Link>
+                   <Link to="/ResetPassword" className="forgot-password">Forgotten your password?</Link>
                </div>
 
            </div>

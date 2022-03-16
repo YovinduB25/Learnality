@@ -1,0 +1,56 @@
+.sidebar-container{
+    background:#153084;
+    width:250px;
+    height:100%;
+    position:fixed;
+    z-index: 1;
+}
+
+.logo-container img{
+    position:absolute;
+    width:50px;
+    height:auto;
+    top:20px;
+}
+
+.logo-container h1{
+    color:#fff;
+    position: absolute;
+    left:50px;
+}
+
+.link-container {
+    position: absolute;
+    top:100px;
+}
+
+
+
+
+.link-container ul li{
+   list-style: none;
+   margin-top:50px;
+   
+}
+
+.sidebar-text{
+    text-decoration: none;
+    color:#fff;
+}
+
+.sidebar-icon{
+    margin-right:29px;
+}
+
+.link-container .sidebar-text{
+    transition: 0.5s ease-in-out;
+}
+
+.link-container .sidebar-text:hover{
+    background: rgb(99, 111, 223);
+    padding:15px 35px;
+    border-radius:12px;
+    
+    
+}
+

@@ -3,7 +3,8 @@ import { Login } from "./components/Login"
 import { SignIn } from "./components/SignIn"
 import { SignUp } from "./components/SignUp"
 import { Home } from "./components/Home"
-import { resetPassword } from "./components/resetPassword"
+import { ResetPassword } from "./components/ResetPassword"
+
 
 function App() {
   return (
@@ -12,8 +13,8 @@ function App() {
         <Route path='/' element={<Login/>} />
         <Route path="/SignIn" element={<SignIn/>} />
         <Route path="/SignUp" element={<SignUp/>} />
-        <Route path="/resetPassword" element={<resetPassword/>}/>
         <Route path="/Home" element={<Home/>}/>
+        <Route path="/ResetPassword" element={<ResetPassword/>}/>
       </Routes>
     </div>
   );

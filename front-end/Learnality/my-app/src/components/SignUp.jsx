@@ -9,7 +9,7 @@ export class SignUp extends React.Component{
            <div className="sign-up-pic"></div>
            <div className="sign-up-container">
                <h1 className="container-heading">Learnality</h1>
-               <form>
+               <form method="POST">
                    <div className="email">
                        <input type="email" name="email"  placeholder="Email Address"/>
                    </div>
