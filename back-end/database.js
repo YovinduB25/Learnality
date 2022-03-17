@@ -16,7 +16,9 @@ try{
 
     /*await findUser(client, "alex" , "12345");*/
 
-    /*await updateUser(client, "alex", "12345", {password: "6789"});*/
+    /*await updateUser(client, "alex", "12345", {password: "56789"});*/
+
+    /*await deleteUser(client, "alex", "56789");*/
 
 }catch (e){
     console.error(e);
@@ -36,11 +38,11 @@ async function createUser(client, newUser){
 
 async function findUser(client, usernameUser, passwordUser){
     const readUser = await client.db("DigitalPhoenix").collection("Records").findOne({
-        userName: usernameUser, password: passwordUser });
+        userName: usernameUser, password: passwordUser});
     
     if (readUser){
-        console.log(`Hello '${usernameUser}'`);
-        console.log(usernameUser);
+        console.log(`Username: '${usernameUser}'`);
+        console.log(`Password: '${passwordUser}'`);
     }else{
         console.log(`No User Found with name '${usernameUser}'`);
     }
@@ -48,11 +50,19 @@ async function findUser(client, usernameUser, passwordUser){
 
 async function updateUser(client, usernameUpdate, passwordUpdate, newpasswordUpdate){
     const updateUser = await client.db("DigitalPhoenix").collection("Records").updateOne({
-        username: usernameUpdate, password: passwordUpdate}, 
+        userName: usernameUpdate, password: passwordUpdate}, 
         {$set: newpasswordUpdate});
 
     console.log(`${updateUser.matchedCount} User Matched`);
     console.log(`${updateUser.modifiedCount} User password Update`);  
+}
+
+async function deleteUser(client, usernameDelete, passwordDelete){
+    const deleteUser = await client.db("DigitalPhoenix").collection("Records").deleteOne({
+        userName: usernameDelete, password: passwordDelete
+    });
+
+    console.log(`${deleteUser.deletedCount} User '${usernameDelete}' has been deleted`);
 }
 
 /*async function listDatabases(client){
