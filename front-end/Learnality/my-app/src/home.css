@@ -147,3 +147,13 @@ body{
   background:#233774;
   transition:.5s ease;
 }
+
+.overlay-link button .learning-style-button{
+  text-decoration:none;
+  color:#fff;
+}
+
+.overlay-link button .personality-style-button{
+  text-decoration:none;
+  color:#fff;
+}

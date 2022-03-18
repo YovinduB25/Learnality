@@ -10,18 +10,24 @@ export class SignUp extends React.Component{
            <div className="sign-up-container">
                <h1 className="container-heading">Learnality</h1>
                <form method="POST">
-                   <div className="email">
-                       <input type="email" name="email"  placeholder="Email Address"/>
-                   </div>
 
-                   <div className="full-name">
+               <div className="full-name">
                        <input type="text" name="full_name" placeholder="Full name"/>
                    </div>
+
+
 
                    <div className="Username">
                        <input type="username" name="username" placeholder="Username"/>
                    </div>
 
+
+                   <div className="email">
+                       <input type="email" name="email"  placeholder="Email Address"/>
+                   </div>
+
+                   
+                
                    <div className="Password">
                        <input type="password" name="password" placeholder="Password"/>
                    </div>

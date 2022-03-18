@@ -36,7 +36,9 @@ export class Home extends React.Component{
                         <div className="overlay">
                             <div className="overlay-text">Attempt Learning Style Identification Quiz</div>
                             <div className="overlay-link">
-                                <button>Start Quiz</button>
+                            <button>
+                                <Link to="/LearningStyleQuiz" className="learning-style-button">Start Quiz</Link>
+                            </button>
                             </div>
                         </div>
                    </div>
@@ -46,7 +48,9 @@ export class Home extends React.Component{
                         <div className="overlay">
                             <div className="overlay-text">Attempt Personality Trait Identification Quiz</div>
                             <div className="overlay-link">
-                                <button>Start Quiz</button>
+                            <button>
+                                <Link to="/PersonalityStyleQuiz" className="personality-style-button">Start Quiz</Link>
+                            </button>
                             </div>
                         </div>
                    </div>

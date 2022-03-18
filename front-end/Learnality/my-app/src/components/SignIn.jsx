@@ -10,8 +10,8 @@ export class SignIn extends React.Component{
            <div className="sign-in-container">
                <h1 className="container-heading">Learnality</h1>
                <form method="POST"> 
-                   <div className="username-email">
-                       <input type="text" name="userName_email"  placeholder="Username or Email Address"/>
+                   <div className="username">
+                       <input type="text" name="userName"  placeholder="Username"/>
                    </div>
 
                    <div className="password">
