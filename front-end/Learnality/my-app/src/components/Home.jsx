@@ -28,7 +28,7 @@ export class Home extends React.Component{
                             <CgProfile/>
                        </div>
                    </div>
-                   <h2 className="choose-option-heading">Find your best study approach by attempting these following quizzes</h2>
+                   <h2 className="choose-option-heading">Find your best study approach by attempting these following quiz</h2>
                    
                    <div className="learning-style-quiz-container">
                         <h3 className="learning-style-quiz-heading">Identify Your Learning Style</h3>

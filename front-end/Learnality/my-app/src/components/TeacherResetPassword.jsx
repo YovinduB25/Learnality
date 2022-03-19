@@ -4,7 +4,7 @@ import "../resetPassword.css";
 import resetPassword from "../images/ResetPasswordPage/ResetPasswordPic.png";
 
 
-export class ResetPassword extends React.Component{
+export class TeacherResetPassword extends React.Component{
     render(){
         return(
             <div className="ResetPassword">
@@ -29,11 +29,11 @@ export class ResetPassword extends React.Component{
                     <div className="reset-password-line2"></div>
 
                     <div className="go-to-sign-up-page">
-                        <Link to="/StudentSignUp" className="go-to-sign-up">Create New Account</Link>
+                        <Link to="/TeacherSignUp" className="go-to-sign-up">Create New Account</Link>
                     </div>
 
                     <div className="go-to-sign-in-page">
-                        <Link to="/StudentSignIn" className="go-to-sign-in">Back to log in</Link>
+                        <Link to="/TeacherSignIn" className="go-to-sign-in">Back to log in</Link>
                     </div>
                     
                 </div>
