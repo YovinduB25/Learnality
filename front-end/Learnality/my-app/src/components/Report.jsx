@@ -24,16 +24,16 @@ export class Report extends React.Component{
                        <div className="profile">
                             <CgProfile/>
                        </div>
-                       <div class="container-one" > 
-                            <h3> Details </h3>
-                            <p className="name-report"> Name : John </p> 
-                            <p className="gender-report"> Gender : Male </p> 
-                            <p className="learner-report"> Learner type : Visual learner </p> 
-                            <p className="personality-report"> Personality type : Openness type </p>
+                       <div className="container-one" > 
+                            <h3> Details</h3>
+                            <p className="name-report"> Name : </p> 
+                            <p className="gender-report"> Gender : </p> 
+                            <p className="learner-report"> Type Of Learner :  </p> 
+                            <p className="personality-report"> Personality Type : </p>
                         </div>
                    </div>
 
-                   <div class="container-two">
+                   <div className="container-two">
                         <h3> Description </h3>
                         <p className="visual-report"> Visual learner : You benefit mostly by watching videos and images.In other words, you prefer graphic representations to text.You rely on the instructor's body language to help to understand.</p> 
                         <p className="openness-report"> Openness Personality : They are imaginative, curious, and open-minded. Individuals who are low in openness to experience would rather not try new things. They are close-minded, literal and enjoy having a routine. </p> 

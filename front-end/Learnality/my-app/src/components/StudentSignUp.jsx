@@ -10,7 +10,7 @@ export class StudentSignUp extends React.Component{
            <div className="sign-up-pic"></div>
            <div className="sign-up-container">
                <div className="container-heading-section">
-                     <img src={Logo} alt="logo"></img>
+                     <img src={Logo} alt="logo"/>
                      <h1 className="container-heading">Learnality</h1> 
                </div>
                

@@ -1,20 +1,20 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { SideBar } from "../components/SideBar";
+import { SideBar } from "./SideBar";
 import { IoMdNotificationsOutline } from "react-icons/io"
 import { CgProfile } from "react-icons/cg"
 import "../settings.css";
 
-export class Settings extends React.Component{
+export class EditProfile extends React.Component{
     render(){
         return(
-            <div className="settings">
+            <div className="Profile">
                 <div className="sidebar">
                    <SideBar/>
                </div>
 
                <div class="center-container">
-               <h1 className="center-container-main-heading">Settings</h1>
+               <h1 className="center-container-main-heading">Edit Profile</h1>
                    <div className="icon-container">
                        <div className="notifications">
                            <IoMdNotificationsOutline/>

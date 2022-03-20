@@ -6,15 +6,13 @@ import  { TeacherSignIn } from "./components/TeacherSignIn"
 import { TeacherSignUp } from "./components/TeacherSignUp"
 import { Home } from "./components/Home"
 import { ResetPassword } from "./components/ResetPassword"
-import { Settings } from "./components/Settings"
+import { EditProfile } from "./components/EditProfile"
 import { Dashboard } from "./components/Dashboard"
 import { Report } from "./components/Report"
 import LearningStyleQuiz  from "./components/LearningStyleQuiz"
 import PersonalityStyleQuiz from "./components/PersonalityStyleQuiz"
 import { MainSignUp } from "./components/MainSignUp"
 import { TeacherResetPassword } from "./components/TeacherResetPassword"
-
-
 
 
 function App() {
@@ -30,7 +28,7 @@ function App() {
         <Route path="/Home" element={<Home/>}/>
         <Route path="/ResetPassword" element={<ResetPassword/>}/>
         <Route path="/TeacherResetPassword" element={<TeacherResetPassword/>}/>
-        <Route path="/Settings" element={<Settings/>}/>
+        <Route path="/EditProfile" element={<EditProfile/>}/>
         <Route path="/Dashboard" element={<Dashboard/>}/>
         <Route path="/Report" element={<Report/>}/>
         <Route path="/LearningStyleQuiz" element={<LearningStyleQuiz/>}/>
