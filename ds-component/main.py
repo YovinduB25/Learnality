@@ -101,15 +101,15 @@ if __name__ == "__main__":
     # for model training comment new_input_array and predict_model fields
     # for model prediction comment each model
     
-    trainX, trainy, testX, testy, le = prepare_data("Learning-Style")
+    #trainX, trainy, testX, testy, le = prepare_data("Learning-Style")
     #learning_model(trainX, trainy, testX, testy)
-    new_input_array = [1, 0, 4, 2, 2, 1, 4, 0, 1, 3]    #input
-    predict_model("learning_model", new_input_array, le)
+    #new_input_array = [1, 0, 4, 2, 2, 1, 4, 0, 1, 3]    #input
+    #predict_model("learning_model", new_input_array, le)
 
-    trainX, trainy, testX, testy, le = prepare_data("Personality-Trait")
+    #trainX, trainy, testX, testy, le = prepare_data("Personality-Trait")
     #personality_model(trainX, trainy, testX, testy)
-    new_input_array = [3, 3, 3, 1, 4, 2, 3, 4, 2, 4]    #input
-    predict_model("personality_model", new_input_array, le)
+    #new_input_array = [3, 3, 3, 1, 4, 2, 3, 4, 2, 4]    #input
+    #predict_model("personality_model", new_input_array, le)
 
     print("Finished process.......")
 
