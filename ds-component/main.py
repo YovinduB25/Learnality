@@ -6,6 +6,9 @@ from keras.layers import Dense
 from matplotlib import pyplot
 import csv
 import numpy as np
+from flask import Flask, request
+import json
+import ast
 
 def prepare_data(model_type):
     print("Started data preparation...........")
@@ -95,22 +98,39 @@ def predict_model(model_type,input_data,le):
     test_output = model.predict(test_input, verbose=1)
     output_data = np.argmax(test_output, 1)
     output_class = le.inverse_transform(output_data)
-    print("Predicted Output :",output_class[0])
+    return output_class[0]
 
 if __name__ == "__main__":
+    app = Flask(__name__)
     # for model training comment new_input_array and predict_model fields
     # for model prediction comment each model
-    
-    #trainX, trainy, testX, testy, le = prepare_data("Learning-Style")
-    #learning_model(trainX, trainy, testX, testy)
-    #new_input_array = [1, 0, 4, 2, 2, 1, 4, 0, 1, 3]    #input
-    #predict_model("learning_model", new_input_array, le)
+    @app.route('/learn')
+    def learningFunction():
+        input_list = request.args
+        jsonInput = json.dumps(input_list)
+        my_dict = ast.literal_eval(jsonInput)
+        input_array = []
+        for i in range(10):
+            input_array.append(int(my_dict[str(i)]))
+        trainX, trainy, testX, testy, le = prepare_data("Learning-Style")
+        # learning_model(trainX, trainy, testX, testy)
+        predicted_output = predict_model("learning_model", input_array, le)
+        return predicted_output
 
-    #trainX, trainy, testX, testy, le = prepare_data("Personality-Trait")
-    #personality_model(trainX, trainy, testX, testy)
-    #new_input_array = [3, 3, 3, 1, 4, 2, 3, 4, 2, 4]    #input
-    #predict_model("personality_model", new_input_array, le)
 
-    print("Finished process.......")
+    @app.route('/persona')
+    def personaFunction():
+        input_list = request.args
+        jsonInput = json.dumps(input_list)
+        my_dict = ast.literal_eval(jsonInput)
+        input_array = []
+        for i in range(10):
+            input_array.append(int(my_dict[str(i)]))
+        trainX, trainy, testX, testy, le = prepare_data("Personality-Trait")
+        #personality_model(trainX, trainy, testX, testy)
+        predicted_output = predict_model("personality_model", input_array, le)
+        return predicted_output
+
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
 
