@@ -5,8 +5,10 @@ import { CgProfile } from "react-icons/cg"
 import { HiDownload } from "react-icons/hi"
 import "../report.css";
 
-export class Report extends React.Component{
-    render(){
+export default function Report() {
+
+    const userId = localStorage.getItem('userId') || '';
+
         return(
             <div className="dashboard">
                 <div className="sidebar">
@@ -37,5 +39,4 @@ export class Report extends React.Component{
                </div>
             </div>
         )
-    }
 }
