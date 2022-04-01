@@ -1,15 +1,22 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { SideBar } from "../components/SideBar";
-import { IoMdNotificationsOutline } from "react-icons/io"
 import { CgProfile } from "react-icons/cg"
 import { FaBookReader } from "react-icons/fa"
 import { FaBrain } from "react-icons/fa"
 import { FiRepeat } from "react-icons/fi"
+import { useState } from "react";
 import "../dashboard.css";
 
-export class Dashboard extends React.Component{
-    render(){
+export default function Dashboard(){
+
+    const [counter, setCounter] = useState(0);
+    const handleClick = () => {
+        setCounter (counter + 1)
+
+    };
+    
+
         return(
             <div className="dashboard">
                 <div className="sidebar">
@@ -19,12 +26,9 @@ export class Dashboard extends React.Component{
                <div class="center-container">
                <h1 className="center-container-main-heading">Dashboard</h1>
                    <div className="icon-container">
-                       <div className="notifications">
-                           <IoMdNotificationsOutline/>
-                       </div>
-
+                       
                        <div className="profile">
-                            <CgProfile/>
+                            <Link to="/StudentViewProfile" className="ProfileLink"><CgProfile/></Link>
                        </div>
                    </div>
                 <div className="display-degree-container">
@@ -32,12 +36,15 @@ export class Dashboard extends React.Component{
                 </div>
 
                 <div className="attempt-counter-container">
-                    <span className="attempt-counter">02</span>
+                    <span className="attempt-counter">{counter}</span>
                     <p className="attempt-heading">Attempts</p>
                 </div>
 
                 <div className="retry-quiz-button">
-                    <button><FiRepeat/> Retry Quiz</button>
+                <Link to="/LearningStyleQuiz">
+                    <button onClick={handleClick}><FiRepeat/>Retry Quiz</button>
+                </Link>
+                    
                 </div>
 
                 <div className="display-learning-style-type-container">
@@ -54,5 +61,5 @@ export class Dashboard extends React.Component{
                </div>
             </div>
         )
-    }
+    
 }

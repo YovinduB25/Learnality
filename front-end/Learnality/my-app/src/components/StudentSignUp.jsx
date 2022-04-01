@@ -10,14 +10,14 @@ export class StudentSignUp extends React.Component{
            <div className="sign-up-pic"></div>
            <div className="sign-up-container">
                <div className="container-heading-section">
-                     <img src={Logo} alt="logo"></img>
+                     <img src={Logo} alt="logo"/>
                      <h1 className="container-heading">Learnality</h1> 
                </div>
                
                <form method="POST">
 
                    <div className="FullName">
-                       <input type="Fullrname" name="Fullname" placeholder="Full Name" required/> 
+                       <input type="text" name="Fullname" placeholder="Full Name" required/> 
                    </div>
 
                    <div className="select-gender">
@@ -31,7 +31,7 @@ export class StudentSignUp extends React.Component{
 
 
                    <div className="Username">
-                       <input type="username" name="username" placeholder="Username" required/> 
+                       <input type="text" name="username" placeholder="Username" required/> 
                    </div>
 
         

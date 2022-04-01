@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { SideBar } from "../components/SideBar";
-import { IoMdNotificationsOutline } from "react-icons/io"
 import { CgProfile } from "react-icons/cg"
 import "../LearningStyleQuiz.css"
 
@@ -26,22 +25,31 @@ export default function LearningStyleQuiz() {
 		{
 			questionText: 'How often do you listen to music? ',
 			answerOptions: [
+				{ answerText: 'Least', isCorrect: true },
 				{ answerText: 'Less', isCorrect: true },
+				{ answerText: 'Neutral', isCorrect: true },
 				{ answerText: 'More', isCorrect: true },
+				{ answerText: 'Most', isCorrect: true },
 			],
 		},
 		{
 			questionText: 'Prefer spoken directions over written directions?',
 			answerOptions: [
-				{ answerText: 'Disagree', isCorrect: true },
-				{ answerText: 'Agree', isCorrect: true },
+				{ answerText: 'Least', isCorrect: true },
+				{ answerText: 'Less', isCorrect: true },
+				{ answerText: 'Neutral', isCorrect: true },
+				{ answerText: 'More', isCorrect: true },
+				{ answerText: 'Most', isCorrect: true },
 			],
 		},
 		{
 			questionText: 'How often do you read?',
 			answerOptions: [
+				{ answerText: 'Least', isCorrect: true },
 				{ answerText: 'Less', isCorrect: true },
+				{ answerText: 'Neutral', isCorrect: true },
 				{ answerText: 'More', isCorrect: true },
+				{ answerText: 'Most', isCorrect: true },
 			],
 		},
 		{
@@ -54,8 +62,11 @@ export default function LearningStyleQuiz() {
 		{
 			questionText: 'Do you like to explore new things?',
 			answerOptions: [
-				{ answerText: 'Disagree', isCorrect: true },
-				{ answerText: 'Agree', isCorrect: true },
+				{ answerText: 'Least', isCorrect: true },
+				{ answerText: 'Less', isCorrect: true },
+				{ answerText: 'Neutral', isCorrect: true },
+				{ answerText: 'More', isCorrect: true },
+				{ answerText: 'Most', isCorrect: true },
 			],
 		},
 		{
@@ -83,22 +94,125 @@ export default function LearningStyleQuiz() {
 				{ answerText: '4) Use hands-on activities with objects that can be touched', isCorrect: true },
 			],
 		},
+		{
+			questionText: 'I have a vivid imagination.',
+			answerOptions: [
+				{ answerText: 'Least', isCorrect: true },
+				{ answerText: 'Less', isCorrect: true },
+				{ answerText: 'Neutral', isCorrect: true },
+				{ answerText: 'More', isCorrect: true },
+				{ answerText: 'Most', isCorrect: true },
+			],
+		},
+		
+		{
+			questionText: 'Consistently predicts political orientation.',
+			answerOptions: [
+				{ answerText: 'Least', isCorrect: true },
+				{ answerText: 'Less', isCorrect: true },
+				{ answerText: 'Neutral', isCorrect: true },
+				{ answerText: 'More', isCorrect: true },
+				{ answerText: 'Most', isCorrect: true },
+			],
+		},
+		{
+			questionText: 'I usually plan ahead and follow a schedule to get a work done.',
+			answerOptions: [
+				{ answerText: 'Least', isCorrect: true },
+				{ answerText: 'Less', isCorrect: true },
+				{ answerText: 'Neutral', isCorrect: true },
+				{ answerText: 'More', isCorrect: true },
+				{ answerText: 'Most', isCorrect: true },
+			],
+		},
+		{
+			questionText: 'I like to keep things clean, and organized. ',
+			answerOptions: [
+				{ answerText: 'Yes', isCorrect: true },
+				{ answerText: 'No', isCorrect: true },
+			],
+		},
+		{
+			questionText: 'I do love to teach and share information. ',
+			answerOptions: [
+				{ answerText: 'Least', isCorrect: true },
+				{ answerText: 'Less', isCorrect: true },
+				{ answerText: 'Neutral', isCorrect: true },
+				{ answerText: 'More', isCorrect: true },
+				{ answerText: 'Most', isCorrect: true },
+			],
+		},
+		{
+			questionText: 'I am likely to talk often and socialize with others ',
+			answerOptions: [
+				{ answerText: 'Least', isCorrect: true },
+				{ answerText: 'Less', isCorrect: true },
+				{ answerText: 'Neutral', isCorrect: true },
+				{ answerText: 'More', isCorrect: true },
+				{ answerText: 'Most', isCorrect: true },
+			],
+		},
+		{
+			questionText: "I sympathize with others' feelings.",
+			answerOptions: [
+				{ answerText: 'Least', isCorrect: true },
+				{ answerText: 'Less', isCorrect: true },
+				{ answerText: 'Neutral', isCorrect: true },
+				{ answerText: 'More', isCorrect: true },
+				{ answerText: 'Most', isCorrect: true },
+			],
+		},
+		{
+			questionText: 'I enjoy helping and contributing to the happiness of other people',
+			answerOptions: [
+				{ answerText: 'Least', isCorrect: true },
+				{ answerText: 'Less', isCorrect: true },
+				{ answerText: 'Neutral', isCorrect: true },
+				{ answerText: 'More', isCorrect: true },
+				{ answerText: 'Most', isCorrect: true },
+			],
+		},
+		{
+			questionText: 'Easily jealous about what others have. ',
+			answerOptions: [
+				{ answerText: 'Least', isCorrect: true },
+				{ answerText: 'Less', isCorrect: true },
+				{ answerText: 'Neutral', isCorrect: true },
+				{ answerText: 'More', isCorrect: true },
+				{ answerText: 'Most', isCorrect: true },
+			],
+		},
+		{
+			questionText: 'I am unable to handle stress well.',
+			answerOptions: [
+				{ answerText: 'Least', isCorrect: true },
+				{ answerText: 'Less', isCorrect: true },
+				{ answerText: 'Neutral', isCorrect: true },
+				{ answerText: 'More', isCorrect: true },
+				{ answerText: 'Most', isCorrect: true },
+			],
+		},
 	];
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
-	const [showLearner, setShowLearner] = useState(false);
-	const [learnerType, setType] = useState(String);
+	const [showResult, setShowResult] = useState(false);
+	const [resultType, setType] = useState(String);
+	const [ansArray, setAnsArray] = useState([]);
 
-	const handleAnswerOptionClick = (isCorrect) => {
-		if (isCorrect) {
-			setType(learnerType + 1);
-		}
+	// let answersArray = [];
+
+	const handleAnswerOptionClick = (chosenAnswer) => {
+
+
+		// this.setAnsArray(this.answersArray.push(chosenAnswer));
+		setAnsArray(ansArray => [...ansArray, chosenAnswer]);
 
 		const nextQuestion = currentQuestion + 1;
 		if (nextQuestion < questions.length) {
 			setCurrentQuestion(nextQuestion);
 		} else {
-			setShowLearner(true);
+			console.log(ansArray);
+			setShowResult(true);
 		}
 	};
 	return (
@@ -109,21 +223,17 @@ export default function LearningStyleQuiz() {
             
             <div className='center-container'>
 
-                <h1 className="center-container-main-heading">What's your Learning Style?</h1>
+                <h1 className="center-container-main-heading">What's your Learning and personality Style?</h1>
                 <div className="icon-container">
-                    <div className="notifications">
-                        <IoMdNotificationsOutline/>
-                    </div>
-
                     <div className="profile">
                         <CgProfile/>
                     </div>
                 </div>
-                <span className='learning-style-sub-heading'> This quiz consist of 10 questions </span>
+                <span className='learning-style-sub-heading'> This quiz consist of 20 questions.</span>
                     <div className='LearningStyleQuestionContainer'>
-                        {showLearner ? (
+                        {showResult ? (
                             <div className='score-section'>
-                                You are a {learnerType} learner.
+                                You are a {resultType} learner.For more information navigate to dashboard.
                             </div>
                             
                         ) : (
@@ -137,9 +247,9 @@ export default function LearningStyleQuiz() {
                                 
                                 <div className='answer-section'>
                                     
-                                    {questions[currentQuestion].answerOptions.map((answerOption) => (
+                                    {questions[currentQuestion].answerOptions.map((answerOption, answerIndex) => (
                                         <div className="choose-answer-option">
-                                            <button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+                                            <button data-index={answerIndex} onClick={() => handleAnswerOptionClick(answerIndex+1)}>{answerOption.answerText}</button>
                                         </div>
                                     ))}
                                     

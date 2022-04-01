@@ -35,6 +35,11 @@
     font-weight: 600;
 }
 
+.attempt-counter{
+    position:absolute;
+    left:10px;
+}
+
 .attempt-counter-container span{
     position: absolute;
     top:90px;

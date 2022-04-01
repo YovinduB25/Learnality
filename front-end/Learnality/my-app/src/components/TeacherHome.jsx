@@ -3,23 +3,23 @@ import { Link } from "react-router-dom"
 import "../home.css";
 import { CgProfile } from "react-icons/cg"
 import LearningStylePic from "../images/HomePage/LearningStylePic.png";
-import { SideBar } from "../components/SideBar";
+import { TeacherSideBar } from "../components/TeacherSideBar";
 
 
 
 
-export class Home extends React.Component{
+export class TeacherHome extends React.Component{
     render(){
         return(
             <div className="home">
                <div className="sidebar">
-                   <SideBar/>
+                   <TeacherSideBar/>
                </div>
                <div className="center-container">
                    <h1 className="center-container-main-heading">Home</h1>
                    <div className="icon-container">
                        <div className="profile">
-                            <Link to="/StudentViewProfile" className="ProfileLink"><CgProfile/></Link>
+                            <Link to="/TeacherViewProfile" className="ProfileLink"><CgProfile/></Link>
                        </div>
                    </div>
                    <h2 className="choose-option-heading">Find your best study approach by attempting these following quiz</h2>

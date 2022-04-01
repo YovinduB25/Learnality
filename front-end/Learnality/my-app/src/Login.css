@@ -128,7 +128,7 @@
 
 .sub-container p{
   color: #3a3a3a;
-  font-size:20px;
+  font-size:18px;
   font-weight:600;
 }
 
@@ -141,3 +141,10 @@
   color:rgb(110, 119, 245);
   transition:0.5s all;
 }
+
+/* .container .LoginLogo img{
+    position:absolute;
+    width:10px;
+    height:auto;
+    top:50px;
+} */

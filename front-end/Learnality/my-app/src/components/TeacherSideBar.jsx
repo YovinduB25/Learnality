@@ -10,7 +10,7 @@ import { HiOutlineLogin } from "react-icons/hi"
 
 
 
-export class SideBar extends React.Component{
+export class TeacherSideBar extends React.Component{
     render(){
         return(
             <div className="sidebar-container">
@@ -20,42 +20,42 @@ export class SideBar extends React.Component{
                 </div>
 
                 <div className="link-container">
-                    <ul className="nav-list">
+                    <ul class="nav-list">
                         <li>
-                            <Link to="/Home" className='sidebar-text'>
-                                <span className="sidebar-icon"><BiHomeAlt/></span>
-                                <span className="sidebar-link">Home</span>
+                            <Link to="/TeacherHome" className='sidebar-text'>
+                                <span class="sidebar-icon"><BiHomeAlt/></span>
+                                <span class="sidebar-link">Home</span>
                             </Link>
                         </li>
 
             
 
                         <li>
-                            <Link to="/Dashboard" className='sidebar-text'>
-                                <span className="sidebar-icon"><MdOutlineDashboardCustomize/></span>
-                                <span className="sidebar-link">Dashboard</span>
+                            <Link to="/TeacherDashboard" className='sidebar-text'>
+                                <span class="sidebar-icon"><MdOutlineDashboardCustomize/></span>
+                                <span class="sidebar-link">Dashboard</span>
                             </Link>
                         </li>
 
                         <li>
-                            <Link to="/StudentEditProfile" className='sidebar-text'>
-                                <span className="sidebar-icon"><FaUserEdit/></span>
-                                <span className="sidebar-link">Edit Profile</span>
+                            <Link to="/TeacherEditProfile" className='sidebar-text'>
+                                <span class="sidebar-icon"><FaUserEdit/></span>
+                                <span class="sidebar-link">Edit Profile</span>
                             </Link>
                         </li>
 
                         <li>
-                            <Link to="/Report" className='sidebar-text'>
-                                <span className="sidebar-icon"><HiOutlineDocumentText/></span>
-                                <span className="sidebar-link">Report</span>
+                            <Link to="/TeacherReport" className='sidebar-text'>
+                                <span class="sidebar-icon"><HiOutlineDocumentText/></span>
+                                <span class="sidebar-link">Report</span>
                             </Link>
                         </li>
 
                         <li>
                             <Link to="/" className='sidebar-text'>
-                                <span className="sidebar-icon"><HiOutlineLogin/></span>
+                                <span class="sidebar-icon"><HiOutlineLogin/></span>
 
-                                <span className="sidebar-link">Log Out</span>
+                                <span class="sidebar-link">Log Out</span>
                             </Link>
                         </li>
 

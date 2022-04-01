@@ -1,23 +1,23 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { SideBar } from "../components/SideBar";
+import { TeacherSideBar } from "../components/TeacherSideBar";
 import { CgProfile } from "react-icons/cg"
 import { HiDownload } from "react-icons/hi"
 import "../report.css";
 
-export class Report extends React.Component{
+export class TeacherReport extends React.Component{
     render(){
         return(
             <div className="dashboard">
                 <div className="sidebar">
-                   <SideBar/>
+                   <TeacherSideBar/>
                </div>
 
                <div class="center-container">
                <h1 className="center-container-main-heading">Report</h1>
                    <div className="icon-container">
                        <div className="profile">
-                            <Link to="/StudentViewProfile" className="ProfileLink"><CgProfile/></Link>
+                             <Link to="/TeacherViewProfile" className="ProfileLink"><CgProfile/></Link>
                        </div>
                        <div className="container-one" > 
                             <h3> Details</h3>

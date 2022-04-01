@@ -2,7 +2,6 @@
 
 *{
    font-family: 'Poppins', sans-serif;
-   
  }
 
 .teacher-main-sign-in{
@@ -28,7 +27,7 @@
 .teacher-sign-in-container{
    position:absolute;
    width: 460px;
-   height: 480px;
+   height: 450px;
    left: 810px;
    top: 60px;
    background: #F5F5F5;
@@ -69,8 +68,6 @@ input::placeholder{
    transition:0.5s all;
 }
 
-
-
 .forgot-password{
    font-size:15px;
    color:#3a3a3a;
@@ -83,11 +80,10 @@ input::placeholder{
    width:460px;
    height:70px;
    left:810px;
-   top:560px;
+   top:530px;
    background:#F5F5F5;
    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
    border-radius: 50px;
-
 }
 
 .teacher-sign-in-sub-container p{
@@ -95,8 +91,7 @@ input::placeholder{
    font-size:15px;
    font-weight:600;
    margin-top:23px;
-   
- }
+}
 
 .sign-in-sign-up-link{
    color:rgb(41, 41, 255);
@@ -107,4 +102,6 @@ input::placeholder{
    color:rgb(110, 119, 245);
    transition:0.5s all;
 }
+
+
  

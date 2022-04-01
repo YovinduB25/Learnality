@@ -1,17 +1,15 @@
-
-
-
- .container-one{
+.container-one{
     position: absolute;
     width: 900px;
-    height: 220px;
+    height: 230px;
     left: -800px;
-    top: 80px;
+    top: 60px;
     background: #E0E0E0;
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
 
 .container-one h3{
     font-size: 18px;  
@@ -36,6 +34,7 @@
 .personality-report {
   font-size: 17px;
   margin-left: 30px;
+ 
 }
 
 .container-two{
@@ -43,7 +42,7 @@
   width: 900px;
   height: 220px;
   left: 50px;
-  top: 370px;
+  top: 350px;
   background: #E0E0E0;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 20px;
@@ -68,9 +67,9 @@
   position: absolute;
   border:none;
   border-radius:50px;
-  padding:10px 25px;
-  top:92%;
-  left:77%;
+  padding:10px 40px;
+  top:90%;
+  left:40%;
   background: #000000;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 30px;
@@ -81,7 +80,7 @@
 }
 
 button:hover{
-  background: #3d2dc9;
+  background: #3d3b50;
   color: white;
   transition: 0.7s;
   cursor: pointer;
