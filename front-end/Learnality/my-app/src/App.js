@@ -7,7 +7,7 @@ import  TeacherSignUp from "./components/TeacherSignUp"
 import { Home } from "./components/Home"
 import { TeacherHome } from "./components/TeacherHome"
 import { ResetPassword } from "./components/ResetPassword"
-import { EditProfile } from "./components/EditProfile"
+
 import { TeacherEditProfile } from "./components/TeacherEditProfile"
 import  TeacherDashboard  from "./components/TeacherDashboard"
 import  Dashboard  from "./components/Dashboard"
