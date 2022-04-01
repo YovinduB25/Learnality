@@ -121,7 +121,7 @@ exports.getLstyle = (req, res) => {
             if (dataToSend.length == 0) {
                 res.send({ message: "Empty response!" });
             } else {
-                var url = 'http://192.168.1.100:5000/learn'
+                var url = 'http://34.136.94.138:5000/learn'
                 request({
                     url: url,
                     qs: dataToSend.join('')
@@ -155,7 +155,7 @@ exports.getPersonality = (req, res) => {
             if (dataToSend.length == 0) {
                 res.send({ message: "Empty response!" });
             } else {
-                var url = 'http://192.168.1.100:5000/persona'
+                var url = 'http://34.136.94.138:5000/persona'
                 request({
                     url: url,
                     qs: dataToSend.join('')
