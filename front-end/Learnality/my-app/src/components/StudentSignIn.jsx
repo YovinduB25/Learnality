@@ -4,6 +4,7 @@ import "../SignIn.css";
 import SimpleReactValidator from 'simple-react-validator';
 import Logo from "../images/logo.png"
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 
 export default function StudentSignIn() {
@@ -15,6 +16,8 @@ export default function StudentSignIn() {
     const username = useRef(null);
     const password = useRef(null);
 
+    const navigate = useNavigate();
+
     const handleLogin = (event) => {
         event.preventDefault();
         var axios = require('axios');
@@ -22,6 +25,8 @@ export default function StudentSignIn() {
             "username": username?.current?.value,
             "password": password?.current?.value
         });
+        
+        console.log(data);
 
         var config = {
             method: 'post',
@@ -34,10 +39,12 @@ export default function StudentSignIn() {
 
         axios(config)
             .then(function (response) {
-                console.log(JSON.stringify(response.data));
+                const userId = response.data[0].id;
+                localStorage.setItem("userId", userId)
+                navigate("/Home");
             })
             .catch(function (error) {
-                console.log(error);
+                alert("Incorrect password/username combination");
             });
     };
     return (
@@ -56,7 +63,7 @@ export default function StudentSignIn() {
                         ref={username} 
                         placeholder="Username"
                         className="form-control" 
-                        {...register("username", { required: 'Name is Required'})}
+                        // {...register("username", { required: 'Name is Required'})}
                         />
                         <br/><small className='text-danger'>Name is Required</small>
 
@@ -69,7 +76,7 @@ export default function StudentSignIn() {
                         ref={password} 
                         placeholder="Password" 
                         className="form-control"
-                        {...register("password", { required: 'Password is Required'})}
+                        // {...register("password", { required: 'Password is Required'})}
                         />
                         <small className='text-danger'>Password is Required</small>
                     </div>

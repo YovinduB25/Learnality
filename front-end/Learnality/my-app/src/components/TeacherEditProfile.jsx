@@ -1,12 +1,43 @@
-import React from "react"
+import React, { useRef } from 'react';
 import { Link } from "react-router-dom"
 import { TeacherSideBar } from "../components/TeacherSideBar";
 import { CgProfile } from "react-icons/cg"
 import EditProfile  from "../images/EditProfile.jpg"
 import "../editProfile.css";
 
-export class TeacherEditProfile extends React.Component{
-    render(){
+export default function TeacherEditProfile (){
+    const userId = localStorage.getItem('userId') || '';
+
+    const fullname = useRef(null);
+    const username = useRef(null);
+    const courses = useRef(null);
+
+    const updateProfile = (event) => {
+        event.preventDefault();
+        var axios = require('axios');
+        var data = JSON.stringify({
+        "fname": fullname?.current?.value,
+        "username": username?.current?.value,
+        "course": courses?.current?.value
+        });
+
+        var config = {
+        method: 'put',
+        url: 'https://learnality-api.herokuapp.com/api/user/update?id=' + userId,
+        headers: { 
+            'Content-Type': 'application/json'
+        },
+        data : data
+        };
+
+        axios(config)
+        .then(function (response) {
+        console.log(JSON.stringify(response.data));
+        })
+        .catch(function (error) {
+        console.log(error);
+        });
+    }
         return(
             <div className="Profile">
                 <div className="sidebar">
@@ -60,5 +91,4 @@ export class TeacherEditProfile extends React.Component{
                </div>
             </div>
         )
-    }
 }

@@ -3,9 +3,57 @@ import { SideBar } from "../components/SideBar";
 import { CgProfile } from "react-icons/cg"
 import "../LearningStyleQuiz.css"
 
-
-
 export default function LearningStyleQuiz() {
+
+	const userId = localStorage.getItem('userId') || '';
+
+	const handleEndQuiz = (isLearning) => {
+		var axios = require('axios');
+		var data = JSON.stringify({
+			"userId": userId,
+			"answers": isLearning? ansArray.slice(0, 10) : ansArray.slice(10, 21),
+			"is_learning": isLearning
+		});
+		console.log(data);
+
+		var config = {
+			method: 'post',
+			url: 'https://learnality-api.herokuapp.com/api/question/storeAnswers',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			data: data
+		};
+
+		axios(config)
+			.then(function (response) {
+				console.log(JSON.stringify(response.data));
+				getLearningStyle();
+			})
+			.catch(function (error) {
+				alert("An error has occured while storing data.");
+			});
+	}
+
+	const getLearningStyle = () => {
+		var axios = require('axios');
+
+		var config = {
+			method: 'get',
+			url: 'https://learnality-api.herokuapp.com/api/user/getLstyle?userId=' + userId,
+			headers: { }
+		};
+
+		axios(config)
+		.then(function (response) {
+			console.log(JSON.stringify(response.data));
+			setType(response.data.learning_style);
+		})
+		.catch(function (error) {
+			alert("An error occured while getting personality data.");
+		});
+	};
+	
 	const questions = [
 		{
 			questionText: 'Are you quiet by nature?',
@@ -14,7 +62,7 @@ export default function LearningStyleQuiz() {
 				{ answerText: 'No', isCorrect: true },
 			],
 		},
-		
+
 		{
 			questionText: 'Do you remember the faces of people you meet for the first time?',
 			answerOptions: [
@@ -104,7 +152,7 @@ export default function LearningStyleQuiz() {
 				{ answerText: 'Most', isCorrect: true },
 			],
 		},
-		
+
 		{
 			questionText: 'Consistently predicts political orientation.',
 			answerOptions: [
@@ -192,6 +240,13 @@ export default function LearningStyleQuiz() {
 				{ answerText: 'Most', isCorrect: true },
 			],
 		},
+		{
+			questionText: 'Completed?',
+			answerOptions: [
+				{ answerText: 'Yes', isCorrect: true },
+				{ answerText: 'No', isCorrect: true },
+			],
+		},
 	];
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -213,54 +268,56 @@ export default function LearningStyleQuiz() {
 		} else {
 			console.log(ansArray);
 			setShowResult(true);
+			handleEndQuiz(true);
+			handleEndQuiz(false);
 		}
 	};
 	return (
-        <div className="LearningQuiz">
-            <div className="sidebar">
-                <SideBar/>
-            </div>
-            
-            <div className='center-container'>
+		<div className="LearningQuiz">
+			<div className="sidebar">
+				<SideBar />
+			</div>
 
-                <h1 className="center-container-main-heading">What's your Learning and personality Style?</h1>
-                <div className="icon-container">
-                    <div className="profile">
-                        <CgProfile/>
-                    </div>
-                </div>
-                <span className='learning-style-sub-heading'> This quiz consist of 20 questions.</span>
-                    <div className='LearningStyleQuestionContainer'>
-                        {showResult ? (
-                            <div className='score-section'>
-                                You are a {resultType} learner.For more information navigate to dashboard.
-                            </div>
-                            
-                        ) : (
-                            <>
-                                <div className='question-section'>
-                                    <div className='question-count'>
-                                        <span>Question {currentQuestion + 1}</span>/{questions.length}
-                                    </div>
-                                    <div className='question-text'>{questions[currentQuestion].questionText}</div>
-                                </div>
-                                
-                                <div className='answer-section'>
-                                    
-                                    {questions[currentQuestion].answerOptions.map((answerOption, answerIndex) => (
-                                        <div className="choose-answer-option">
-                                            <button data-index={answerIndex} onClick={() => handleAnswerOptionClick(answerIndex+1)}>{answerOption.answerText}</button>
-                                        </div>
-                                    ))}
-                                    
-                                </div>
-                            </>
-                        )}
-                    </div>
-                
-            </div>
-        </div>
-		
-		
+			<div className='center-container'>
+
+				<h1 className="center-container-main-heading">What's your Learning and personality Style?</h1>
+				<div className="icon-container">
+					<div className="profile">
+						<CgProfile />
+					</div>
+				</div>
+				<span className='learning-style-sub-heading'> This quiz consist of 20 questions.</span>
+				<div className='LearningStyleQuestionContainer'>
+					{showResult ? (
+						<div className='score-section'>
+							You are a {resultType} learner.For more information navigate to dashboard.
+						</div>
+
+					) : (
+						<>
+							<div className='question-section'>
+								<div className='question-count'>
+									<span>Question {currentQuestion + 1}</span>/{questions.length}
+								</div>
+								<div className='question-text'>{questions[currentQuestion].questionText}</div>
+							</div>
+
+							<div className='answer-section'>
+
+								{questions[currentQuestion].answerOptions.map((answerOption, answerIndex) => (
+									<div className="choose-answer-option">
+										<button data-index={answerIndex} onClick={() => handleAnswerOptionClick(answerIndex + 1)}>{answerOption.answerText}</button>
+									</div>
+								))}
+
+							</div>
+						</>
+					)}
+				</div>
+
+			</div>
+		</div>
+
+
 	);
 }
