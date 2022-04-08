@@ -47,7 +47,7 @@ export default function LearningStyleQuiz() {
 		axios(config)
 		.then(function (response) {
 			console.log(JSON.stringify(response.data));
-			setType(response.data.learning_style);
+			setType(response.data.personality_trait);
 		})
 		.catch(function (error) {
 			alert("An error occured while getting personality data.");
