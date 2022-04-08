@@ -18,7 +18,7 @@ export default function TeacherSignIn (){
 
         var config = {
         method: 'post',
-        url: 'http://localhost:8080/api/user/login',
+        url: 'https://learnality-api.herokuapp.com/api/user/login',
         headers: { 
             'Content-Type': 'application/json'
         },
@@ -27,12 +27,10 @@ export default function TeacherSignIn (){
 
         axios(config)
         .then(function (response) {
-            console.log(JSON.stringify(response.data));
-            let userId = response.data[0].id;
-            localStorage.setItem('userId', userId);
+        console.log(JSON.stringify(response.data));
         })
         .catch(function (error) {
-            console.log("Login failed");
+        console.log(error);
         });
     };
         return(
@@ -40,7 +38,7 @@ export default function TeacherSignIn (){
            <div className="sign-in-pic"></div>
            <div className="teacher-sign-in-container">
                <div className="container-heading-section">
-                     <img src={Logo} alt="logo"/>
+                     <img src={Logo} alt="logo"></img>
                      <h1 className="container-heading">Learnality</h1> 
                </div>
                <form method="POST" onSubmit={handleTeacherLogin}> 
@@ -52,11 +50,13 @@ export default function TeacherSignIn (){
                        <input type="password" name="password" ref={password} placeholder="Password" required/>
                    </div>
 
+                
                    <div className="log-in-button">
                        <button>Log in</button>
                    </div>
                </form>
-               
+
+
                <div className="forgot-password">
                    <Link to="/TeacherResetPassword" className="forgot-password">Forgotten your password?</Link>
                </div>

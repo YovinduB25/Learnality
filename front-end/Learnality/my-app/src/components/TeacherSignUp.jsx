@@ -8,6 +8,7 @@ export default function TeacherSignUp (){
     const username = useRef(null);
     const password = useRef(null);
 
+    //pass this to API: done
     let selectedCourses = [];
 
     const handleChange = (event) => {  
@@ -25,7 +26,7 @@ export default function TeacherSignUp (){
     const arrayRemove = (arr, value) => { 
     
         return arr.filter(function(ele){ 
-            return ele !== value; 
+            return ele != value; 
         });
     }
 
@@ -42,7 +43,7 @@ export default function TeacherSignUp (){
 
         var config = {
         method: 'post',
-        url: 'http://localhost:8080/api/user/create',
+        url: 'https://learnality-api.herokuapp.com/api/user/create',
         headers: { 
             'Content-Type': 'application/json'
         },
@@ -57,15 +58,16 @@ export default function TeacherSignUp (){
         console.log(error);
     });
 };
-        return(
-           <div className="teacher-main-sign-up">
-           <div className="sign-up-pic"></div>
-           <div className="teacher-sign-up-container">
-               <div className="container-heading-section">
-                     <img src={Logo} alt="logo"></img>
-                     <h1 className="container-heading">Learnality</h1> 
-               </div>
-               <form method="POST" onSubmit = {handleTeacherRegistration}>
+return(
+    <div className="teacher-main-sign-up">
+    <div className="sign-up-pic"></div>
+    <div className="teacher-sign-up-container">
+        <div className="container-heading-section">
+              <img src={Logo} alt="logo"></img>
+              <h1 className="container-heading">Learnality</h1> 
+        </div>
+        
+        <form method="POST" onSubmit = {handleTeacherRegistration}>
 
             <div className="FullName">
                 <input type="text" name="Fullname" ref={Fullname} placeholder="Full Name" required/> 
@@ -109,16 +111,15 @@ export default function TeacherSignUp (){
             </div>
         </form>
 
-               <div className="teacher-policy-text">
-                   <p>By signing up, you agree to our Terms, Data Policy and Cookie Policy.</p>
-               </div>
-
-           </div>
-           <div className="teacher-sign-up-sub-container">
-               <p>Have an account? <Link to="/TeacherSignIn" className="sign-up-sign-up-link">Log in</Link></p>
-           </div>
+        <div className="teacher-policy-text">
+            <p>By signing up, you agree to our Terms, Data Policy and Cookie Policy.</p>
         </div>
-        );
-        
-    
+
+    </div>
+    <div className="teacher-sign-up-sub-container">
+        <p>Have an account? <Link to="/TeacherSignIn" className="sign-up-sign-up-link">Log in</Link></p>
+    </div>
+ </div>
+ );
+ 
 }

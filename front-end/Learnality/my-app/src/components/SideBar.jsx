@@ -41,9 +41,6 @@ export class SideBar extends React.Component{
                             <Link to="/StudentEditProfile" className='sidebar-text'>
                                 <span className="sidebar-icon"><FaUserEdit/></span>
                                 <span className="sidebar-link">Edit Profile</span>
-                            <Link to="/EditProfile" className='sidebar-text'>
-                                <span class="sidebar-icon"><FaUserEdit/></span>
-                                <span class="sidebar-link">Edit Profile</span>
                             </Link>
                         </li>
 

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+  }
+
+.side-menu{
+    position:fixed;
+    background:#153084;
+    width:300px;
+    height:100%;
+}  
+
+.menu-heading img{
+  position:absolute;
+  width:60px;
+  height:auto;
+  top:20px;
+  left:9px;
+}
+
+.menu-heading h1{
+  color:#ffff;
+  position: absolute;
+  top:6px;
+  left:75px;
+  
+}

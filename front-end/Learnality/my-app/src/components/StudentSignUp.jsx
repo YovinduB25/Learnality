@@ -25,7 +25,7 @@ export default function StudentSignUp (){
 
         var config = {
         method: 'post',
-        url: 'http://localhost:8080/api/user/create',
+        url: 'https://learnality-api.herokuapp.com/api/user/create',
         headers: { 
             'Content-Type': 'application/json'
         },
@@ -91,7 +91,6 @@ export default function StudentSignUp (){
                        <button>Sign Up</button>
                    </div>
                </form>
-
 
                <div className="policy-text">
                    <p>By signing up, you agree to our Terms, Data Policy and Cookie Policy.</p>
