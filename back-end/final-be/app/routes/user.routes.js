@@ -4,10 +4,12 @@ module.exports = app => {
 
     //create user
     router.post("/create", users.create);
-    //login user
-    router.post("/login", users.login);
-     // Retrieve all users by course
-     router.get("/findByCourse", users.findByCourse);
+    //login user (student)
+    router.post("/studentLogin", users.studentLogin);
+    //login user (teacher)
+    router.post("/teacherLogin", users.teacherLogin);
+    // Retrieve all users by course
+    router.get("/findByCourse", users.findByCourse);
     // Retrieve a single user by id
     router.get("/find", users.findById);
     // Update a user by id
@@ -16,10 +18,13 @@ module.exports = app => {
     router.delete("/delete", users.deleteById);
     // Retrieve all answers by single user
     router.get("/getAllAnswers", users.getUserAnswers);
+    // Retrieve teacher dashboard data
+    router.get("/getDashboard", users.getDashboard);
     // Retrieve learning Style of single user
     router.get("/getLstyle", users.getLstyle);
     // Retrieve personality trait of single user
     router.get("/getPersonality", users.getPersonality);
+    
 
     app.use('/api/user', router);
 };

@@ -14,6 +14,8 @@ var UserSchema = new Schema(
     course: Array,
     is_teacher: Boolean,
     answers: [{ type: Schema.Types.ObjectId, ref: 'question' }],
+    learning_method: [{ type: Schema.Types.ObjectId, ref: 'learning' }],
+    personality_trait: [{ type: Schema.Types.ObjectId, ref: 'persona' }]
   },
   { timestamps: true }
 );
@@ -23,5 +25,3 @@ UserSchema.method("toJSON", function() {
   return object;
 });
 module.exports =  mongoose.model('user', UserSchema)
-
-  

@@ -1,24 +1,21 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var QuestionSchema = new Schema(
+var UserPersonaSchema = new Schema(
   {
     userId: { 
       type: mongoose.Schema.Types.ObjectId, 
       ref: 'user' 
     },
-    answers: [{
-      type: String
-    }],
-    is_learning: Boolean
+    personality_trait: String
   },
   { timestamps: true }
 );
-QuestionSchema.method("toJSON", function() {
+UserPersonaSchema.method("toJSON", function() {
   const { __v, _id, ...object } = this.toObject();
   object.id = _id;
   return object;
 });
-module.exports =  mongoose.model('question', QuestionSchema)
+module.exports =  mongoose.model('persona', UserPersonaSchema)
 
   

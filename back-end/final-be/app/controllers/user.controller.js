@@ -43,10 +43,32 @@ exports.create = (req, res) => {
         });
 };
 
-exports.login = (req, res) => {
+exports.studentLogin = (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
-    var condition = { username: username, password: password };
+    var condition = { username: username, password: password, is_teacher: false };
+    User.find(condition)
+        .then(data => {
+            if(data.length == 0){
+                res.status(404).send({
+                    message: "User not found"
+                });
+            }else{
+                res.send(data);
+            }
+        })
+        .catch(err => {
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred"
+            });
+        });
+};
+
+exports.teacherLogin = (req, res) => {
+    const username = req.body.username;
+    const password = req.body.password;
+    var condition = { username: username, password: password, is_teacher: true };
     User.find(condition)
         .then(data => {
             if(data.length == 0){
@@ -107,12 +129,87 @@ exports.getUserAnswers = (req, res) => {
         });
 };
 
+exports.getDashboard = (req, res) => {
+    // array format = Visual,Auditory,ReadingWriting,Kinesthetic,Openness,Extroversion,Agreeableness,Conscientiousness,Neuroticism
+    var id = req.query.userId;
+    courseArray = [];
+    var i = 1;
+    User.findById(id)
+        .then((result) => {
+            courses = result.course;
+            courses.forEach(element => {
+                var condition = { course: element,is_teacher : false };
+                var Visual = 0;
+                var Auditory = 0;
+                var ReadingWriting = 0;
+                var Kinesthetic = 0;
+                var Openness = 0;
+                var Extroversion = 0;
+                var Agreeableness = 0;
+                var Conscientiousness = 0;
+                var Neuroticism = 0;
+                User.find(condition).populate('learning_method').populate('personality_trait')
+                    .then(data => {
+                        data.forEach(detail => {
+                            learning_method = detail.learning_method;
+                            if(learning_method[0].learning_method == "Visual"){
+                                Visual+=1;
+                            }
+                            if(learning_method[0].learning_method == "Auditory"){
+                                Auditory+=1;
+                            }
+                            if(learning_method[0].learning_method == "Reading/Writing"){
+                                ReadingWriting+=1;
+                            }
+                            if(learning_method[0].learning_method == "Kinesthetic"){
+                                Kinesthetic+=1;
+                            }
+
+                            personality_trait = detail.personality_trait;
+                            if(personality_trait[0].personality_trait == "Openness"){
+                                Openness+=1;
+                            }
+                            if(personality_trait[0].personality_trait == "Extroversion"){
+                                Extroversion+=1;
+                            }
+                            if(personality_trait[0].personality_trait == "Agreeableness"){
+                                Agreeableness+=1;
+                            }
+                            if(personality_trait[0].personality_trait == "Conscientiousness"){
+                                Conscientiousness+=1;
+                            }
+                            if(personality_trait[0].personality_trait == "Neuroticism"){
+                                Neuroticism+=1;
+                            }
+                        });
+                        courseArray.push({ "course" : element,
+                    "values" : [Visual,Auditory,ReadingWriting,Kinesthetic,Openness,Extroversion,Agreeableness,Conscientiousness,Neuroticism]});
+                        if(courses.length == i){
+                            res.json(courseArray);
+                        }
+                        i+=1;
+                    })
+                    .catch(err => {
+                        res.status(500).send({
+                            message:
+                                err.message || "Some error occurred!"
+                        });
+                    })
+            });
+            
+        })
+        .catch((error) => {
+            res.status(500).json({ error });
+        });
+};
+
 exports.getLstyle = (req, res) => {
     var id = req.query.userId;
     User.findById(id)
         .populate('answers')
         .then((result) => {
             answerArray = result.answers;
+            dataToSend = [];
             answerArray.forEach(element => {
                 if (element.is_learning == true) {
                     dataToSend = element.answers;
@@ -120,7 +217,8 @@ exports.getLstyle = (req, res) => {
             });
             if (dataToSend.length == 0) {
                 res.send({ message: "Empty response!" });
-            } else {
+            }
+            else{
                 var url = 'http://34.136.94.138:5000/learn'
                 request({
                     url: url,
@@ -130,7 +228,22 @@ exports.getLstyle = (req, res) => {
                         res.json({'error:': error});
 
                     } else if (response && body) {
-                        res.json({ 'learning_style': body });
+                        var newRequest = new StoreLearning();
+                        newRequest.userId = id;
+                        newRequest.learning_method = body;
+                        newRequest.save()
+                        .then((result) => {
+                            User.findById(newRequest.userId, (err, user) => {
+                                if (user) {
+                                    user.learning_method.push(newRequest);
+                                    user.save();
+                                    res.json({ 'learning_style': body });
+                                }
+                            });
+                        })
+                        .catch((error) => {
+                            res.status(500).json({ error });
+                        });
                     }
                 })
             }
@@ -164,7 +277,22 @@ exports.getPersonality = (req, res) => {
                         res.json({'error:': error});
 
                     } else if (response && body) {
-                        res.json({ 'personality_trait': body });
+                        var newRequest = new StorePersona();
+                        newRequest.userId = id;
+                        newRequest.personality_trait = body;
+                        newRequest.save()
+                        .then((result) => {
+                            User.findById(newRequest.userId, (err, user) => {
+                                if (user) {
+                                    user.personality_trait.push(newRequest);
+                                    user.save();
+                                    res.json({ 'personality_trait': body });
+                                }
+                            });
+                        })
+                        .catch((error) => {
+                            res.status(500).json({ error });
+                        });
                     }
                 })
             }
