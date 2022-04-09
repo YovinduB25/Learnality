@@ -1,9 +1,12 @@
 import React, { useRef } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../TeacherSignUp.css";
 import Logo from "../images/logo.png"
 
 export default function TeacherSignUp (){
+
+    const navigate = useNavigate(); 
+
     const Fullname = useRef(null);
     const username = useRef(null);
     const password = useRef(null);
@@ -52,9 +55,16 @@ export default function TeacherSignUp (){
 
         axios(config)
         .then(function (response) {
-        console.log(JSON.stringify(response.data));
+            console.log(JSON.stringify(response.data));
+            navigate("/TeacherSignIn");
         })
         .catch(function (error) {
+            if(error.response.data.message === "Please select the course you are following"){
+                alert("Please select the course you are following");
+            }
+            if(error.response.status === 500){
+                alert("Username is already in use. Try Again");
+            }
         console.log(error);
     });
 };

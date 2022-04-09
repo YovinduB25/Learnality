@@ -1,16 +1,14 @@
 import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import "../SignIn.css";
-import SimpleReactValidator from 'simple-react-validator';
 import Logo from "../images/logo.png"
-import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 
 export default function StudentSignIn() {
 
-    const { register,
-         handleSubmit, formState: { errors } } = useForm();
+    // const { register,
+    //      handleSubmit, formState: { errors } } = useForm();
     // const onSubmit = data => console.log(data);
 
     const username = useRef(null);
@@ -30,7 +28,7 @@ export default function StudentSignIn() {
 
         var config = {
             method: 'post',
-            url: 'https://learnality-api.herokuapp.com/api/user/login',
+            url: 'https://learnality-api.herokuapp.com/api/user/studentLogin',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -44,7 +42,8 @@ export default function StudentSignIn() {
                 navigate("/Home");
             })
             .catch(function (error) {
-                alert("Incorrect password/username combination");
+                alert("Incorrect password / username combination");
+                console.log(error.response)
             });
     };
     return (
@@ -65,7 +64,7 @@ export default function StudentSignIn() {
                         className="form-control" 
                         // {...register("username", { required: 'Name is Required'})}
                         />
-                        <br/><small className='text-danger'>Name is Required</small>
+                        {/* <br/><small className='text-danger'>Name is Required</small> */}
 
                     </div>
 
@@ -78,7 +77,7 @@ export default function StudentSignIn() {
                         className="form-control"
                         // {...register("password", { required: 'Password is Required'})}
                         />
-                        <small className='text-danger'>Password is Required</small>
+                        {/* <small className='text-danger'>Password is Required</small> */}
                     </div>
 
                     <div className="log-in-button">

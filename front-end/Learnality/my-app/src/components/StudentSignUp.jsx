@@ -2,8 +2,11 @@ import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import "../SignUp.css";
 import Logo from "../images/logo.png"
+import { useNavigate } from "react-router-dom";
 
 export default function StudentSignUp (){
+    
+    const navigate = useNavigate();
 
     const Fullname = useRef(null);
     const gender = useRef(null);
@@ -34,9 +37,16 @@ export default function StudentSignUp (){
 
         axios(config)
         .then(function (response) {
-        console.log(JSON.stringify(response.data));
+            console.log(JSON.stringify(response.data));
+            navigate("/StudentSignIn");
         })
         .catch(function (error) {
+            if(error.response.data.message === "Please select the course you are following"){
+                alert("Please select the course you are following");
+            }
+            if(error.response.status === 500){
+                alert("Username is already in use. Try Again");
+            }
         console.log(error);
         });
     };
@@ -76,7 +86,7 @@ export default function StudentSignUp (){
 
                    <div className="course-dropdown">
                        <select name="select-course" ref={selectCourse} id="course-dropdown-list">
-                           <option value="display-course" selected disabled >Select Your Course</option>
+                           <option value= "">Select Your Course</option>
                            <option value="SE">BEng (Hons) Software Engineering</option>
                            <option value="CS">BSc (Hons) Computer Science</option>
                            <option value="AL/DS">BEng (Hons) Artificial Intelligence and Data Science</option>

@@ -2,8 +2,11 @@ import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import "../TeacherSignIn.css";
 import Logo from "../images/logo.png"
+import { useNavigate } from "react-router-dom";
 
 export default function TeacherSignIn (){
+
+    const navigate = useNavigate();
 
     const username = useRef(null);
     const password = useRef(null);
@@ -18,7 +21,7 @@ export default function TeacherSignIn (){
 
         var config = {
         method: 'post',
-        url: 'https://learnality-api.herokuapp.com/api/user/login',
+        url: 'https://learnality-api.herokuapp.com/api/user/teacherLogin',
         headers: { 
             'Content-Type': 'application/json'
         },
@@ -26,12 +29,14 @@ export default function TeacherSignIn (){
         };
 
         axios(config)
-        .then(function (response) {
-        console.log(JSON.stringify(response.data));
-        })
-        .catch(function (error) {
-        console.log(error);
-        });
+            .then(function (response) {
+                const userId = response.data[0].id;
+                localStorage.setItem("userId", userId)
+                navigate("/TeacherDashBoard");
+            })
+            .catch(function (error) {
+                alert("Incorrect password / username combination");
+            });
     };
         return(
            <div className="teacher-main-sign-in">

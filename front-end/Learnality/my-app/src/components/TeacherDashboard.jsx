@@ -5,6 +5,32 @@ import { CgProfile } from "react-icons/cg"
 import "../TeacherDashboard.css";
 import { Chart } from "react-google-charts";
 
+// getTeacherDb();
+
+const getTeacherDb = () => {
+
+    alert("Loading...");
+
+    const userId = localStorage.getItem('userId') || '';
+
+    var axios = require('axios');
+
+    var config = {
+        method: 'get',
+        url: 'https://learnality-api.herokuapp.com/api/user/getDashboard?userId=' + userId,
+        headers: { }
+    };
+
+    axios(config)
+    .then(function (response) {
+        console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+
+};
+
 export const data = [
     ["Task", "Hours per Day"],
     ["Visionary", 20],
