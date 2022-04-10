@@ -3,7 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const app = express();
 var corsOptions = {
-  origin: "http://localhost:3001"
+  origin: "http://localhost:3000"
 };
 
 //Here we are configuring express to use body-parser as middle-ware.
