@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom";
-import "../resetPassword.css";
+import "../ResetPassword.css";
 import resetPassword from "../images/ResetPasswordPage/ResetPasswordPic.png";
 
 
