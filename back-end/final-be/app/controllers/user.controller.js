@@ -228,7 +228,7 @@ exports.getLstyle = (req, res) => {
                         res.json({'error:': error});
 
                     } else if (response && body) {
-                        var newRequest = new StoreLearning();
+                        var newRequest = new UserLearning();
                         newRequest.userId = id;
                         newRequest.learning_method = body;
                         newRequest.save()
