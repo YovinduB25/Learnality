@@ -35,7 +35,16 @@ export default function TeacherSignIn (){
                 navigate("/TeacherDashBoard");
             })
             .catch(function (error) {
-                alert("Incorrect password / username combination");
+                if(error.response.data.message === "User not found"){
+                    alert("User not found");
+                }
+                else if(error.response.status === 500){
+                    alert("Some Error Occurred. Try Again");
+                }
+                else{
+                    alert("Incorrect password / username combination");
+                }
+                console.log(error.response.data)
             });
     };
         return(

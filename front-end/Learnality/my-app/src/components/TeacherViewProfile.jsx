@@ -1,30 +1,47 @@
-import React from "react"
+import React, { useState } from "react"
 import { TeacherSideBar } from "./TeacherSideBar";
 import { CgProfile } from "react-icons/cg"
 import ViewProfile  from "../images/ViewProfile.jpg"
 import "../ViewProfile.css";
 
+var axios = require('axios');
+
+const userId = localStorage.getItem('userId') || '';
+
 export default function TeacherViewProfile() {
+   
+    const [data, setData] = useState({name: '', username: '', degree: '', loaded: false});
 
-    const userId = localStorage.getItem('userId') || '';
-    
-    var axios = require('axios');
-    var data = '';
+    const makeRequest = () => {
 
-    var config = {
-    method: 'get',
-    url: 'https://learnality-api.herokuapp.com/api/user/find?id=' + userId,
-    headers: { },
-    data : data
+        var data = '';
+        var config = {
+            method: 'get',
+            url: 'https://learnality-api.herokuapp.com/api/user/find?id=' + userId,
+            headers: { },
+            data : data
+        };
+
+        axios(config)
+        .then(function (response) {
+            setData({
+                name: response.data.fname,
+                username: response.data.username,
+                degree: response.data.course,
+                loaded: true
+            });
+            console.log(JSON.stringify(response.data)); 
+        })
+        .catch(function (error) {
+            console.log(error);
+            setData({loaded: true});
+        });
+
     };
 
-    axios(config)
-    .then(function (response) {
-    console.log(JSON.stringify(response.data));
-    })
-    .catch(function (error) {
-    console.log(error);
-    });
+    if(!data.loaded){
+        makeRequest();
+    }
         return(
             <div className="Profile">
                 <div className="sidebar">
@@ -44,9 +61,9 @@ export default function TeacherViewProfile() {
                         <img src={ViewProfile} alt="ViewProfilePic"/>
                     </div>
                    <div className="view-info-container">
-                      <p>Name :</p>
-                      <p>Username :</p>
-                      <p>Teaching Degree :</p>
+                    <p>Name  :  {data.name}</p>
+                    <p>Username  :  {data.username}</p>
+                    <p>Degree  :  {data.degree}</p>
                    </div>
                </div>
             </div>

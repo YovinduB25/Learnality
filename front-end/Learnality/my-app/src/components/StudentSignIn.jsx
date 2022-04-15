@@ -7,10 +7,6 @@ import { useNavigate } from "react-router-dom";
 
 export default function StudentSignIn() {
 
-    // const { register,
-    //      handleSubmit, formState: { errors } } = useForm();
-    // const onSubmit = data => console.log(data);
-
     const username = useRef(null);
     const password = useRef(null);
 
@@ -42,7 +38,15 @@ export default function StudentSignIn() {
                 navigate("/Home");
             })
             .catch(function (error) {
-                alert("Incorrect password / username combination");
+                if(error.response.data.message === "User not found"){
+                    alert("User not found");
+                }
+                else if(error.response.status === 500){
+                    alert("Some Error Occurred. Try Again");
+                }
+                else{
+                    alert("Incorrect password / username combination");
+                }
                 console.log(error)
             });
     };
@@ -56,28 +60,13 @@ export default function StudentSignIn() {
                 </div>
                 <form method="POST" onSubmit={handleLogin}>
                     <div className="username">
-                        <input 
-                        type="text"
-                        name="username"
-                        ref={username} 
-                        placeholder="Username"
-                        className="form-control" 
-                        // {...register("username", { required: 'Name is Required'})}
-                        />
-                        {/* <br/><small className='text-danger'>Name is Required</small> */}
-
+                        <input type="text" name="username" ref={username} placeholder="Username" className="form-control" required/>
+                       
                     </div>
 
                     <div className="password">
-                        <input
-                        type="password" 
-                        name="password" 
-                        ref={password} 
-                        placeholder="Password" 
-                        className="form-control"
-                        // {...register("password", { required: 'Password is Required'})}
-                        />
-                        {/* <small className='text-danger'>Password is Required</small> */}
+                        <input type="password" name="password" ref={password} placeholder="Password" className="form-control" required />
+                        
                     </div>
 
                     <div className="log-in-button">

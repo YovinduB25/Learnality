@@ -29,7 +29,7 @@ export default function TeacherSignUp (){
     const arrayRemove = (arr, value) => { 
     
         return arr.filter(function(ele){ 
-            return ele != value; 
+            return ele !== value; 
         });
     }
 

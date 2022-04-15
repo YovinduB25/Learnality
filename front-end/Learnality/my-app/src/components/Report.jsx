@@ -1,12 +1,48 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { SideBar } from "../components/SideBar";
 import { CgProfile } from "react-icons/cg"
 import { HiDownload } from "react-icons/hi"
 import "../report.css";
 
-export class Report extends React.Component{
-    render(){
+var axios = require('axios');
+
+const userId = localStorage.getItem('userId') || '';
+
+export default function Report() {
+
+    const [data, setData] = useState({name: '', gender: '', loaded: false});
+
+    const makeRequest = () => {
+
+        var data = '';
+        var config = {
+            method: 'get',
+            url: 'https://learnality-api.herokuapp.com/api/user/find?id=' + userId,
+            headers: { },
+            data : data
+        };
+
+        axios(config)
+        .then(function (response) {
+            setData({
+                name: response.data.fname,
+                gender: response.data.gender,
+                loaded: true
+            });
+            console.log(JSON.stringify(response.data)); 
+        })
+        .catch(function (error) {
+            console.log(error);
+            setData({loaded: true});
+        });
+
+    };
+
+    if(!data.loaded){
+        makeRequest();
+    }
+
         return(
             <div className="dashboard">
                 <div className="sidebar">
@@ -21,8 +57,8 @@ export class Report extends React.Component{
                        </div>
                        <div className="container-one" > 
                             <h3> Details</h3>
-                            <p className="name-report"> Name : </p> 
-                            <p className="gender-report"> Gender : </p> 
+                            <p className="name-report"> Name : {data.name}</p> 
+                            <p className="gender-report"> Gender : {data.gender}</p> 
                             <p className="learner-report"> Type Of Learner :  </p> 
                             <p className="personality-report"> Personality Type : </p>
                         </div>
@@ -37,5 +73,4 @@ export class Report extends React.Component{
                </div>
             </div>
         )
-    }
 }

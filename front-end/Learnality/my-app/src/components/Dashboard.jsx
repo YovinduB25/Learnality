@@ -1,22 +1,53 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { SideBar } from "../components/SideBar";
 import { CgProfile } from "react-icons/cg"
 import { FaBookReader } from "react-icons/fa"
 import { FaBrain } from "react-icons/fa"
 import { FiRepeat } from "react-icons/fi"
-import { useState } from "react";
 import "../dashboard.css";
 
+var axios = require('axios');
+
+const userId = localStorage.getItem('userId') || '';
+
 export default function Dashboard(){
+
+    const [data, setData] = useState({degree: '', loaded: false});
+
+    const makeRequest = () => {
+
+        var data = '';
+        var config = {
+            method: 'get',
+            url: 'https://learnality-api.herokuapp.com/api/user/find?id=' + userId,
+            headers: { },
+            data : data
+        };
+
+        axios(config)
+        .then(function (response) {
+            setData({
+                degree: response.data.course,
+                loaded: true
+            });
+            console.log(JSON.stringify(response.data)); 
+        })
+        .catch(function (error) {
+            console.log(error);
+            setData({loaded: true});
+        });
+
+    };
+
+    if(!data.loaded){
+        makeRequest();
+    }
 
     const [counter, setCounter] = useState(0);
     const handleClick = () => {
         setCounter (counter + 1)
-
-    };
-    
-
+    }
         return(
             <div className="dashboard">
                 <div className="sidebar">
@@ -32,7 +63,7 @@ export default function Dashboard(){
                        </div>
                    </div>
                 <div className="display-degree-container">
-                    <p className="degree-heading">Degree :<span></span></p>
+                    <p className="degree-heading">Degree : {data.degree}<span></span></p>
                 </div>
 
                 <div className="attempt-counter-container">

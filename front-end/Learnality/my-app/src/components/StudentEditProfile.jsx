@@ -6,6 +6,7 @@ import { SideBar } from "../components/SideBar"
 import "../editProfile.css";
 
 export default function StudentEditProfile (){
+
     const userId = localStorage.getItem('userId') || '';
 
     const fullname = useRef(null);
@@ -35,7 +36,7 @@ export default function StudentEditProfile (){
         console.log(JSON.stringify(response.data));
         })
         .catch(function (error) {
-        console.log(error);
+        console.log(error.response);
         });
     }
         return(
@@ -57,10 +58,10 @@ export default function StudentEditProfile (){
                         <img src={EditProfile} alt="EditProfilePic"/>
                     </div>
                    
-                    <form>
+                    <form method = "POST" onSubmit = {updateProfile}>
                         <div className="edit-info-container">
                             <label for="fname">Full Name</label>
-                            <input type="text" id="fname"/>
+                            <input type="text" id="fname" />
 
                             <label for="UName">Username</label>
                             <input type="text" id="UName"/>

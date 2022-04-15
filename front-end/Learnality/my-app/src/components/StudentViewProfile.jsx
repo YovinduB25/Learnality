@@ -1,30 +1,48 @@
-import React from "react"
+import React, { useState } from 'react';
 import { SideBar } from "./SideBar";
 import { CgProfile } from "react-icons/cg"
 import ViewProfile  from "../images/ViewProfile.jpg"
 import "../ViewProfile.css";
 
+var axios = require('axios');
+
+const userId = localStorage.getItem('userId') || '';
+
 export default function StudentViewProfile() {
+    
+    const [data, setData] = useState({name: '', username: '', degree: '', loaded: false});
 
-    const userId = localStorage.getItem('userId') || '';
+    const makeRequest = () => {
 
-    var axios = require('axios');
-    var data = '';
+        var data = '';
+        var config = {
+            method: 'get',
+            url: 'https://learnality-api.herokuapp.com/api/user/find?id=' + userId,
+            headers: { },
+            data : data
+        };
 
-    var config = {
-    method: 'get',
-    url: 'https://learnality-api.herokuapp.com/api/user/find?id=' + userId,
-    headers: { },
-    data : data
+        axios(config)
+        .then(function (response) {
+            setData({
+                name: response.data.fname,
+                username: response.data.username,
+                degree: response.data.course,
+                loaded: true
+            });
+            console.log(JSON.stringify(response.data)); 
+        })
+        .catch(function (error) {
+            console.log(error);
+            setData({loaded: true});
+        });
+
     };
 
-    axios(config)
-    .then(function (response) {
-    console.log(JSON.stringify(response.data));
-    })
-    .catch(function (error) {
-    console.log(error);
-    });
+    if(!data.loaded){
+        makeRequest();
+    }
+
         return(
             <div className="Profile">
                 <div className="sidebar">
@@ -39,14 +57,14 @@ export default function StudentViewProfile() {
                        </div>
                    </div>
 
-
+                    
                     <div className="ViewProfilePic">
                         <img src={ViewProfile} alt="ViewProfilePic"/>
                     </div>
                    <div className="view-info-container">
-                      <p>Name :</p>
-                      <p>Username :</p>
-                      <p>Degree :</p>
+                      <p>Name  :  {data.name}</p>
+                      <p>Username  :  {data.username}</p>
+                      <p>Degree  :  {data.degree}</p>
                    </div>
                </div>
             </div>

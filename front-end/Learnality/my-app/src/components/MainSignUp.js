@@ -17,7 +17,7 @@ export class MainSignUp extends React.Component{
                     <Link to="/TeacherSignUp" className="instructor-button">Instructor</Link>
                 </div>
                 <div className="sub-container">
-                    <p>Have an account?<Link to ="/" className="sign-up-link"> Sign In</Link></p>
+                    <p>Have an account?<Link to ="/" className="sign-up-link"> Log In</Link></p>
                 </div>
             </div>
         </div>

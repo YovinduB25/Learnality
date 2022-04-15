@@ -37,7 +37,7 @@ export default function StudentSignUp (){
 
         axios(config)
         .then(function (response) {
-            console.log(JSON.stringify(response.data));
+            // console.log(JSON.stringify(response.data));
             navigate("/StudentSignIn");
         })
         .catch(function (error) {
@@ -87,12 +87,12 @@ export default function StudentSignUp (){
                    <div className="course-dropdown">
                        <select name="select-course" ref={selectCourse} id="course-dropdown-list">
                            <option value= "">Select Your Course</option>
-                           <option value="SE">BEng (Hons) Software Engineering</option>
-                           <option value="CS">BSc (Hons) Computer Science</option>
-                           <option value="AL/DS">BEng (Hons) Artificial Intelligence and Data Science</option>
-                           <option value="BIS">BSc (Hons) Business Infomation Systems</option>
-                           <option value="BM">BA (Hons) Business Managemnet</option>
-                           <option value="BDA">BSc (Hons) Business Data Analytics</option>
+                           <option value="Software Engineering">BEng (Hons) Software Engineering</option>
+                           <option value="Computer Science">BSc (Hons) Computer Science</option>
+                           <option value="Artificial Intelligence and Data Science">BEng (Hons) Artificial Intelligence and Data Science</option>
+                           <option value="Business Infomation Systems">BSc (Hons) Business Infomation Systems</option>
+                           <option value="Business Management">BA (Hons) Business Management</option>
+                           <option value="Business Data Analytics">BSc (Hons) Business Data Analytics</option>
                        </select>
                    </div>
 
