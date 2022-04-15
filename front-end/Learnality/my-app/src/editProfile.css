@@ -1,0 +1,31 @@
+.edit-info-container{
+    position:absolute;
+    top:150px;
+    padding:50px;
+    left:470px;
+    width:500px;
+    height:400px;
+    background: #e0dede;
+    border-radius: 30px;
+}
+
+.EditProfilePic img{
+    position:absolute;
+    top:150px;
+
+}
+
+.form-buttons{
+    position:absolute;
+    top:580px;
+    left:500px;
+}
+
+.form-buttons input{
+    padding: 15px 42px;
+    margin-left:20px;
+    background:#353535;
+    color:#e0dede;
+    border-radius:15px;
+
+}

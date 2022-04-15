@@ -1,0 +1,110 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+ *{
+    font-family: 'Poppins', sans-serif;
+    
+  }
+
+.main-sign-in{
+    text-align: center;
+    background-image: url("./images/white-background.png");
+    background-repeat: no-repeat;
+    width:100%;
+    min-height: 120vh;
+    background-size: cover;
+    
+  }
+
+.sign-in-pic{
+    background-image:url("./images/SignInPage/SignIn_pic.png");
+    position:absolute;
+    background-repeat: no-repeat;
+    width: 1044px;
+    height: 637px;
+    left: 5px;
+    top: 100px;
+}
+
+.sign-in-container{
+    position:absolute;
+    width: 460px;
+    height: 450px;
+    left: 810px;
+    top: 60px;
+    background: #F5F5F5;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 50px;
+}
+
+.container-heading{
+    font-size:48px;
+}
+
+input{
+    padding: 15px 120px;
+    margin-bottom:20px;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid #d6d1d5;
+    
+}
+
+input::placeholder{
+    width:200px;
+    
+}
+
+.log-in-button button{
+    padding:15px 181px;
+    border-radius:30px;
+    border:none;
+    background: #6AA1D4;
+    color:#ffff;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.log-in-button button:hover{
+    background:#1c7cd6;
+    transition:0.5s all;
+}
+
+
+
+.forgot-password{
+    font-size:15px;
+    color:#3a3a3a;
+    text-decoration: none;
+    margin-top:30px;
+}
+
+.sign-in-sub-container{
+    position:absolute;
+    width:460px;
+    height:70px;
+    left:810px;
+    top:540px;
+    background:#F5F5F5;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 50px;
+
+}
+
+.sign-in-sub-container p{
+    color: #3a3a3a;
+    font-size:15px;
+    font-weight:600;
+    margin-top:23px;
+    
+  }
+
+.sign-in-sign-up-link{
+    color:rgb(41, 41, 255);
+    text-decoration:none;
+  }
+  
+.sign-in-sign-up-link:hover{
+    color:rgb(110, 119, 245);
+    transition:0.5s all;
+}
+  
