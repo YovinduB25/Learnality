@@ -13,7 +13,11 @@ const userId = localStorage.getItem('userId') || '';
 
 export default function Dashboard(){
 
-    const [data, setData] = useState({degree: '', loaded: false});
+    const [data, setData] = useState({degree: '', learning: '', personality: '', loaded: false});
+
+    const [learn, setLearn] = useState({learning: '', loaded: false});
+
+    const [persona, setPersona] = useState({personality: '', loaded: false});
 
     const makeRequest = () => {
 
@@ -40,8 +44,56 @@ export default function Dashboard(){
 
     };
 
+    const getLearningStyle = () => {
+		var axios = require('axios');
+
+		var config = {
+			method: 'get',
+			url: 'https://learnality-api.herokuapp.com/api/user/getLstyle?userId=' + userId,
+			headers: { }
+		};
+
+		axios(config)
+		.then(function (response) {
+			console.log(JSON.stringify(response.data));
+			setLearn({
+                learning: response.data.learning_style,
+                loaded: true
+            });
+		})
+		.catch(function (error) {
+            console.log(error);
+            setLearn({loaded: true});
+        });
+	};
+
+    // const getPersonalityTrait = () => {
+	// 	var axios = require('axios');
+
+	// 	var config = {
+	// 		method: 'get',
+	// 		url: 'https://learnality-api.herokuapp.com/api/user/getPersonality?userId=' + userId,
+	// 		headers: { }
+	// 	};
+
+	// 	axios(config)
+	// 	.then(function (response) {
+	// 		console.log(JSON.stringify(response.data));
+	// 		setPersona({
+    //             personality: response.data.personality_trait,
+    //             loaded: true
+    //         });
+	// 	})
+	// 	.catch(function (error) {
+    //         console.log(error);
+    //         setPersona({loaded: true});
+    //     });
+	// };
+
     if(!data.loaded){
         makeRequest();
+        getLearningStyle();
+        // getPersonalityTrait();
     }
 
     const [counter, setCounter] = useState(0);
@@ -81,13 +133,13 @@ export default function Dashboard(){
                 <div className="display-learning-style-type-container">
                     <div className="learner-type-icon"><FaBookReader/></div>
                     <p className="learner-type-heading">Type Of Learner</p>
-                    <span className="learner-type-result">Visual Learner</span>
+                    <span className="learner-type-result">{learn.learning}</span>
                 </div>
 
                 <div className="display-personality-style-type-container">
                     <div className="personality-type-icon"><FaBrain/></div>
                     <p className="personality-type-heading">Type Of Personality</p>
-                    <span className="personality-type-result">Openness Personality</span>
+                    <span className="personality-type-result">{persona.personality}</span>
                 </div>
                </div>
             </div>

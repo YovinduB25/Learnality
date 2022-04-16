@@ -96,22 +96,22 @@ return(
             <div className="course-selection">
                 <p className="select-teaching-course">Select Existing Teaching Course :</p>                                 
 
-                <input type="checkbox" id="SE" name="Software-engineering" onChange={handleChange} value="Software Engineering"/>
+                <input type="checkbox" id="Software Engineering" name="Software-engineering" onChange={handleChange} value="Software Engineering"/>
                 <label for="SE">BEng (Hons) Software Engineering</label><br/>
 
-                <input type="checkbox" id="CS" name="Computer-science"onChange={handleChange}  value="Computer Science"/>
+                <input type="checkbox" id="Computer Science" name="Computer-science"onChange={handleChange}  value="Computer Science"/>
                 <label for="CS">BSc (Hons) Computer Science</label><br/>
 
-                <input type="checkbox" id="AI/DS" name="AI/DS" onChange={handleChange} value="Artificial Intelligence and Data Science"/>
+                <input type="checkbox" id="Artificial Intelligence and Data Science" name="AI/DS" onChange={handleChange} value="Artificial Intelligence and Data Science"/>
                 <label for="AI/DS">BEng (Hons) Artificial Intelligence and Data Science </label><br/>
 
-                <input type="checkbox" id="BIS" name="Business-Infomation-Systems" onChange={handleChange} value="Business Information System"/>
+                <input type="checkbox" id="Business Information System" name="Business-Infomation-Systems" onChange={handleChange} value="Business Information System"/>
                 <label for="BIS">BSc (Hons) Business Infomation Systems</label><br/>
 
-                <input type="checkbox" id="BM" name="Business-Management" onChange={handleChange} value="Business Management"/>
+                <input type="checkbox" id="Business Management" name="Business-Management" onChange={handleChange} value="Business Management"/>
                 <label for="BM">BA (Hons) Business Management</label><br/>
 
-                <input type="checkbox" id="BDA" name="Business-data-analytics" onChange={handleChange} value="Business Data Analytics"/>
+                <input type="checkbox" id="Business Data Analytics" name="Business-data-analytics" onChange={handleChange} value="Business Data Analytics"/>
                 <label for="BDA">BSc (Hons) Business Data Analytics</label><br/>
             </div>
 
