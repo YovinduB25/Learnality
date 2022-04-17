@@ -61,13 +61,13 @@ export default function StudentEditProfile (){
                     <form method = "POST" onSubmit = {updateProfile}>
                         <div className="edit-info-container">
                             <label for="fname">Full Name</label>
-                            <input type="text" id="fname" />
+                            <input type="text" id="fname" ref = {fullname}/>
 
                             <label for="UName">Username</label>
-                            <input type="text" id="UName"/>
+                            <input type="text" id="UName" ref = {username}/>
 
                             <label for="Degree">Degree</label>
-                            <select name="select-course" id="course-dropdown-list"> 
+                            <select name="select-course" ref = {courses} id="course-dropdown-list"> 
                                 <option value="display-course" selected disabled >Select Your Course</option>
                                 <option value="SE">BEng (Hons) Software Engineering</option>
                                 <option value="CS">BSc (Hons) Computer Science</option>
