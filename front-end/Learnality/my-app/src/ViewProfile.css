@@ -9,7 +9,7 @@
     position:absolute;
     top:200px;
     left:530px;
-    padding:20px 250px 20px 80px;
+    padding:20px 100px 40px 80px;
     border-radius: 20px;
     background-color: azure;
 
@@ -17,7 +17,7 @@
 
 .view-info-container p{
     margin-bottom:40px;
-    font-weight: bold;
+    
     
     
 }

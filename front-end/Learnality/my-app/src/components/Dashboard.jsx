@@ -115,7 +115,7 @@ export default function Dashboard(){
                        </div>
                    </div>
                 <div className="display-degree-container">
-                    <p className="degree-heading">Degree : {data.degree}<span></span></p>
+                    <p className="degree-heading">Degree : {data.degree}</p>
                 </div>
 
                 <div className="attempt-counter-container">

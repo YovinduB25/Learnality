@@ -61,9 +61,10 @@ export default function TeacherViewProfile() {
                         <img src={ViewProfile} alt="ViewProfilePic"/>
                     </div>
                    <div className="view-info-container">
-                    <p>Name  :  {data.name}</p>
-                    <p>Username  :  {data.username}</p>
-                    <p>Degree  :  {data.degree}</p>
+                      <br/><br/>
+                      <p><b>Name  :</b>  {data.name}</p>
+                      <p><b>Username  : </b> {data.username}</p>
+                      <p><b>Degree  :</b>  {data.degree}</p>
                    </div>
                </div>
             </div>
