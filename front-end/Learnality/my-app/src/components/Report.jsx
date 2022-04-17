@@ -93,7 +93,7 @@ export default function Report() {
 
                    <div className="container-two">
                         <h3> Description </h3>
-                        <p className="visual-report"> {learn.learning} : </p> 
+                        <p className="visual-report"> {learn.learning} Learner : </p> 
                         <p className="openness-report"> Openness Personality : They are imaginative, curious, and open-minded. Individuals who are low in openness to experience would rather not try new things. They are close-minded, literal and enjoy having a routine. </p> 
                     </div>
                         <button className="download-button"><HiDownload/> Download</button>

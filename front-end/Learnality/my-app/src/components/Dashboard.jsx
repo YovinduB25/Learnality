@@ -133,7 +133,7 @@ export default function Dashboard(){
                 <div className="display-learning-style-type-container">
                     <div className="learner-type-icon"><FaBookReader/></div>
                     <p className="learner-type-heading">Type Of Learner</p>
-                    <span className="learner-type-result">{learn.learning}</span>
+                    <span className="learner-type-result">{learn.learning} Learner</span>
                 </div>
 
                 <div className="display-personality-style-type-container">
