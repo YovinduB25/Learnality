@@ -50,23 +50,18 @@ export default function StudentViewProfile() {
                </div>
 
                <div class="center-container">
-               <h1 className="center-container-main-heading">View Profile</h1>
-                   <div className="icon-container">
-                       <div className="profile">
-                            <CgProfile/>
-                       </div>
-                   </div>
-
-                    
+                    <h1 className="center-container-main-heading">View Profile</h1>
+                
                     <div className="ViewProfilePic">
                         <img src={ViewProfile} alt="ViewProfilePic"/>
                     </div>
-                   <div className="view-info-container">
-                       <br/><br/>
+                   
+                    <div className="view-info-container">
+                      <br/><br/>
                       <p><b>Name  :</b>  {data.name}</p>
                       <p><b>Username  : </b> {data.username}</p>
                       <p><b>Degree  :</b>  {data.degree}</p>
-                   </div>
+                    </div>
                </div>
             </div>
         )
