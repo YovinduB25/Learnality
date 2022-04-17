@@ -13,6 +13,8 @@ export default function Report() {
 
     const [data, setData] = useState({name: '', gender: '', loaded: false});
 
+    const [learn, setLearn] = useState({learning: '', loaded: false});
+
     const makeRequest = () => {
 
         var data = '';
@@ -39,8 +41,33 @@ export default function Report() {
 
     };
 
+    const getLearningStyle = () => {
+		var axios = require('axios');
+
+		var config = {
+			method: 'get',
+			url: 'https://learnality-api.herokuapp.com/api/user/getLstyle?userId=' + userId,
+			headers: { }
+		};
+
+		axios(config)
+		.then(function (response) {
+			console.log(JSON.stringify(response.data));
+			setLearn({
+                learning: response.data.learning_style,
+                loaded: true
+            });
+		})
+		.catch(function (error) {
+            console.log(error);
+            setLearn({loaded: true});
+        });
+	};
+
     if(!data.loaded){
         makeRequest();
+        getLearningStyle();
+
     }
 
         return(
@@ -59,14 +86,14 @@ export default function Report() {
                             <h3> Details</h3>
                             <p className="name-report"> Name : {data.name}</p> 
                             <p className="gender-report"> Gender : {data.gender}</p> 
-                            <p className="learner-report"> Type Of Learner :  </p> 
+                            <p className="learner-report"> Type Of Learner :  {learn.learning}</p> 
                             <p className="personality-report"> Personality Type : </p>
                         </div>
                    </div>
 
                    <div className="container-two">
                         <h3> Description </h3>
-                        <p className="visual-report"> Visual learner : You benefit mostly by watching videos and images.In other words, you prefer graphic representations to text.You rely on the instructor's body language to help to understand.</p> 
+                        <p className="visual-report"> {learn.learning} : </p> 
                         <p className="openness-report"> Openness Personality : They are imaginative, curious, and open-minded. Individuals who are low in openness to experience would rather not try new things. They are close-minded, literal and enjoy having a routine. </p> 
                     </div>
                         <button className="download-button"><HiDownload/> Download</button>
