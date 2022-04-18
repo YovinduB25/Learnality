@@ -10,6 +10,7 @@ import "../dashboard.css";
 var axios = require('axios');
 
 const userId = localStorage.getItem('userId') || '';
+const attempts = localStorage.getItem('attempts') || 0;
 
 export default function Dashboard(){
 
@@ -97,8 +98,17 @@ export default function Dashboard(){
     }
 
     const [counter, setCounter] = useState(0);
+    const [hasCountLoaded, setCountLoaded] = useState(false);
+
+    if(!hasCountLoaded){
+        setCounter(attempts);
+        setCountLoaded(true);
+    }
+
+    //setCounter(attempts);
+
     const handleClick = () => {
-        setCounter (counter + 1)
+        
     }
         return(
             <div className="dashboard">
@@ -119,7 +129,7 @@ export default function Dashboard(){
                 </div>
 
                 <div className="attempt-counter-container">
-                    <span className="attempt-counter">{counter}</span>
+                    <span className="attempt-counter"> &nbsp;{counter}</span>
                     <p className="attempt-heading">Attempts</p>
                 </div>
 

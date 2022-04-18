@@ -27,5 +27,14 @@
     background:#353535;
     color:#e0dede;
     border-radius:15px;
+}
 
+.form-buttons input:hover{
+    background-color:black;
+    transition: 0.5s all ease-in ;
+}
+
+
+.form-buttons input:active{
+    background-color:black; 
 }

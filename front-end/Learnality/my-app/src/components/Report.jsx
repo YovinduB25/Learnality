@@ -84,8 +84,8 @@ export default function Report() {
                        </div>
                        <div className="container-one" > 
                             <h3> Details</h3>
-                            <p className="name-report"> Name : {data.name}</p> 
-                            <p className="gender-report"> Gender : {data.gender}</p> 
+                            <p className="name-report"> Name  &nbsp; &nbsp; &nbsp;: &nbsp; {data.name}</p> 
+                            <p className="gender-report"> Gender  &nbsp; : &nbsp; {data.gender}</p> 
                             <p className="learner-report"> Type Of Learner :  {learn.learning}</p> 
                             <p className="personality-report"> Personality Type : </p>
                         </div>

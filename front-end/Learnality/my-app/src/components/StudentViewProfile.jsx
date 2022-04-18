@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { SideBar } from "./SideBar";
-import { CgProfile } from "react-icons/cg"
 import ViewProfile  from "../images/ViewProfile.jpg"
 import "../ViewProfile.css";
 
@@ -58,9 +57,9 @@ export default function StudentViewProfile() {
                    
                     <div className="view-info-container">
                       <br/><br/>
-                      <p><b>Name  :</b>  {data.name}</p>
-                      <p><b>Username  : </b> {data.username}</p>
-                      <p><b>Degree  :</b>  {data.degree}</p>
+                      <p><b>Name  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; : &nbsp; &nbsp;</b> {data.name}</p>
+                      <p><b>Username &nbsp; : &nbsp; &nbsp;</b> {data.username}</p>
+                      <p><b>Degree &nbsp; &nbsp; &nbsp; &nbsp; : &nbsp; &nbsp;</b>  {data.degree}</p>
                     </div>
                </div>
             </div>

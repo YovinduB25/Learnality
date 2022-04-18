@@ -61,10 +61,10 @@ export default function StudentEditProfile (){
                     <form method = "POST" onSubmit = {updateProfile}>
                         <div className="edit-info-container">
                             <label for="fname">Full Name</label>
-                            <input type="text" id="fname" ref = {fullname}/>
+                            <input type="text" id="fname" ref = {fullname} required/>
 
                             <label for="UName">Username</label>
-                            <input type="text" id="UName" ref = {username}/>
+                            <input type="text" id="UName" ref = {username} required/>
 
                             <label for="Degree">Degree</label>
                             <select name="select-course" ref = {courses} id="course-dropdown-list"> 
