@@ -7,17 +7,13 @@ import { Chart } from "react-google-charts";
 
 // getTeacherDb();
 
-const getTeacherDb = () => {
-
-    alert("Loading...");
-
-    const userId = localStorage.getItem('userId') || '';
+const getTeacherDb = (course) => {
 
     var axios = require('axios');
 
     var config = {
         method: 'get',
-        url: 'https://learnality-api.herokuapp.com/api/user/getDashboard?userId=' + userId,
+        url: 'https://learnality-api.herokuapp.com/api/user/getDashboard?course=' + course,
         headers: { }
     };
 
@@ -26,12 +22,11 @@ const getTeacherDb = () => {
         console.log(JSON.stringify(response.data));
     })
     .catch(function (error) {
+    alert("Data not available");
         console.log(error);
     });
 
 };
-
-getTeacherDb();
 
 export const data = [
     ["Task", "Hours per Day"],
@@ -79,14 +74,14 @@ export default class TeacherDashboard extends React.Component{
                        </div>
                     
                     <div className="select-student-degree">
-                           <select name="select-course" id="course-dropdown-list"> 
-                               <option value="display-course" selected disabled >Select Teaching Course</option>
-                               <option value="SE">BEng (Hons) Software Engineering</option>
-                               <option value="CS">BSc (Hons) Computer Science</option>
-                               <option value="AL/DS">BEng (Hons) Artificial Intelligence and Data Science</option>
-                               <option value="BIS">BSc (Hons) Business Infomation Systems</option>
-                               <option value="BM">BA (Hons) Business Management</option>
-                               <option value="BDA">BSc (Hons) Business Data Analytics</option>
+                           <select name="select-course" id="course-dropdown-list" onChange={e => getTeacherDb(e.target.value)}> 
+                                <option value="" selected disabled >Select Teaching Course</option>
+                                <option value="Software Engineering">BEng (Hons) Software Engineering</option>
+                                <option value="Computer Science">BSc (Hons) Computer Science</option>
+                                <option value="Artificial Intelligence and Data Science">BEng (Hons) Artificial Intelligence and Data Science</option>
+                                <option value="Business Infomation Systems">BSc (Hons) Business Infomation Systems</option>
+                                <option value="Business Management">BA (Hons) Business Management</option>
+                                <option value="Business Data Analytics">BSc (Hons) Business Data Analytics</option>
                            </select> 
                     </div>
 
