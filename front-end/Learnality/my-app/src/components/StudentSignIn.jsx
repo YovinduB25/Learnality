@@ -47,7 +47,7 @@ export default function StudentSignIn() {
                 else{
                     alert("Incorrect password / username combination");
                 }
-                console.log(error)
+                // console.log(error)
             });
     };
     return (

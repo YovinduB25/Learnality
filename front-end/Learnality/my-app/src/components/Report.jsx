@@ -15,6 +15,8 @@ export default function Report() {
 
     const [learn, setLearn] = useState({learning: '', loaded: false});
 
+    const [persona, setPersona] = useState({personality: '', loaded: false});
+
     const makeRequest = () => {
 
         var data = '';
@@ -32,10 +34,10 @@ export default function Report() {
                 gender: response.data.gender,
                 loaded: true
             });
-            console.log(JSON.stringify(response.data)); 
+            // console.log(JSON.stringify(response.data)); 
         })
         .catch(function (error) {
-            console.log(error);
+            // console.log(error);
             setData({loaded: true});
         });
 
@@ -52,21 +54,47 @@ export default function Report() {
 
 		axios(config)
 		.then(function (response) {
-			console.log(JSON.stringify(response.data));
+			// console.log(JSON.stringify(response.data));
 			setLearn({
                 learning: response.data.learning_style,
                 loaded: true
             });
 		})
 		.catch(function (error) {
-            console.log(error);
+            // console.log(error);
             setLearn({loaded: true});
         });
 	};
 
+    const getPersonalityTrait = () => {
+		var axios = require('axios');
+
+		var config = {
+			method: 'get',
+			url: 'https://learnality-api.herokuapp.com/api/user/getPersonality?userId=' + userId,
+			headers: { }
+		};
+
+		axios(config)
+		.then(function (response) {
+			// console.log(JSON.stringify(response.data));
+			setPersona({
+                personality: response.data.personality_trait,
+                loaded: true
+            });
+		})
+		.catch(function (error) {
+            // console.log(error);
+            setPersona({loaded: true});
+        });
+	};
+
+    
+
     if(!data.loaded){
         makeRequest();
         getLearningStyle();
+        getPersonalityTrait();
 
     }
 
@@ -87,14 +115,14 @@ export default function Report() {
                             <p className="name-report"> Name  &nbsp; &nbsp; &nbsp;: &nbsp; {data.name}</p> 
                             <p className="gender-report"> Gender  &nbsp; : &nbsp; {data.gender}</p> 
                             <p className="learner-report"> Type Of Learner :  {learn.learning}</p> 
-                            <p className="personality-report"> Personality Type : </p>
+                            <p className="personality-report"> Personality Type : {persona.personality}</p>
                         </div>
                    </div>
 
                    <div className="container-two">
                         <h3> Description </h3>
-                        <p className="visual-report"> {learn.learning} Learner : </p> 
-                        <p className="openness-report"> Openness Personality : They are imaginative, curious, and open-minded. Individuals who are low in openness to experience would rather not try new things. They are close-minded, literal and enjoy having a routine. </p> 
+                        <p className="visual-report"> {learn.learning} Learner :</p> 
+                        <p className="openness-report">{persona.personality} Personality Trait :</p> 
                     </div>
                         <button className="download-button"><HiDownload/> Download</button>
                </div>
