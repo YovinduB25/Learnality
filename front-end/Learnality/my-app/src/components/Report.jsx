@@ -55,10 +55,10 @@ export default function Report() {
                 gender: response.data.gender,
                 loaded: true
             });
-            console.log(JSON.stringify(response.data)); 
+            // console.log(JSON.stringify(response.data)); 
         })
         .catch(function (error) {
-            console.log(error);
+            // console.log(error);
             setData({loaded: true});
         });
 
@@ -89,7 +89,7 @@ export default function Report() {
 
 		axios(config)
 		.then(function (response) {
-			console.log(JSON.stringify(response.data));
+			// console.log(JSON.stringify(response.data));
 			setLearn({
                 learning: response.data.learning_style,
                 loaded: true
@@ -97,7 +97,7 @@ export default function Report() {
             setLearnDesc(getLearnDesc(response.data.learning_style));
 		})
 		.catch(function (error) {
-            console.log(error);
+            // console.log(error);
             setLearn({loaded: true});
         });
 	};
@@ -178,6 +178,12 @@ export default function Report() {
                        
                    
                         {/* <button className="download-button" onClick="printDiv('printableArea')"><HiDownload/> Download</button> */}
+                   <div className="container-two">
+                        <h3> Description </h3>
+                        <p className="visual-report"> {learn.learning} Learner :</p> 
+                        <p className="openness-report">{persona.personality} Personality Trait :</p> 
+                    </div>
+                        <button className="download-button"><HiDownload/> Download</button>
                </div>
             </div>
         )

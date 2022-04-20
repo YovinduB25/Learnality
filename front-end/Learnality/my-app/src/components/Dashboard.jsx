@@ -36,10 +36,10 @@ export default function Dashboard(){
                 degree: response.data.course,
                 loaded: true
             });
-            console.log(JSON.stringify(response.data)); 
+            // console.log(JSON.stringify(response.data)); 
         })
         .catch(function (error) {
-            console.log(error);
+            // console.log(error);
             setData({loaded: true});
         });
 
@@ -56,14 +56,14 @@ export default function Dashboard(){
 
 		axios(config)
 		.then(function (response) {
-			console.log(JSON.stringify(response.data));
+			// console.log(JSON.stringify(response.data));
 			setLearn({
                 learning: response.data.learning_style,
                 loaded: true
             });
 		})
 		.catch(function (error) {
-            console.log(error);
+            // console.log(error);
             setLearn({loaded: true});
         });
 	};

@@ -47,7 +47,7 @@ export default function StudentSignUp (){
             if(error.response.status === 500){
                 alert("Username is already in use. Try Again");
             }
-        console.log(error);
+        // console.log(error);
         });
     };
         return(
