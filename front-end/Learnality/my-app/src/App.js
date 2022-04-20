@@ -18,6 +18,7 @@ import { TeacherResetPassword } from "./components/TeacherResetPassword"
 import  TeacherViewProfile  from "./components/TeacherViewProfile"
 import  StudentViewProfile  from "./components/StudentViewProfile"
 import  StudentEditProfile  from "./components/StudentEditProfile"
+import  TeacherLearningStyleQuiz from "./components/TeacherLearningStyle"
 
 
 
@@ -44,6 +45,8 @@ function App() {
         <Route path="/Report" element={<Report/>}/>
         <Route path="/TeacherReport" element={<TeacherReport/>}/>
         <Route path="/LearningStyleQuiz" element={<LearningStyleQuiz/>}/>
+        <Route path="/TeacherLearningStyleQuiz" element={<TeacherLearningStyleQuiz/>}/>
+
 
       </Routes>
     </div>

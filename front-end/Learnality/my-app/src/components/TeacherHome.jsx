@@ -31,7 +31,7 @@ export class TeacherHome extends React.Component{
                             <div className="overlay-text">Attempt Learning Style and Personality Style Identification Quiz</div>
                             <div className="overlay-link">
                             <button>
-                                <Link to="/LearningStyleQuiz" className="learning-style-button">Start Quiz</Link>
+                                <Link to="/TeacherLearningStyleQuiz" className="learning-style-button">Start Quiz</Link>
                             </button>
                             </div>
                         </div>

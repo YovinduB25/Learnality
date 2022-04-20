@@ -31,6 +31,8 @@ const getTeacherDb = () => {
 
 };
 
+getTeacherDb();
+
 export const data = [
     ["Task", "Hours per Day"],
     ["Visionary", 20],
@@ -46,11 +48,11 @@ export const options = {
 
 export const Bardata = [
     ["Type of Personality ", "Density", { role: "style" }],
-    ["Openness", 8.94, "#b87333"], // RGB value
-    ["Conscientiousness", 10.49, "silver"], // English color name
-    ["Extraversion", 19.3, "gold"],
-    ["Agreeableness", 21.45, "color: #e5e4e2"], // CSS-style declaration
-    ["Neuroticism", 15.45, "color: #e5e4e2"], // CSS-style declaration
+    ["Openness", 8, "#b87333"], // RGB value
+    ["Conscientiousness", 10, "silver"], // English color name
+    ["Extraversion", 19, "gold"],
+    ["Agreeableness", 21, "color: #e5e4e2"], // CSS-style declaration
+    ["Neuroticism", 30, "color: #e5e4e2"], // CSS-style declaration
   ];
   
 export const baroptions = {
@@ -88,14 +90,7 @@ export default class TeacherDashboard extends React.Component{
                            </select> 
                     </div>
 
-                    <div className="year-dropdown">
-                       <select name="year-course" id="year-dropdown-list">
-                           <option value="display-course" selected disabled >Select Degree Level</option>
-                           <option value="L4">Level 4</option>
-                           <option value="L5">Level 5</option>
-                           <option value="L6">Level 6</option>
-                       </select>
-                   </div>
+                   
     
                    
                    <div className="bargraph">
@@ -111,7 +106,7 @@ export default class TeacherDashboard extends React.Component{
                     <div className="pie-chart">
                         <Chart
                             chartType="Bar"
-                            width="100%"
+                            width="120%"
                             height="400px"
                             data={Bardata}
                             options={baroptions}
