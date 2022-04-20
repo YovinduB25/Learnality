@@ -1,5 +1,6 @@
 const User = require("../models/user.model");
 const UserLearning = require("../models/userLearning.model");
+const StorePersona = require("../models/userPersona.model");
 var request = require('request');
 
 // Create and Save a new user
