@@ -34,7 +34,7 @@
           "type": "message",
           "condition": "",
           "speech": [
-            "Hello! Welcome to Learnality. How can I help you? \n\n\n[1. Learning Style]\n[2. Personality Style]"
+            "Hello! Welcome to Learnality. How can I help you?          \n\n\n[1. Learning Style]     \n[2. Personality Style]    \n  \nType \"Retry\"  to Try again."
           ]
         }
       ],
@@ -44,6 +44,18 @@
   "rootParentId": null,
   "templates": [],
   "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "retry",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "5bec0979-e850-4fdb-b209-57da0828d5dc",
+      "updated": null
+    },
     {
       "isTemplate": false,
       "data": [
