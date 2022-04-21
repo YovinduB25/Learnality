@@ -30,14 +30,12 @@ export default function TeacherLearningStyleQuiz() {
 			.then(function (response) {
 				console.log(JSON.stringify(response.data));
 				getLearningStyle();
-				
+				getPersonalityTrait();
 			})
 			.catch(function (error) {
 				alert("An error has occured while storing data.");
 			});
 	}
-
-	
 
 	const getLearningStyle = () => {
 		var axios = require('axios');
@@ -50,12 +48,32 @@ export default function TeacherLearningStyleQuiz() {
 
 		axios(config)
 		.then(function (response) {
-			console.log(JSON.stringify(response.data));
+			// console.log(JSON.stringify(response.data));
 			setType(response.data.learning_style);
 		})
 		.catch(function (error) {
-			alert("An error occured while getting personality data.");
+			alert("An error occured while getting Learning Style.");
 		});
+	};
+
+	const getPersonalityTrait = () => {
+		var axios = require('axios');
+
+		var config = {
+			method: 'get',
+			url: 'https://learnality-api.herokuapp.com/api/user/getPersonality?userId=' + userId,
+			headers: { }
+		};
+
+		axios(config)
+		.then(function (response) {
+			setPersonality(response.data.personality_trait);
+			// console.log(JSON.stringify(response.data));
+		})
+		.catch(function (error) {
+            // console.log(error);
+            alert("An error occured while getting Personality Trait.");
+        });
 	};
 	
 	const questions = [
@@ -256,6 +274,7 @@ export default function TeacherLearningStyleQuiz() {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showResult, setShowResult] = useState(false);
 	const [resultType, setType] = useState(String);
+	const[persona, setPersonality] = useState(String);
 	const [ansArray, setAnsArray] = useState([]);
 
 	// let answersArray = [];
@@ -284,7 +303,7 @@ export default function TeacherLearningStyleQuiz() {
 
 			<div className='center-container'>
 
-				<h1 className="center-container-main-heading">What's your Learning and personality Style?</h1>
+				<h1 className="center-container-main-heading">What's your Learning and Personality Style?</h1>
 				<div className="icon-container">
 					<div className="profile">
 						<CgProfile />
@@ -294,7 +313,7 @@ export default function TeacherLearningStyleQuiz() {
 				<div className='LearningStyleQuestionContainer'>
 					{showResult ? (
 						<div className='score-section'>
-							You are a {resultType} Learner and you have an ...... Personality.
+							You are a {resultType} Learner and you have an {persona} Personality.
 						</div>
 
 					) : (

@@ -8,10 +8,12 @@ import { FaUserEdit } from "react-icons/fa"
 import { HiOutlineDocumentText } from "react-icons/hi"
 import { HiOutlineLogin } from "react-icons/hi"
 
-
-
 export class SideBar extends React.Component{
     render(){
+        const handleLogout = async (e) => {
+            localStorage.removeItem("userId")
+          };
+        
         return(
             <div className="sidebar-container">
                 <div className="logo-container">
@@ -53,9 +55,10 @@ export class SideBar extends React.Component{
 
                         <li>
                             <Link to="/" className='sidebar-text'>
+                                <button className = 'logout_button' onClick={handleLogout}>
                                 <span className="sidebar-icon"><HiOutlineLogin/></span>
-
                                 <span className="sidebar-link">Log Out</span>
+                                </button> 
                             </Link>
                         </li>
 

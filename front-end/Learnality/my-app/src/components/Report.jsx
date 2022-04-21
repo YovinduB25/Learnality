@@ -173,17 +173,7 @@ export default function Report() {
                             <p className="personality-report"> <b>{persona.personality} Personality</b> : {personaDescription} </p> 
                         </div>
                    </div>
-
-                  
-                       
-                   
                         {/* <button className="download-button" onClick="printDiv('printableArea')"><HiDownload/> Download</button> */}
-                   <div className="container-two">
-                        <h3> Description </h3>
-                        <p className="visual-report"> {learn.learning} Learner :</p> 
-                        <p className="openness-report">{persona.personality} Personality Trait :</p> 
-                    </div>
-                        <button className="download-button"><HiDownload/> Download</button>
                </div>
             </div>
         )
