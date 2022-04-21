@@ -1,0 +1,105 @@
+{
+  "id": "f7fa8fba-4772-4c09-a40a-48d108c50db7",
+  "name": "If Learning Style - Kinesthetic",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "IfLearningStyle-followup"
+  ],
+  "contexts": [
+    "IfLearningStyle-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "ab294416-3d89-4d69-b14f-e6774000184f",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "DefaultWelcomeIntent.DefaultWelcomeIntent-custom.IfLearningStyle-custom-3",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Kinesthetic learner - Kinesthetic or tactile learning is a learning style in which learning takes place by the \nstudents carrying out physical activities, rather than listening to a lecture or watching demonstrations."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "9cbb4e4a-e849-4011-9a62-205bec4f3444",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "d",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d5b3b1ec-52e3-49c6-ba22-9a5a94bc1375",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "kinesthetic learning",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ffd42ffc-038d-4715-a4f2-be0110dcb4ec",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "kinesthetic learning style",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "3266cc08-ea41-4fc1-be34-6cba6acaf38e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "kinaesthetic",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "688864cd-b706-4ba7-8bcb-b3a0223f1cc4",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "kinesthetic",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "5a75e77c-c67b-4d9a-b052-b2d1a5fca2a8",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

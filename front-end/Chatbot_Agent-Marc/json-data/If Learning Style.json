@@ -1,0 +1,126 @@
+{
+  "id": "ab294416-3d89-4d69-b14f-e6774000184f",
+  "name": "If Learning Style",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "DefaultWelcomeIntent-followup"
+  ],
+  "contexts": [
+    "DefaultWelcomeIntent-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "9cbb4e4a-e849-4011-9a62-205bec4f3444",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "DefaultWelcomeIntent.DefaultWelcomeIntent-custom",
+      "affectedContexts": [
+        {
+          "name": "IfLearningStyle-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "number",
+          "dataType": "@sys.number",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "$number",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Learning Styles\n[a. Visual]\n[b. Auditory]\n[c. Reading / Writing]\n[d. Kinesthetic]"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "9cbb4e4a-e849-4011-9a62-205bec4f3444",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "1",
+          "userDefined": false,
+          "alias": "number",
+          "meta": "@sys.number"
+        }
+      ],
+      "count": 0,
+      "id": "5d61fb73-4620-4e5a-a62a-3baa86cdf36e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "VARK",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "ee1f9082-3dd4-4b60-9213-1e0945b90aa0",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "learning style",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f119988e-c0ef-437f-8661-65f0426c4b3e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "learning",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "811dcedf-d95c-4e73-9346-682690394eb5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "learn",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "01114270-d545-457f-8bcb-0669cec3e92e",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

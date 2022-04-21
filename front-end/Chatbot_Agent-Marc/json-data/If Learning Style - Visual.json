@@ -1,0 +1,81 @@
+{
+  "id": "a9e1d01c-1a38-41cb-9956-0237d54b3462",
+  "name": "If Learning Style - Visual",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "IfLearningStyle-followup"
+  ],
+  "contexts": [
+    "IfLearningStyle-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "ab294416-3d89-4d69-b14f-e6774000184f",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "DefaultWelcomeIntent.DefaultWelcomeIntent-custom.IfLearningStyle-custom",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Visual Learner - Being a visual learner entails thinking in pictures rather than in words. Visual learners learn best by utilizing graphs, tables, charts, maps, colors and diagrams. They also tend to learn holistically, instead of sequentially, or in parts."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "9cbb4e4a-e849-4011-9a62-205bec4f3444",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "a",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f8fb1cca-04a2-4c86-9a6c-fbf995bcf099",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "visual learning style",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "92ef7fd2-b006-4afb-bba6-01b72a02c694",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "visual",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "bf590941-9642-4673-81d8-e71acd33e04b",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
