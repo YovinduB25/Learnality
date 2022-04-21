@@ -1,0 +1,74 @@
+{
+  "id": "a2f08438-5286-45cd-a719-8b9269780d20",
+  "name": "if personality - Extroversion",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "DefaultWelcomeIntent-custom-2-followup"
+  ],
+  "contexts": [
+    "DefaultWelcomeIntent-custom-2-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "f6daf952-d715-41e8-947b-c542d60ee375",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "DefaultWelcomeIntent.DefaultWelcomeIntent-custom-2.DefaultWelcomeIntent-custom-2-custom",
+      "affectedContexts": [
+        {
+          "name": "DefaultWelcomeIntent-custom-2-custom-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Extroversion - This personality trait is manifested in the fact that the person is very excited, sociable, talkative, and expresses a large number of emotions. People with a low level of this trait prefer loneliness, difficulty starting a conversation, do not like small talk, and be the center of attention."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "9cbb4e4a-e849-4011-9a62-205bec4f3444",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "c",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "57fbb9a2-4f31-4aad-ae9a-9086471efc92",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Extroversion",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "bbb0a2e8-392d-4af9-9ed6-933d3e16b3e7",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

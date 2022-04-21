@@ -1,0 +1,69 @@
+{
+  "id": "f4336425-3ab1-4c39-83f2-57f58f68704d",
+  "name": "if personality - Agreeableness",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "DefaultWelcomeIntent-custom-2-followup"
+  ],
+  "contexts": [
+    "DefaultWelcomeIntent-custom-2-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "f6daf952-d715-41e8-947b-c542d60ee375",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "DefaultWelcomeIntent.DefaultWelcomeIntent-custom-2.DefaultWelcomeIntent-custom-2-custom-3",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Agreeableness - This personality trait enhances the level of trust, tenderness, affection, and other prosocial behavior labeled. They tend to care about the interests of others, empathize with others, and enjoy helping and helping those in need. People with low traits tend to have little interest in others."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "9cbb4e4a-e849-4011-9a62-205bec4f3444",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "d",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a6e14f24-db02-493d-ae2a-23d0304dee25",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Agreeableness",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f955f423-64ba-45c2-b35e-072e001134e4",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

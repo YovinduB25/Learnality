@@ -1,0 +1,69 @@
+{
+  "id": "f4af8d5f-7573-4f64-82c5-b15c8e240d78",
+  "name": "if perosnality - Neuroticism",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "DefaultWelcomeIntent-custom-2-followup"
+  ],
+  "contexts": [
+    "DefaultWelcomeIntent-custom-2-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "f6daf952-d715-41e8-947b-c542d60ee375",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "DefaultWelcomeIntent.DefaultWelcomeIntent-custom-2.DefaultWelcomeIntent-custom-2-custom-2",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Neuroticism - This personality trait makes people feel emotionally unstable, anxious, irritable, and sad. People with low traits tend to be emotionally stable and cope well with stress and sadness. A very relaxed spirit."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "9cbb4e4a-e849-4011-9a62-205bec4f3444",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "e",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "25bfdd95-80c7-482f-82bc-340e97a9d17f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Neuroticism",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "8194e059-572f-4106-b665-d75acb313329",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

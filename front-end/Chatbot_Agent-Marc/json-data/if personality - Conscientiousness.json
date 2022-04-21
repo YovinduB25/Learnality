@@ -1,0 +1,69 @@
+{
+  "id": "1b7cb2dc-4362-42a5-8275-4d0a2b1bfcee",
+  "name": "if personality - Conscientiousness",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "DefaultWelcomeIntent-custom-2-followup"
+  ],
+  "contexts": [
+    "DefaultWelcomeIntent-custom-2-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "f6daf952-d715-41e8-947b-c542d60ee375",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "DefaultWelcomeIntent.DefaultWelcomeIntent-custom-2.DefaultWelcomeIntent-custom-2-custom-4",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Conscientiousness - This personality trait improves thoughtfulness, good impulse control, and goal-directed behavior. They tend to be organized, alert, take time to prepare, complete important tasks immediately, and enjoy a set schedule. People with low consciousness hate setting schedules, making riots, not returning things, and postponing important things."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "9cbb4e4a-e849-4011-9a62-205bec4f3444",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "b",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ff8b589f-13fb-4a7a-a6c3-6bd33a250f4a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Conscientiousness",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "9bee7f27-0118-462d-bbc2-a317536dc35f",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

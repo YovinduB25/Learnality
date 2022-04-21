@@ -1,0 +1,81 @@
+{
+  "id": "04063b97-a2fd-42b2-91ed-7e91145d537a",
+  "name": "if personality - Openness",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "DefaultWelcomeIntent-custom-2-followup"
+  ],
+  "contexts": [
+    "DefaultWelcomeIntent-custom-2-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "f6daf952-d715-41e8-947b-c542d60ee375",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "DefaultWelcomeIntent.DefaultWelcomeIntent-custom-2.DefaultWelcomeIntent-custom-2-custom-5",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Openness - This personality trait enhances a person's imagination and discernment. They tend to have a wide range of interests, which makes them more adventurous, creative, and eager to learn new things. People with a low level of this trait tend to dislike change, resist new ideas, lack a rich imagination, and do not enjoy new things."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "9cbb4e4a-e849-4011-9a62-205bec4f3444",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "a",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "521ce0da-d0c2-4230-a92e-f6b3a1119267",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "openness",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "c6ad5e6c-d14d-4961-b950-a153465082a9",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "open",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b653d5c2-88dc-43ac-9f64-5c63343b3aa2",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
