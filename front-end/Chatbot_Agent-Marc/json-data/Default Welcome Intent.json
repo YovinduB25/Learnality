@@ -34,7 +34,7 @@
           "type": "message",
           "condition": "",
           "speech": [
-            "Hello! Welcome to Learnality. How can I help you?          \n\n\n[1. Learning Style]     \n[2. Personality Style]    \n  \nType \"Retry\"  to Try again."
+            "Hello! Welcome to Learnality. How can I help you?          \n\n1. Learning Style.\n2. Personality Style.\n\nType \"Retry\"  to Try again if the bot cannot understand the input or to change your selection.\nType \"Bye\" to end the conversation."
           ]
         }
       ],

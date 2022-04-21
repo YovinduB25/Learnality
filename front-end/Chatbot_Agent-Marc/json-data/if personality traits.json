@@ -48,7 +48,7 @@
           "type": "message",
           "condition": "",
           "speech": [
-            "Personality Traits\n\n[a. Openness]\n[b. Conscientiousness]\n[c. Extroversion]\n[d. Agreeableness]\n[e. Neuroticism]"
+            "Select the Personality Traits by typing : \"a\", \"b\", \"c\", \"d\" or \"e\".\n\na. Openness\nb. Conscientiousness\nc. Extroversion\nd. Agreeableness\ne. Neuroticism"
           ]
         }
       ],

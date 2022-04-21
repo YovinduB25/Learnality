@@ -48,7 +48,7 @@
           "type": "message",
           "condition": "",
           "speech": [
-            "Learning Styles\n[a. Visual]\n[b. Auditory]\n[c. Reading / Writing]\n[d. Kinesthetic]"
+            "Select the Learning Styles by typing : \"a\", \"b\", \"c\" or \"d\".\n\na. Visual\nb. Auditory\nc. Reading / Writing\nd. Kinesthetic"
           ]
         }
       ],

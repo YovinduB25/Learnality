@@ -1,22 +1,22 @@
 {
-  "id": "f0142236-1602-41ff-ada5-5bb65b0ee58e",
-  "name": "Default Fallback Intent",
+  "id": "0f20b08b-6333-444a-9090-fb5a79e300ca",
+  "name": "End Convo",
   "auto": true,
   "condition": "",
   "conditionalFollowupEvents": [],
   "conditionalResponses": [],
   "context": [],
   "contexts": [],
-  "endInteraction": false,
+  "endInteraction": true,
   "events": [],
-  "fallbackIntent": true,
+  "fallbackIntent": false,
   "liveAgentHandoff": false,
   "parentId": null,
   "followUpIntents": [],
   "priority": 500000,
   "responses": [
     {
-      "action": "input.unknown",
+      "action": "",
       "affectedContexts": [],
       "parameters": [],
       "defaultResponsePlatforms": {},
@@ -25,8 +25,7 @@
           "type": "message",
           "condition": "",
           "speech": [
-            "I didn't get that. Can you say it again? or Type \"Retry\"",
-            "Sorry, I didn't get that. Can you rephrase? or Type \"Retry\""
+            "Thank you for using Learnality, Come again!"
           ]
         }
       ],
@@ -35,7 +34,20 @@
   ],
   "rootParentId": null,
   "templates": [],
-  "userSays": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Bye",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "6f73c999-6c48-4aff-a2e7-01ec8447a368",
+      "updated": null
+    }
+  ],
   "webhookForSlotFilling": false,
   "webhookUsed": false
 }
