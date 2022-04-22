@@ -13,9 +13,12 @@ export class ResetPassword extends React.Component{
                         <img src={resetPassword} alt="resetPasswordPic"/>
                     </div>
                     <h4 className="reset-password-heading">Trouble with logging in?</h4>
-                    <h4 className="reset-password-sub-heading">Enter your email address and we'll send you a link back to your account</h4>
+                    <h4 className="reset-password-sub-heading">Enter your username and new password.</h4>
+                    <div className="text-inputUser">
+                         <input type="text" name="userName"  placeholder="Username" />
+                    </div>
                     <div className="text-input">
-                         <input type="text" name="userName_email"  placeholder="Username or Email Address" />
+                         <input type="text" name="newPassword"  placeholder="New Password" />
                     </div>
 
                     <div className="reset-password-button">

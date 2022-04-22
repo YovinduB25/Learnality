@@ -60,14 +60,14 @@ export default function TeacherEditProfile (){
                       <form>
                         <div className="edit-info-container">
                             <label for="fname">Full Name</label>
-                            <input type="text" id="fname"/>
+                            <input type="text" id="fname" required/>
 
                             <label for="UName">Username</label>
-                            <input type="text" id="UName"/>
+                            <input type="text" id="UName" required/>
 
                             <label for="Degree">Degree</label>
-                            <select name="select-course" id="course-dropdown-list"> 
-                            <option value="display-course" selected disabled >Select Your Course</option>
+                            <select name="select-course" id="course-dropdown-list" required> 
+                            <option value="" selected disabled >Select Your Course</option>
                             <option value="SE">BEng (Hons) Software Engineering</option>
                             <option value="CS">BSc (Hons) Computer Science</option>
                             <option value="AL/DS">BEng (Hons) Artificial Intelligence and Data Science</option>

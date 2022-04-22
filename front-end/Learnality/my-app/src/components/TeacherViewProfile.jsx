@@ -30,6 +30,7 @@ export default function TeacherViewProfile() {
                 degree: response.data.course,
                 loaded: true
             });
+
             console.log(JSON.stringify(response.data)); 
         })
         .catch(function (error) {
@@ -57,9 +58,9 @@ export default function TeacherViewProfile() {
 
                     <div className="view-info-container">
                         <br/><br/>
-                        <p><b>Name  :</b>  {data.name}</p>
-                        <p><b>Username  : </b> {data.username}</p>
-                        <p><b>Degree  :</b>  {data.degree}</p>
+                        <p><b>Name  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; : &nbsp; &nbsp;</b> {data.name}</p>
+                        <p><b>Username &nbsp; : &nbsp; &nbsp;</b> {data.username}</p>
+                        <p><b>Degree &nbsp; &nbsp; &nbsp; &nbsp; : &nbsp; &nbsp;</b>  {data.degree}</p>
                     </div>
                 </div>
             </div>
