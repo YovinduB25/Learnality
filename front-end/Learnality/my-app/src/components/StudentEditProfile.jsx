@@ -15,29 +15,36 @@ export default function StudentEditProfile (){
 
     const updateProfile = (event) => {
         event.preventDefault();
-        var axios = require('axios');
-        var data = JSON.stringify({
-        "fname": fullname?.current?.value,
-        "username": username?.current?.value,
-        "course": courses?.current?.value
-        });
+        const editprofile = window.confirm("Are you sure you want to update your profile details?");
+        if (editprofile){
+            var axios = require('axios');
+            var data = JSON.stringify({
+            "fname": fullname?.current?.value,
+            "username": username?.current?.value,
+            "course": courses?.current?.value
+            });
 
-        var config = {
-        method: 'put',
-        url: 'https://learnality-api.herokuapp.com/api/user/update?id=' + userId,
-        headers: { 
-            'Content-Type': 'application/json'
-        },
-        data : data
-        };
+            var config = {
+            method: 'put',
+            url: 'https://learnality-api.herokuapp.com/api/user/update?id=' + userId,
+            headers: { 
+                'Content-Type': 'application/json'
+            },
+            data : data
+            };
 
-        axios(config)
-        .then(function (response) {
-        // console.log(JSON.stringify(response.data));
-        })
-        .catch(function (error) {
-        // console.log(error.response);
-        });
+            axios(config)
+            .then(function (response) {
+            // console.log(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+            console.log(error.response.status);
+
+            });
+        }
+        else{
+            alert("Profile not updated.");
+        }
     }
         return(
             <div className="Profile">
@@ -67,8 +74,8 @@ export default function StudentEditProfile (){
                             <input type="text" id="UName" ref = {username} required/>
 
                             <label for="Degree">Degree</label>
-                            <select name="select-course" ref = {courses} id="course-dropdown-list"> 
-                                <option value="display-course" selected disabled >Select Your Course</option>
+                            <select name="select-course" ref = {courses} id="course-dropdown-list" required>  
+                                <option value="" selected disabled >Select Your Course</option>
                                 <option value="Software Engineering">BEng (Hons) Software Engineering</option>
                                 <option value="Computer Science">BSc (Hons) Computer Science</option>
                                 <option value="Artificial Intelligence and Data Science">BEng (Hons) Artificial Intelligence and Data Science</option>

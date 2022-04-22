@@ -8,6 +8,10 @@ var axios = require('axios');
 const userId = localStorage.getItem('userId') || '';
 
 export default function StudentViewProfile() {
+
+    function refreshPage(){
+        window.location.reload(false);
+    }
     
     const [data, setData] = useState({name: '', username: '', degree: '', loaded: false});
 
@@ -39,7 +43,9 @@ export default function StudentViewProfile() {
     };
 
     if(!data.loaded){
+        // window.location.reload(loaded);
         makeRequest();
+
     }
 
         return(

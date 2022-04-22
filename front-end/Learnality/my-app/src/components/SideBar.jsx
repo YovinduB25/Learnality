@@ -10,9 +10,14 @@ import { HiOutlineLogin } from "react-icons/hi"
 
 export class SideBar extends React.Component{
     render(){
-        const handleLogout = async (e) => {
-            localStorage.removeItem("userId")
-          };
+
+        // function refreshPage(){
+        //     window.location.reload(false);
+        // }
+
+        // const handleLogout = async (e) => {
+        //     localStorage.removeItem("userId")
+        //   };
         
         return(
             <div className="sidebar-container">
@@ -29,8 +34,6 @@ export class SideBar extends React.Component{
                                 <span className="sidebar-link">Home</span>
                             </Link>
                         </li>
-
-            
 
                         <li>
                             <Link to="/Dashboard" className='sidebar-text'>
@@ -55,7 +58,7 @@ export class SideBar extends React.Component{
 
                         <li>
                             <Link to="/" className='sidebar-text'>
-                                <button className = 'logout_button' onClick={handleLogout}>
+                                <button className = 'logout_button' /*onClick={handleLogout}*/>
                                 <span className="sidebar-icon"><HiOutlineLogin/></span>
                                 <span className="sidebar-link">Log Out</span>
                                 </button> 
