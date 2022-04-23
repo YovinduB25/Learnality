@@ -138,6 +138,27 @@ exports.findById = (req, res) => {
         });
 };
 
+exports.findByuser = (req, res) => {
+    const username = decodeURI(req.query.username);
+    User.find({username:username})
+        .then(data => {
+            if (!data)
+                res.status(404).send({
+                    message: "User not found with name " + username
+                });
+            else{
+                res.send(data);
+            } 
+        })
+        .catch(err => {
+            res
+                .status(500)
+                .send({
+                    message: "Error retrieving User with username=" + username
+                });
+        });
+};
+
 exports.getUserAnswers = (req, res) => {
     var id = req.query.userId;
     User.findById(id)

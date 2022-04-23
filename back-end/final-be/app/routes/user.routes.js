@@ -12,6 +12,8 @@ module.exports = app => {
     router.get("/findByCourse", users.findByCourse);
     // Retrieve a single user by id
     router.get("/find", users.findById);
+    //Retrieve a single user by username
+    router.get("/findusername",users.findByuser);
     // Update a user by id
     router.put("/update", users.updateById);
     // Delete a user by id
