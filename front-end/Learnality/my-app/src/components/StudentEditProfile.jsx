@@ -4,6 +4,7 @@ import { CgProfile } from "react-icons/cg"
 import EditProfile  from "../images/EditProfile.jpg"
 import { SideBar } from "../components/SideBar"
 import "../editProfile.css";
+import { useNavigate } from "react-router-dom";
 
 export default function StudentEditProfile (){
 
@@ -12,6 +13,36 @@ export default function StudentEditProfile (){
     const fullname = useRef(null);
     const username = useRef(null);
     const courses = useRef(null);
+    const navigate = useNavigate();
+
+    const deleteProfile = (event) => {
+
+        event.preventDefault();
+        const deleteprofile = window.confirm("Are you sure you want to delete your account?");
+        if (deleteprofile){
+            var axios = require('axios');
+            var data = '';
+
+            var config = {
+            method: 'delete',
+            url: 'https://learnality-api.herokuapp.com/api/user/delete?id=' + userId,
+            headers: {  },
+            data : data
+            };
+
+            axios(config)
+            .then(function (response) {
+            // console.log(JSON.stringify(response.data));
+                navigate("/");
+            })
+            .catch(function (error) {
+            // console.log(error.response.status);
+            });
+        }
+        else{
+            alert("Account not Deleted.");
+        }
+    }
 
     const updateProfile = (event) => {
         event.preventDefault();
@@ -38,7 +69,7 @@ export default function StudentEditProfile (){
             // console.log(JSON.stringify(response.data));
             })
             .catch(function (error) {
-            console.log(error.response.status);
+            // console.log(error.response.status);
 
             });
         }
@@ -84,6 +115,9 @@ export default function StudentEditProfile (){
                                 <option value="Business Data Analytics">BSc (Hons) Business Data Analytics</option>
                             </select> 
 
+                        </div>
+                        <div className="delete-button">
+                            <input type="button" value="Delete your account"  onClick={deleteProfile}/>
                         </div>
                         <div className="form-buttons">
                             <input type="submit" value="Save Changes"/>
