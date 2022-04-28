@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
+import { Home } from "../components/Home"
 import { SideBar } from "../components/SideBar";
 import { CgProfile } from "react-icons/cg"
-import { HiDownload } from "react-icons/hi"
 import "../report.css";
 
 var axios = require('axios');
@@ -22,10 +22,28 @@ export default function Report() {
     const [personaDescription, setPersonaDesc] = useState(String);
 
 
+    
+    
+
+    // const getReadMoreLink = () =>{
+    //     if(learn.learning=="Visual"){
+    //         return <Home/>;
+    //     }
+    //     else if(learn.learning=="Auditory"){
+    //         return <Home/>;
+    //     }
+    //     else if(learn.learning=="Reading/Writing"){
+    //         return <Home/>;
+    //     }
+    //     else if(learn.learning=="Kinestetic"){
+    //         return <Home/>;
+    //     }
+    // }
+
     //Learning style descriptions are defined here
     const learningStyleDescriptions = {
         'Visual' : "These learners learn by watching videos and images. In other words, I prefer graphic representations to text. They rely on the instructor's body language to help to understand. Also, write a descriptive note in the displayed information.",
-        'Auditory':'These types of learners may gain data and knowledge by listening and reading loudly and may not be able to understand the written information.',
+        'Auditory':'These types of learners may gain data and knowledge by listening and reading loudly and may not be able to understand the written information.' ,
         'Reading/Writing' : 'They learn by reading and writing. They get information by reading books, memos, handouts, etc. In addition, they tend to rewrite their notes and quietly reread them over and over again to understand them.',
         'Kinesthetic' : 'These types of learners need to tackle the problem (practical experience). They tend to get tired of traditional lessons easily but enjoy sports and physical activity.'
     }
@@ -153,10 +171,6 @@ export default function Report() {
                <div class="center-container">
                <h1 className="center-container-main-heading">Report</h1>
 
-                {/* <div id="printableArea">
-                  
-                </div> */}
-
 
                    <div className="icon-container">
                        <div className="profile">
@@ -173,7 +187,7 @@ export default function Report() {
                             <p className="personality-report"> <b>{persona.personality} Personality</b> : {personaDescription} </p> 
                         </div>
                    </div>
-                        {/* <button className="download-button" onClick="printDiv('printableArea')"><HiDownload/> Download</button> */}
+                   
                </div>
             </div>
         )

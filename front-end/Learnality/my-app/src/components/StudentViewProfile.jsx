@@ -8,7 +8,7 @@ var axios = require('axios');
 const userId = localStorage.getItem('userId') || '';
 
 export default function StudentViewProfile() {
-
+    
     const [data, setData] = useState({name: '', username: '', degree: '', loaded: false});
 
     const makeRequest = () => {
@@ -38,9 +38,8 @@ export default function StudentViewProfile() {
 
     };
 
-    if(!data.loaded){  
+    if(!data.loaded){
         makeRequest();
-
     }
 
         return(

@@ -7,6 +7,7 @@ import { MdOutlineDashboardCustomize } from "react-icons/md"
 import { FaUserEdit } from "react-icons/fa"
 import { HiOutlineDocumentText } from "react-icons/hi"
 import { HiOutlineLogin } from "react-icons/hi"
+import { CgFeed } from "react-icons/cg"
 
 
 
@@ -45,9 +46,9 @@ export class TeacherSideBar extends React.Component{
                         </li>
 
                         <li>
-                            <Link to="/TeacherReport" className='sidebar-text'>
-                                <span class="sidebar-icon"><HiOutlineDocumentText/></span>
-                                <span class="sidebar-link">Report</span>
+                            <Link to="/TeacherFeedback" className='sidebar-text'>
+                                <span class="sidebar-icon"><CgFeed/></span>
+                                <span class="sidebar-link">Feedback</span>
                             </Link>
                         </li>
 

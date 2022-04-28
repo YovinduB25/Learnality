@@ -61,7 +61,7 @@ export class SideBar extends React.Component{
                                 <button className = 'logout_button' /*onClick={handleLogout}*/>
                                 <span className="sidebar-icon"><HiOutlineLogin/></span>
                                 <span className="sidebar-link">Log Out</span>
-                                </button> 
+                                </button>
                             </Link>
                         </li>
 

@@ -30,7 +30,7 @@ export default function TeacherLearningStyleQuiz() {
 			.then(function (response) {
 				console.log(JSON.stringify(response.data));
 				getLearningStyle();
-				getPersonalityTrait();
+				
 			})
 			.catch(function (error) {
 				alert("An error has occured while storing data.");
@@ -55,7 +55,7 @@ export default function TeacherLearningStyleQuiz() {
 			alert("An error occured while getting Learning Style.");
 		});
 	};
-
+	
 	const getPersonalityTrait = () => {
 		var axios = require('axios');
 
@@ -75,7 +75,7 @@ export default function TeacherLearningStyleQuiz() {
             alert("An error occured while getting Personality Trait.");
         });
 	};
-	
+
 	const questions = [
 		{
 			questionText: 'Are you quiet by nature?',
@@ -274,7 +274,7 @@ export default function TeacherLearningStyleQuiz() {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showResult, setShowResult] = useState(false);
 	const [resultType, setType] = useState(String);
-	const[persona, setPersonality] = useState(String);
+	const [persona, setPersonality] = useState(String);
 	const [ansArray, setAnsArray] = useState([]);
 
 	// let answersArray = [];

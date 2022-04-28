@@ -105,7 +105,7 @@ export default function StudentEditProfile (){
                             <input type="text" id="UName" ref = {username} required/>
 
                             <label for="Degree">Degree</label>
-                            <select name="select-course" ref = {courses} id="course-dropdown-list" required>  
+                            <select name="select-course" ref = {courses} id="course-dropdown-list" required> 
                                 <option value="" selected disabled >Select Your Course</option>
                                 <option value="Software Engineering">BEng (Hons) Software Engineering</option>
                                 <option value="Computer Science">BSc (Hons) Computer Science</option>
@@ -116,12 +116,13 @@ export default function StudentEditProfile (){
                             </select> 
 
                         </div>
-                        <div className="delete-button">
-                            <input type="button" value="Delete your account"  onClick={deleteProfile}/>
-                        </div>
                         <div className="form-buttons">
                             <input type="submit" value="Save Changes"/>
                             <input type="reset" value="Discard All Changes"/>
+                        </div>
+
+                        <div className="delete-account-button">
+                            <button onClick={deleteProfile}>Delete Account</button>
                         </div>
                         
 

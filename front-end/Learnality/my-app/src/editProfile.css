@@ -1,6 +1,6 @@
 .edit-info-container{
     position:absolute;
-    top:150px;
+    top:100px;
     padding:50px;
     left:470px;
     width:500px;
@@ -12,54 +12,48 @@
 .EditProfilePic img{
     position:absolute;
     top:150px;
+    left:20px;
 
-}
-
-.delete-button{
-    position:absolute;
-    top:580px;
-    left:280px;
-}
-
-.delete-button input{
-    padding: 15px 31px;
-    margin-left:20px;
-    background:#ff0000;
-    color:#e0dede;
-    border-radius:15px;
-    
-}
-
-.delete-button input:hover{
-    background-color:#800000;
-    transition: 0.5s all ease-in ;
-}
-
-
-.delete-button input:active{
-    background-color:#800000; 
 }
 
 .form-buttons{
     position:absolute;
-    top:580px;
-    left:500px;
+    top:520px;
+    left:480px;
 }
 
 .form-buttons input{
-    padding: 15px 42px;
-    margin-left:20px;
+    padding: 15px 55px;
+    margin-left:9px;
     background:#353535;
     color:#e0dede;
     border-radius:15px;
+    font-weight: bold;
 }
 
 .form-buttons input:hover{
-    background-color:black;
-    transition: 0.5s all ease-in ;
+    background-color:rgb(87, 87, 87);
+    transition: 0.5s all ease;
 }
 
 
 .form-buttons input:active{
     background-color:black; 
+}
+
+.delete-account-button button{
+    position:absolute;
+    top:580px;
+    left:490px;
+    padding: 15px 180px;
+    background:#e63434;
+    color:#e0dede;
+    border-radius:15px;
+    border:none; 
+    font-weight: bold;
+}
+
+.delete-account-button button:hover{
+    background:#f16464;
+    transition: 0.5s all ease ;
 }

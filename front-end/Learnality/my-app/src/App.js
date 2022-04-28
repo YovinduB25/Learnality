@@ -1,3 +1,4 @@
+import React  from 'react';
 import { Routes, Route } from "react-router-dom"
 import { Login } from "./components/Login"
 import   StudentSignIn  from "./components/StudentSignIn"
@@ -19,7 +20,8 @@ import  TeacherViewProfile  from "./components/TeacherViewProfile"
 import  StudentViewProfile  from "./components/StudentViewProfile"
 import  StudentEditProfile  from "./components/StudentEditProfile"
 import  TeacherLearningStyleQuiz from "./components/TeacherLearningStyle"
-
+import { TeacherFeedback } from "./components/TeacherFeedback"
+import { VisualLearner } from "./components/VisualLearner"
 
 
 function App() {
@@ -46,8 +48,8 @@ function App() {
         <Route path="/TeacherReport" element={<TeacherReport/>}/>
         <Route path="/LearningStyleQuiz" element={<LearningStyleQuiz/>}/>
         <Route path="/TeacherLearningStyleQuiz" element={<TeacherLearningStyleQuiz/>}/>
-
-
+        <Route path="/TeacherFeedback" element={<TeacherFeedback/>}/>
+        <Route path="/VisualLearner" element={<VisualLearner/>}/>
       </Routes>
     </div>
   );

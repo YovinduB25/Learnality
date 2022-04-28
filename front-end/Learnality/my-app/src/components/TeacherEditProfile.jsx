@@ -76,7 +76,6 @@ export default function TeacherEditProfile (){
             alert("Profile not updated.");
         }
     }
-
         return(
             <div className="Profile">
                 <div className="sidebar">
@@ -106,26 +105,26 @@ export default function TeacherEditProfile (){
 
                             <label for="Degree">Degree</label>
                             <select name="select-course" ref = {courses} id="course-dropdown-list" required> 
-                            <option value="" selected disabled >Select Your Course</option>
-                            <option value="SE">BEng (Hons) Software Engineering</option>
-                            <option value="CS">BSc (Hons) Computer Science</option>
-                            <option value="AL/DS">BEng (Hons) Artificial Intelligence and Data Science</option>
-                            <option value="BIS">BSc (Hons) Business Infomation Systems</option>
-                            <option value="BM">BA (Hons) Business Management</option>
-                            <option value="BDA">BSc (Hons) Business Data Analytics</option>
+                            <option value="display-course" selected disabled >Select Your Course</option>
+                            <option value="Software Engineering">BEng (Hons) Software Engineering</option>
+                            <option value="Computer Science">BSc (Hons) Computer Science</option>
+                            <option value="Artificial Intelligence and Data Science">BEng (Hons) Artificial Intelligence and Data Science</option>
+                            <option value="Business Infomation Systems">BSc (Hons) Business Infomation Systems</option>
+                            <option value="Business Management">BA (Hons) Business Management</option>
+                            <option value="Business Data Analytics">BSc (Hons) Business Data Analytics</option>
                         </select> 
+                        
                         </div>
-                        <div className="delete-button">
-                            <input type="button" value="Delete your account"  onClick={deleteProfile}/>
-                        </div>
+                        
                         <div className="form-buttons">
                                 <input type="submit" value="Save Changes"/>
                                 <input type="reset" value="Discard All Changes"/>
                         </div>
-                      </form> 
-                      
 
-                   
+                        <div className="delete-account-button">
+                            <button onClick={deleteProfile}>Delete Account</button>
+                        </div>
+                      </form> 
                </div>
             </div>
         )

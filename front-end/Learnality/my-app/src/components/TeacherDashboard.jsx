@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "react-router-dom"
 import { TeacherSideBar } from "../components/TeacherSideBar";
 import { CgProfile } from "react-icons/cg"
@@ -53,10 +53,10 @@ const getTeacherDb = (course) => {
     axios(config)
     .then(function (response) {
         console.log(JSON.stringify(response.data));
-        // getGraphs();
+        //getGraphs();
     })
     .catch(function (error) {
-        alert("Data for that learning style is not available");
+    alert("Data for that learning style is not available");
         console.log(error);
     });
 
@@ -72,22 +72,30 @@ export const data = [
   
 export const options = {
     title: "VARK Catergoriztion of Students",
+    chartArea: { width: "89%" }
 };
 
 export const Bardata = [
-    ["Type of Personality ", "Density", { role: "style" }],
-    ["Openness", 8, "#b87333"], // RGB value
-    ["Conscientiousness", 10, "silver"], // English color name
-    ["Extraversion", 19, "gold"],
-    ["Agreeableness", 21, "color: #e5e4e2"], // CSS-style declaration
-    ["Neuroticism", 30, "color: #e5e4e2"], // CSS-style declaration
+    ["Type of Personality ", "Density"],
+    ["Openness", 38], 
+    ["Conscientiousness", 10], 
+    ["Extraversion", 19],
+    ["Agreeableness", 21],
+    ["Neuroticism", 20]
   ];
   
-export const baroptions = {
-    chart: {
-      title: "Catergorization of Personalities Of Students",
+  export const baroptions = {
+    title: "Catergorization Of Personalities",
+    chartArea: { width: "80%" },
+    colors: ["#4169E1"],
+    hAxis: {
+      title: "Total Of Students",
+      minValue: 0
     },
-};
+    vAxis: {
+      title: "Type Of Personalities"
+    }
+  };
 
 export default class TeacherDashboard extends React.Component{
         render(){
@@ -117,8 +125,8 @@ export default class TeacherDashboard extends React.Component{
                                 <option value="Business Data Analytics">BSc (Hons) Business Data Analytics</option>
                            </select> 
                     </div>
-
-                   <div className="bargraph">
+ 
+                   <div className="pie-chart">
                         <Chart
                         chartType="PieChart"
                         data={data}
@@ -128,15 +136,16 @@ export default class TeacherDashboard extends React.Component{
                         />
                     </div>
                         
-                    <div className="pie-chart">
-                        <Chart
-                            chartType="Bar"
-                            width="120%"
-                            height="400px"
-                            data={Bardata}
-                            options={baroptions}
-                        />
+                    <div className="bargraph">
+                    <Chart
+                        chartType="BarChart"
+                        width="120%"
+                        height="400px"
+                        data={Bardata}
+                        options={baroptions}
+                    />
                     </div>
+                        
                    </div>
                 </div>
             )

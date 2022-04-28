@@ -44,7 +44,7 @@ export default function TeacherSignIn (){
                 else{
                     alert("Incorrect password / username combination");
                 }
-                console.log(error.response.data)
+                // console.log(error.response.data)
             });
     };
         return(

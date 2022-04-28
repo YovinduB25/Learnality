@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { TeacherSideBar } from "../components/TeacherSideBar";
 import { CgProfile } from "react-icons/cg"
-import { HiDownload } from "react-icons/hi"
 import "../report.css";
 
 var axios = require('axios');
@@ -87,7 +86,7 @@ export default function TeacherReport() {
 
 		axios(config)
 		.then(function (response) {
-			console.log(JSON.stringify(response.data));
+			// console.log(JSON.stringify(response.data));
 			setLearn({
                 learning: response.data.learning_style,
                 loaded: true
@@ -95,7 +94,7 @@ export default function TeacherReport() {
             setLearnDesc(getLearnDesc(response.data.learning_style));
 		})
 		.catch(function (error) {
-            console.log(error);
+            // console.log(error);
             setLearn({loaded: true});
         });
 	};
@@ -111,7 +110,7 @@ export default function TeacherReport() {
 
 		axios(config)
 		.then(function (response) {
-			console.log(JSON.stringify(response.data));
+			// console.log(JSON.stringify(response.data));
 			setPersona({
                 personality: response.data.personality_trait,
                 loaded: true
@@ -119,7 +118,7 @@ export default function TeacherReport() {
             setPersonaDesc(getPersonaDesc(response.data.personality_trait));
 		})
 		.catch(function (error) {
-            console.log(error);
+            // console.log(error);
             setPersona({loaded: true});
         });
 	};
