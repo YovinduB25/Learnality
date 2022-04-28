@@ -8,6 +8,7 @@ import { SideBar } from "../components/SideBar";
 export class Home extends React.Component{
     render(){
 
+        // https://stackoverflow.com/questions/67030873/refresh-the-page-only-once-in-react-class-component
         const reloadCount = sessionStorage.getItem('reloadCount');
         if(reloadCount < 2) {
             sessionStorage.setItem('reloadCount', String(reloadCount + 1));
@@ -15,7 +16,7 @@ export class Home extends React.Component{
         } else {
             sessionStorage.removeItem('reloadCount');
         }
-        
+
         return(
             <div className="home">
                <div className="sidebar">
