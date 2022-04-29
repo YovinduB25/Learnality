@@ -112,7 +112,7 @@ export default function TeacherEditProfile (){
                             <option value="Business Infomation Systems">BSc (Hons) Business Infomation Systems</option>
                             <option value="Business Management">BA (Hons) Business Management</option>
                             <option value="Business Data Analytics">BSc (Hons) Business Data Analytics</option>
-                        </select> 
+                            </select> 
                         
                         </div>
                         

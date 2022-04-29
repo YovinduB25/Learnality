@@ -36,14 +36,14 @@ export default function TeacherSignIn (){
             })
             .catch(function (error) {
                 if(error.response.data.message === "User not found"){
-                    alert("User not found");
+                    alert("Check your username and password again!");
                 }
                 else if(error.response.status === 500){
                     alert("Some Error Occurred. Try Again");
                 }
-                else{
-                    alert("Incorrect password / username combination");
-                }
+                // else{
+                //     alert("Incorrect password / username combination");
+                // }
                 // console.log(error.response.data)
             });
     };
