@@ -13,6 +13,7 @@ export default function StudentEditProfile (){
     const fullname = useRef(null);
     const username = useRef(null);
     const courses = useRef(null);
+    const password = useRef(null);
     const navigate = useNavigate();
 
     const deleteProfile = (event) => {
@@ -52,7 +53,8 @@ export default function StudentEditProfile (){
             var data = JSON.stringify({
             "fname": fullname?.current?.value,
             "username": username?.current?.value,
-            "course": courses?.current?.value
+            "course": courses?.current?.value,
+            "password": password?.current?.value
             });
 
             var config = {
@@ -103,6 +105,9 @@ export default function StudentEditProfile (){
 
                             <label for="UName">Username</label>
                             <input type="text" id="UName" ref = {username} required/>
+
+                            <label for="password">Password</label>
+                            <input type="text" id="password" ref = {password} required/>
 
                             <label for="Degree">Degree</label>
                             <select name="select-course" ref = {courses} id="course-dropdown-list" required> 
