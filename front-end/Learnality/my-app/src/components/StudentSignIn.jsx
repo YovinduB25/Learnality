@@ -75,10 +75,6 @@ export default function StudentSignIn() {
                 </form>
 
 
-                <div className="forgot-password">
-                    <Link to="/ResetPassword" className="forgot-password">Forgotten your password?</Link>
-                </div>
-
             </div>
             <div className="sign-in-sub-container">
                 <p>Don't have an account? <Link to="/StudentSignUp" className="sign-in-sign-up-link">Sign Up</Link></p>

@@ -70,11 +70,6 @@ export default function TeacherSignIn (){
                    </div>
                </form>
 
-
-               <div className="forgot-password">
-                   <Link to="/TeacherResetPassword" className="forgot-password">Forgotten your password?</Link>
-               </div>
-
            </div>
            <div className="teacher-sign-in-sub-container">
                <p>Don't have an account? <Link to="/TeacherSignUp" className="sign-in-sign-up-link">Sign Up</Link></p>

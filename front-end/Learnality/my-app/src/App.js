@@ -7,7 +7,6 @@ import   TeacherSignIn  from "./components/TeacherSignIn"
 import TeacherSignUp  from "./components/TeacherSignUp"
 import { Home } from "./components/Home"
 import { TeacherHome } from "./components/TeacherHome"
-import { ResetPassword } from "./components/ResetPassword"
 import  TeacherEditProfile  from "./components/TeacherEditProfile"
 import  TeacherDashboard  from "./components/TeacherDashboard"
 import  Dashboard  from "./components/Dashboard"
@@ -15,7 +14,6 @@ import Report from "./components/Report"
 import TeacherReport from "./components/TeacherReport"
 import LearningStyleQuiz  from "./components/LearningStyleQuiz"
 import { MainSignUp } from "./components/MainSignUp"
-import { TeacherResetPassword } from "./components/TeacherResetPassword"
 import  TeacherViewProfile  from "./components/TeacherViewProfile"
 import  StudentViewProfile  from "./components/StudentViewProfile"
 import  StudentEditProfile  from "./components/StudentEditProfile"
@@ -55,8 +53,6 @@ function App() {
         <Route path="/TeacherSignUp" element={<TeacherSignUp/>} />
         <Route path="/Home" element={<Home/>}/>
         <Route path="/TeacherHome" element={<TeacherHome/>}/>
-        <Route path="/ResetPassword" element={<ResetPassword/>}/>
-        <Route path="/TeacherResetPassword" element={<TeacherResetPassword/>}/>
         <Route path="/TeacherEditProfile" element={<TeacherEditProfile/>}/>
         <Route path="/StudentEditProfile" element={<StudentEditProfile/>}/>
         <Route path="/TeacherViewProfile" element={<TeacherViewProfile/>}/>
