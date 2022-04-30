@@ -42,36 +42,23 @@ const TeacherDashboard = () => {
         }
     };
 
-    const getTeacherDb = (course) => {
-
-        var config = {
-            method: 'get',
-            url: 'https://learnality-api.herokuapp.com/api/user/getDashboard?course=' + course,
-            headers: {}
-        };
-    
-        axios(config)
-            .then(function (response) {
-                console.log(JSON.stringify(response.data));
-                // getGraphs();
-            })
-            .catch(function (error) {
-                alert("Data for that learning style is not available");
-                console.log(error);
-            });
-    
-    };
-
     const getGraphs = (course) => {
         var config = {
             method: 'get',
-            url: 'https://learnality-api.herokuapp.com/api/user/getDashboard?course=' + course ,
+            url: 'https://learnality-api.herokuapp.com/api/user/getDashboard?course=' + course /*+ course*/,
             headers: {}
         };
 
         axios(config)
             .then(function (response) {
+                console.log("setting data");
                 console.log(JSON.stringify(response.data));
+
+                //Reset all
+                setLearn({});
+                setPersonality({});
+
+                //Set all datas
                 setLearn({
                     visual: response.data.learning_style.Visual,
                     auditory: response.data.learning_style.Auditory,
@@ -85,6 +72,7 @@ const TeacherDashboard = () => {
                     extroversion: response.data.personality.Extroversion,
                     neuroticism: response.data.personality.Neuroticism
                 });
+
                 setIsFetchingDone(true)
             })
             .catch(function (error) {
@@ -121,13 +109,13 @@ const TeacherDashboard = () => {
 
     }, [isFetchingDone])
 
-    useEffect(() => {
-        getGraphs();
-    }, [])
+    //useEffect(() => {
+        //getGraphs();
+    //}, [])
 
-    useEffect(() => {
-        console.log("data:", data)
-    }, [data])
+    //useEffect(() => {
+    //    console.log("data:", data)
+    //}, [data])
 
     return (
 
@@ -146,7 +134,7 @@ const TeacherDashboard = () => {
                     </div>
 
                     <div className="select-student-degree">
-                        <select name="select-course" id="course-dropdown-list" onChange={e => getTeacherDb(e.target.value)}>
+                        <select name="select-course" id="course-dropdown-list" onChange={e => getGraphs(e.target.value)}>
                             <option value="" selected disabled >Select Teaching Course</option>
                             <option value="Software Engineering">BEng (Hons) Software Engineering</option>
                             <option value="Computer Science">BSc (Hons) Computer Science</option>
@@ -158,7 +146,7 @@ const TeacherDashboard = () => {
                     </div>
 
                     <div className="pie-chart">
-                        {console.log(data)}
+                        {console.log("Dataaaaa pie: "+data)}
                          <Chart
                            chartType="PieChart"
                            data={data}
@@ -169,6 +157,7 @@ const TeacherDashboard = () => {
                     </div>
 
                     <div className="bargraph">
+                        {console.log("Dataaaaa bar: "+baroptions)}
                         <Chart
                             chartType="BarChart"
                             width="120%"
