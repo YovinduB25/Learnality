@@ -29,6 +29,14 @@ import { TeacherVisualLearner } from "./components/TeacherVisualLearner"
 import { TeacherAuditoryLearner } from "./components/TeacherAuditoryLearner"
 import { TeacherReadingWritingLearner } from "./components/TeacherReadingWritingLearner"
 import { TeacherKinesteticLearner } from "./components/TeacherKinesteticLearner"
+import { Openness } from "./components/Openness"
+import { Conscientiousness } from "./components/Conscientiousness"
+import { Extraversion } from "./components/Extraversion"
+import { Agreeableness } from "./components/Agreeableness"
+import { Neuroticism } from "./components/Neuroticism"
+
+
+
 
 function App() {
   return (
@@ -63,6 +71,11 @@ function App() {
         <Route path="/TeacherAuditoryLearner" element={<TeacherAuditoryLearner/>}/>
         <Route path="/TeacherReadingWritingLearner" element={<TeacherReadingWritingLearner/>}/>
         <Route path="/TeacherKinesteticLearner" element={<TeacherKinesteticLearner/>}/>
+        <Route path="/Openness" element={<Openness/>}/>
+        <Route path="/Conscientiousness" element={<Conscientiousness/>}/>
+        <Route path="/Extraversion" element={<Extraversion/>}/>
+        <Route path="/Agreeableness" element={<Agreeableness/>}/>
+        <Route path="/Neuroticism" element={<Neuroticism/>}/> 
       </Routes>
     </div>
   );
