@@ -10,7 +10,9 @@ const userId = localStorage.getItem('userId') || '';
 
 export default function TeacherViewProfile() {
    
-    const [data, setData] = useState({name: '', username: '', degree: '', loaded: false});
+    const [data, setData] = useState({name: '', username: '', loaded: false});
+
+    const[degree, setDegree] = useState({degree0: '', degree1: '', degree2: '', degree3: '', degree4: '', degree5: '', load: false});
 
     const makeRequest = () => {
 
@@ -27,14 +29,24 @@ export default function TeacherViewProfile() {
             setData({
                 name: response.data.fname,
                 username: response.data.username,
-                degree: response.data.course,
                 loaded: true
             });
-            // console.log(JSON.stringify(response.data)); 
+            setDegree({
+                degree0: response.data.course[0],
+                degree1: response.data.course[1],
+                degree2: response.data.course[2],
+                degree3: response.data.course[3],
+                degree4: response.data.course[4],
+                degree5: response.data.course[5],
+                load: true
+            });
+
+            console.log(JSON.stringify(response.data.course)); 
         })
         .catch(function (error) {
             // console.log(error);
             setData({loaded: true});
+            setDegree({load: true});
         });
 
     };
@@ -57,9 +69,14 @@ export default function TeacherViewProfile() {
 
                     <div className="view-info-container">
                         <br/><br/>
-                        <p><b>Name  :</b>  {data.name}</p>
-                        <p><b>Username  : </b> {data.username}</p>
-                        <p><b>Degree  :</b>  {data.degree}</p>
+                        <p><b>Name  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; : &nbsp; &nbsp;</b> {data.name}</p>
+                        <p><b>Username &nbsp; : &nbsp; &nbsp;</b> {data.username}</p>
+                        <p><b>Degree &nbsp; &nbsp; &nbsp; &nbsp; : &nbsp; &nbsp;</b>  <ul>{degree.degree0}</ul>
+                                                                                      <ul>{degree.degree1}</ul>
+                                                                                      <ul>{degree.degree2}</ul>
+                                                                                      <ul>{degree.degree3}</ul>
+                                                                                      <ul>{degree.degree4}</ul>
+                                                                                      <ul>{degree.degree5}</ul></p>
                     </div>
                 </div>
             </div>
