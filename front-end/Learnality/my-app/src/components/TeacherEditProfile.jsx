@@ -96,7 +96,7 @@ export default function TeacherEditProfile (){
                     </div>
                    
                       <form method = "POST" onSubmit = {updateProfile}>
-                        <div className="edit-info-container">
+                        <div className="teacher-edit-info-container">
                             <label for="fname">Full Name</label>
                             <input type="text" id="fname" ref = {fullname} required/>
 
@@ -108,12 +108,12 @@ export default function TeacherEditProfile (){
 
                         </div>
                         
-                        <div className="form-buttons">
+                        <div className="teacher-form-buttons">
                                 <input type="submit" value="Save Changes"/>
                                 <input type="reset" value="Discard All Changes"/>
                         </div>
 
-                        <div className="delete-account-button">
+                        <div className="teacher-delete-account-button">
                             <button onClick={deleteProfile}>Delete Account</button>
                         </div>
                       </form> 
