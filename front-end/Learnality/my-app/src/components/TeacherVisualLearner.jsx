@@ -1,24 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom"
-import { SideBar } from "../components/SideBar";
+import { TeacherSideBar } from "./TeacherSideBar";
 import { CgProfile } from "react-icons/cg"
 import ReactPlayer from "react-player";
 import heart from "../images/LearnerPages/lets-draw.png"
 import bird from "../images/LearnerPages/tangram.png"
 import "../LearningStyle.css";
 
-export class VisualLearner extends React.Component{
+export class TeacherVisualLearner extends React.Component{
     render(){
         return(
             <div className="visual-learner">
                <div className="sidebar">
-                   <SideBar/>
+                   <TeacherSideBar/>
                </div>
                <div className="center-container">
                    <h1 className="center-container-main-heading">You are a Visual Learner!</h1>
                    <div className="icon-container">
                        <div className="profile">
-                            <Link to="/StudentViewProfile" className="ProfileLink"><CgProfile/></Link>
+                            <Link to="/TeacherViewProfile" className="ProfileLink"><CgProfile/></Link>
                        </div>
 
                        <div className="learner-detail-container">

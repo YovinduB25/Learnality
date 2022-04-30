@@ -20,6 +20,25 @@ export default function TeacherReport() {
 
     const [personaDescription, setPersonaDesc] = useState(String);
 
+
+
+
+    const getReadMoreLink = (learning) =>{
+        if(learning=="Visual"){
+            return <Link to="/TeacherVisualLearner">{learning}</Link>;
+        }
+        else if(learning=="Auditory"){
+            return <Link to="/TeacherAuditoryLearner">{learning}</Link>;
+        }
+        else if(learning=="Reading/Writing"){
+            return <Link to="/TeacherReadingWritingLearner">{learning}</Link>;
+        }
+        else if(learning=="Kinestetic"){
+            return <Link to="/TeacherKinesteticLearner">{learning}</Link>;
+        }
+    }
+
+
     //Learning style descriptions are defined here
     const learningStyleDescriptions = {
         'Visual' : "These learners learn by watching videos and images. In other words, I prefer graphic representations to text. They rely on the instructor's body language to help to understand. Also, write a descriptive note in the displayed information.",
@@ -149,7 +168,7 @@ export default function TeacherReport() {
                             <p className="learner-report"> <b>Type Of Learner :</b>  {learn.learning}</p> 
                             <p className="personality-report"> <b>Type Of Personality :</b> {persona.personality} </p>
                             <h3> Description </h3>
-                            <p className="learning-report"> <b>{learn.learning} Learner </b>: {learnDescription}</p> 
+                            <p className="learning-report"> <b>{getReadMoreLink(learn.learning)} Learner </b>: {learnDescription}</p> 
                             <p className="personality-report"> <b>{persona.personality} Personality</b> : {personaDescription} </p> 
                         </div>
                    </div>

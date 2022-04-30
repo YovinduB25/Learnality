@@ -1,6 +1,9 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-import { Home } from "../components/Home"
+import VisualLearner from "../components/VisualLearner";
+import AuditoryLearner from "../components/AuditoryLearner";
+import ReadingWritingLearner from "../components/ReadingWritingLearner";
+import KinesteticLearner from "../components/KinesteticLearner";
 import { SideBar } from "../components/SideBar";
 import { CgProfile } from "react-icons/cg"
 import "../report.css";
@@ -25,20 +28,20 @@ export default function Report() {
     
     
 
-    // const getReadMoreLink = () =>{
-    //     if(learn.learning=="Visual"){
-    //         return <Home/>;
-    //     }
-    //     else if(learn.learning=="Auditory"){
-    //         return <Home/>;
-    //     }
-    //     else if(learn.learning=="Reading/Writing"){
-    //         return <Home/>;
-    //     }
-    //     else if(learn.learning=="Kinestetic"){
-    //         return <Home/>;
-    //     }
-    // }
+    const getReadMoreLink = (learning) =>{
+        if(learning=="Visual"){
+            return <Link to="/VisualLearner">{learning}</Link>;
+        }
+        else if(learning=="Auditory"){
+            return <Link to="/AuditoryLearner">{learning}</Link>;
+        }
+        else if(learning=="Reading/Writing"){
+            return <Link to="/ReadingWritingLearner">{learning}</Link>;
+        }
+        else if(learning=="Kinestetic"){
+            return <Link to="/KinesteticLearner">{learning}</Link>;
+        }
+    }
 
     //Learning style descriptions are defined here
     const learningStyleDescriptions = {
@@ -183,7 +186,7 @@ export default function Report() {
                             <p className="learner-report"> <b>Type Of Learner :</b>  {learn.learning}</p> 
                             <p className="personality-report"> <b>Type Of Personality :</b> {persona.personality} </p>
                             <h3> Description </h3>
-                            <p className="learning-report"> <b>{learn.learning} Learner </b>: {learnDescription}</p> 
+                            <p className="learning-report"> <b>{getReadMoreLink(learn.learning)} Learner </b>: {learnDescription}</p> 
                             <p className="personality-report"> <b>{persona.personality} Personality</b> : {personaDescription} </p> 
                         </div>
                    </div>

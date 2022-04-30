@@ -1,31 +1,44 @@
 import React from "react";
 import { Link } from "react-router-dom"
-import { SideBar } from "../components/SideBar";
+import { TeacherSideBar } from "./TeacherSideBar";
 import { CgProfile } from "react-icons/cg"
 import ReactPlayer from "react-player";
 import heart from "../images/LearnerPages/lets-draw.png"
 import bird from "../images/LearnerPages/tangram.png"
 import "../LearningStyle.css";
 
-export class VisualLearner extends React.Component{
+export class Openness extends React.Component{
     render(){
         return(
             <div className="visual-learner">
                <div className="sidebar">
-                   <SideBar/>
+                   <TeacherSideBar/>
                </div>
                <div className="center-container">
                    <h1 className="center-container-main-heading">You are a Visual Learner!</h1>
                    <div className="icon-container">
                        <div className="profile">
-                            <Link to="/StudentViewProfile" className="ProfileLink"><CgProfile/></Link>
+                            <Link to="/TeacherViewProfile" className="ProfileLink"><CgProfile/></Link>
                        </div>
 
-                       <div className="learner-detail-container">
-                            <h4 className="learner-detail-heading">What is a Visual Learner?</h4>
-                            <p>Visual learners understand best when they see information. They may not understand spoken instructions. Visual students like diagrams, flowcharts and graphs, and they find handouts helpful, where they can write down what they hear or see as it is being described. Visual learners notice small details, so will remember faces instead of names, and they tend to like balance. They are often quiet students who like to read, draw and do craft. They will watch a situation before getting involved. Visual learners express themselves through creativity.</p>
+                       <div className="personality-detail-container">
+                            <h4 className="personality-detail-heading">What is an Openness?</h4>
+                             <p>People who tend to be high in the trait of openness are more willing to embrace new things, fresh
+                                ideas, and novel experiences. They are open-minded and approach new things with curiosity and
+                                tend to seek out novelty. They tend to pursue new adventures, experiences, and creative
+                                endeavors. They are also very good at thinking about and making connections between different
+                                concepts and ideas.
+                                People who are low on openness, on the other hand, tend to prefer routines, traditions, and
+                                familiarity. They approach new things with great caution and prefer consistency. Individuals who
+                                are very low on the trait of openness are often seen as being rigid and close-minded. They may
+                                find it difficult to cope with changes.
+                                Individuals who are low in this trait may pass up opportunities to try new things, including
+                                changes that could lead to academic or career advancement. Rather than move to a new place to
+                                go to a different school or make a career change to find a more rewarding job, they may stick
+                                with what is routine and familiar.
+                             </p>
 
-                            <h6 className="learner-detail-two-heading">Learning strategies</h6>
+                            <h6 className="personality-detail-two-heading">Learning strategies</h6>
                             <ul>
                                 <li>Look at headings and pictures before reading whole sentences</li>
                                 <li>Highlight important words in colour</li>
@@ -38,7 +51,7 @@ export class VisualLearner extends React.Component{
                             
                        </div>
 
-                       <div className="learner-recommendation-video-container">
+                       <div className="personality-recommendation-video-container">
                             <div className="recommended-video">
                                 <ReactPlayer
                                         url="https://www.youtube.com/watch?v=IN-_S_jj3gE"
