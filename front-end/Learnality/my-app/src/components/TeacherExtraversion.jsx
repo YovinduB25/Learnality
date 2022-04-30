@@ -1,24 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom"
-import { SideBar } from "./SideBar";
+import { TeacherSideBar } from "./TeacherSideBar";
 import { CgProfile } from "react-icons/cg"
 import ReactPlayer from "react-player";
 import article1 from "../images/LearnerPages/image4.jpg"
 import article2 from "../images/LearnerPages/article-2.jpg"
 import "../PersonalityTraits.css";
 
-export class Extraversion extends React.Component{
+export class TeacherExtraversion extends React.Component{
     render(){
         return(
             <div className="extraversion">
                <div className="sidebar">
-                   <SideBar/>
+                   <TeacherSideBar/>
                </div>
                <div className="center-container">
                    <h1 className="center-container-main-heading">You have an Extraversion Personality!</h1>
                    <div className="icon-container">
                        <div className="profile">
-                            <Link to="/StudentViewProfile" className="ProfileLink"><CgProfile/></Link>
+                            <Link to="/TeachertViewProfile" className="ProfileLink"><CgProfile/></Link>
                        </div>
 
                        <div className="personality-detail-container">

@@ -34,6 +34,11 @@ import { Conscientiousness } from "./components/Conscientiousness"
 import { Extraversion } from "./components/Extraversion"
 import { Agreeableness } from "./components/Agreeableness"
 import { Neuroticism } from "./components/Neuroticism"
+import { TeacherOpenness } from "./components/TeacherOpenness"
+import { TeacherConscientiousness } from "./components/TeacherConscientious"
+import { TeacherExtraversion } from "./components/TeacherExtraversion"
+import { TeacherAgreeableness } from "./components/TeacherAgreeaableness"
+import { TeacherNeuroticism } from "./components/TeacherNeuroticism"
 
 
 
@@ -76,6 +81,11 @@ function App() {
         <Route path="/Extraversion" element={<Extraversion/>}/>
         <Route path="/Agreeableness" element={<Agreeableness/>}/>
         <Route path="/Neuroticism" element={<Neuroticism/>}/> 
+        <Route path="/TeacherOpenness" element={<TeacherOpenness/>}/>
+        <Route path="/TeacherConscientiousness" element={<TeacherConscientiousness/>}/>
+        <Route path="/TeacherExtraversion" element={<TeacherExtraversion/>}/>
+        <Route path="/TeacherAgreeableness" element={<TeacherAgreeableness/>}/>
+        <Route path="/TeacherNeuroticism" element={<TeacherNeuroticism/>}/> 
       </Routes>
     </div>
   );

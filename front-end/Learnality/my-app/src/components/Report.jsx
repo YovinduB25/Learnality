@@ -1,9 +1,5 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-import VisualLearner from "../components/VisualLearner";
-import AuditoryLearner from "../components/AuditoryLearner";
-import ReadingWritingLearner from "../components/ReadingWritingLearner";
-import KinesteticLearner from "../components/KinesteticLearner";
 import { SideBar } from "../components/SideBar";
 import { CgProfile } from "react-icons/cg"
 import "../report.css";
@@ -30,16 +26,35 @@ export default function Report() {
 
     const getReadMoreLink = (learning) =>{
         if(learning=="Visual"){
-            return <Link to="/VisualLearner">{learning}</Link>;
+            return <Link to="/VisualLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
         else if(learning=="Auditory"){
-            return <Link to="/AuditoryLearner">{learning}</Link>;
+            return <Link to="/AuditoryLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
         else if(learning=="Reading/Writing"){
-            return <Link to="/ReadingWritingLearner">{learning}</Link>;
+            return <Link to="/ReadingWritingLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
-        else if(learning=="Kinestetic"){
-            return <Link to="/KinesteticLearner">{learning}</Link>;
+        else if(learning=="Kinesthetic"){
+            return <Link to="/KinesteticLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
+        }
+    }
+
+
+    const getReadMoreLinktwo = (personality) =>{
+        if(personality=="Openness"){
+            return <Link to="/Openness" className="read-more-link">{personality}&nbsp;Personality</Link>;
+        }
+        else if(personality=="Conscientiousness"){
+            return <Link to="/Conscientiousness" className="read-more-link">{personality}&nbsp;Personality</Link>;
+        }
+        else if(personality=="Extroversion"){
+            return <Link to="/Extroversion" className="read-more-link">{personality}&nbsp;Personality</Link>;
+        }
+        else if(personality=="Agreeableness"){
+            return <Link to="/Agreeableness" className="read-more-link">{personality}&nbsp;Personality</Link>;
+        }
+        else if(personality=="Neuroticism"){
+            return <Link to="/Neuroticism" className="read-more-link">{personality}&nbsp;Personality</Link>;
         }
     }
 
@@ -147,16 +162,7 @@ export default function Report() {
         });
 	};
 
-//     const printDiv = (divName) => {
-//         var printContents = document.getElementById(divName).innerHTML;
-//         var originalContents = document.body.innerHTML;
-   
-//         document.body.innerHTML = printContents;
-   
-//         window.print();
-   
-//         document.body.innerHTML = originalContents;
-//    }
+
 
     if(!data.loaded){
         makeRequest();
@@ -186,8 +192,8 @@ export default function Report() {
                             <p className="learner-report"> <b>Type Of Learner :</b>  {learn.learning}</p> 
                             <p className="personality-report"> <b>Type Of Personality :</b> {persona.personality} </p>
                             <h3> Description </h3>
-                            <p className="learning-report"> <b>{getReadMoreLink(learn.learning)} Learner </b>: {learnDescription}</p> 
-                            <p className="personality-report"> <b>{persona.personality} Personality</b> : {personaDescription} </p> 
+                            <p className="learning-report"> <b>{getReadMoreLink(learn.learning)}  </b>: {learnDescription}</p> 
+                            <p className="personality-report"> <b>{getReadMoreLinktwo(persona.personality)}</b> : {personaDescription} </p> 
                         </div>
                    </div>
                    

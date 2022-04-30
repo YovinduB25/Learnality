@@ -25,16 +25,33 @@ export default function TeacherReport() {
 
     const getReadMoreLink = (learning) =>{
         if(learning=="Visual"){
-            return <Link to="/TeacherVisualLearner">{learning}</Link>;
+            return <Link to="/TeacherVisualLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
         else if(learning=="Auditory"){
-            return <Link to="/TeacherAuditoryLearner">{learning}</Link>;
+            return <Link to="/TeacherAuditoryLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
         else if(learning=="Reading/Writing"){
-            return <Link to="/TeacherReadingWritingLearner">{learning}</Link>;
+            return <Link to="/TeacherReadingWritingLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
-        else if(learning=="Kinestetic"){
-            return <Link to="/TeacherKinesteticLearner">{learning}</Link>;
+        else if(learning=="Kinesthetic"){
+            return <Link to="/TeacherKinesteticLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
+        }
+    }
+    const getReadMoreLinktwo = (personality) =>{
+        if(personality=="Openness"){
+            return <Link to="/TeacherOpenness" className="read-more-link">{personality}&nbsp;Personality</Link>;
+        }
+        else if(personality=="Conscientiousness"){
+            return <Link to="/TeacherConscientiousness" className="read-more-link">{personality}&nbsp;Personality</Link>;
+        }
+        else if(personality=="Extroversion"){
+            return <Link to="/TeacherExtroversion" className="read-more-link">{personality}&nbsp;Personality</Link>;
+        }
+        else if(personality=="Agreeableness"){
+            return <Link to="/TeacherAgreeableness" className="read-more-link">{personality}&nbsp;Personality</Link>;
+        }
+        else if(personality=="Neuroticism"){
+            return <Link to="/TeacherNeuroticism" className="read-more-link">{personality}&nbsp;Personality</Link>;
         }
     }
 
@@ -168,8 +185,8 @@ export default function TeacherReport() {
                             <p className="learner-report"> <b>Type Of Learner :</b>  {learn.learning}</p> 
                             <p className="personality-report"> <b>Type Of Personality :</b> {persona.personality} </p>
                             <h3> Description </h3>
-                            <p className="learning-report"> <b>{getReadMoreLink(learn.learning)} Learner </b>: {learnDescription}</p> 
-                            <p className="personality-report"> <b>{persona.personality} Personality</b> : {personaDescription} </p> 
+                            <p className="learning-report"> <b>{getReadMoreLink(learn.learning)} </b>: {learnDescription}</p> 
+                            <p className="personality-report"> <b>{getReadMoreLinktwo(persona.personality)} </b> : {personaDescription} </p> 
                         </div>
                    </div>
 

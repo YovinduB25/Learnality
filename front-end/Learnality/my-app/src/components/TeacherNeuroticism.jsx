@@ -1,24 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom"
-import { SideBar } from "./SideBar";
+import { TeacherSideBar } from "./TeacherSideBar";
 import { CgProfile } from "react-icons/cg"
 import ReactPlayer from "react-player";
 import article1 from "../images/LearnerPages/image5.gif"
 import article2 from "../images/LearnerPages/article-2.jpg"
 import "../PersonalityTraits.css";
 
-export class Neuroticism extends React.Component{
+export class TeacherNeuroticism extends React.Component{
     render(){
         return(
             <div className="neuroticism">
                <div className="sidebar">
-                   <SideBar/>
+                   <TeacherSideBar/>
                </div>
                <div className="center-container">
                    <h1 className="center-container-main-heading">You have a Neuroticism Personality!</h1>
                    <div className="icon-container">
                        <div className="profile">
-                            <Link to="/StudentViewProfile" className="ProfileLink"><CgProfile/></Link>
+                            <Link to="/TeacherViewProfile" className="ProfileLink"><CgProfile/></Link>
                        </div>
 
                        <div className="personality-detail-container">

@@ -64,5 +64,14 @@
   margin-left: 30px;
 }
 
+.read-more-link{
+  text-decoration:none;
+  color:rgb(4, 13, 114);
+}
+
+.read-more-link:hover{
+  text-decoration:none;
+  color:rgb(121, 0, 129);
+}
 
 
