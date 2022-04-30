@@ -11,7 +11,7 @@ export default function TeacherEditProfile (){
 
     const fullname = useRef(null);
     const username = useRef(null);
-    const courses = useRef(null);
+    const password = useRef(null);
     const navigate = useNavigate();
 
     const deleteProfile = (event) => {
@@ -51,7 +51,7 @@ export default function TeacherEditProfile (){
             var data = JSON.stringify({
             "fname": fullname?.current?.value,
             "username": username?.current?.value,
-            "course": courses?.current?.value
+            "password": password?.current?.value
             });
 
             var config = {
@@ -102,18 +102,10 @@ export default function TeacherEditProfile (){
 
                             <label for="UName">Username</label>
                             <input type="text" id="UName" ref = {username} required/>
+                           
+                            <label for="password">Password</label>
+                            <input type="text" id="password" ref = {password} required/>
 
-                            <label for="Degree">Degree</label>
-                            <select name="select-course" ref = {courses} id="course-dropdown-list" required> 
-                            <option value="display-course" selected disabled >Select Your Course</option>
-                            <option value="Software Engineering">BEng (Hons) Software Engineering</option>
-                            <option value="Computer Science">BSc (Hons) Computer Science</option>
-                            <option value="Artificial Intelligence and Data Science">BEng (Hons) Artificial Intelligence and Data Science</option>
-                            <option value="Business Infomation Systems">BSc (Hons) Business Infomation Systems</option>
-                            <option value="Business Management">BA (Hons) Business Management</option>
-                            <option value="Business Data Analytics">BSc (Hons) Business Data Analytics</option>
-                            </select> 
-                        
                         </div>
                         
                         <div className="form-buttons">
