@@ -248,10 +248,9 @@ export default function LearningStyleQuiz() {
 			],
 		},
 		{
-			questionText: 'Completed?',
+			questionText: 'Press "Next" to View your Learning Style.',
 			answerOptions: [
-				{ answerText: 'Yes', isCorrect: true },
-				{ answerText: 'No', isCorrect: true },
+				{ answerText: 'Next', isCorrect: true }
 			],
 		},
 	];

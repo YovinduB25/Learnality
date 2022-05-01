@@ -6,6 +6,7 @@ import { FaBookReader } from "react-icons/fa"
 import { FaBrain } from "react-icons/fa"
 import { FiRepeat } from "react-icons/fi"
 import "../dashboard.css";
+import { render } from "@testing-library/react";
 
 var axios = require('axios');
 
@@ -13,6 +14,17 @@ const userId = localStorage.getItem('userId') || '';
 const attempts = localStorage.getItem('attempts') || 0;
 
 export default function Dashboard(){
+
+    function refreshPage() {
+        // https://stackoverflow.com/questions/67030873/refresh-the-page-only-once-in-react-class-component
+        const reloadCount = sessionStorage.getItem('reloadCount');
+        if(reloadCount < 2) {
+            sessionStorage.setItem('reloadCount', String(reloadCount + 1));
+            window.location.reload();
+        } else {
+            sessionStorage.removeItem('reloadCount');
+        }
+    }
 
     const [data, setData] = useState({degree: '', learning: '', personality: '', loaded: false});
 
@@ -79,14 +91,14 @@ export default function Dashboard(){
 
 		axios(config)
 		.then(function (response) {
-			console.log(JSON.stringify(response.data));
+			// console.log(JSON.stringify(response.data));
 			setPersona({
                 personality: response.data.personality_trait,
                 loaded: true
             });
 		})
 		.catch(function (error) {
-            console.log(error);
+            // console.log(error);
             setPersona({loaded: true});
         });
 	};
@@ -101,26 +113,18 @@ export default function Dashboard(){
     const [hasCountLoaded, setCountLoaded] = useState(false);
 
     if(!hasCountLoaded){
+        refreshPage();
         setCounter(attempts);
         setCountLoaded(true);
     }
 
     //setCounter(attempts);
-    console.log("fucking atempts: " + counter);
+    // console.log("Attempts: " + counter);
 
     const handleClick = () => {
         
     }
-
-    // // https://stackoverflow.com/questions/67030873/refresh-the-page-only-once-in-react-class-component
-	// const reloadCount = sessionStorage.getItem('reloadCount');
-	// if(reloadCount < 2) {
-	// 	sessionStorage.setItem('reloadCount', String(reloadCount + 1));
-	// 	window.location.reload();
-	// } else {
-	// 	sessionStorage.removeItem('reloadCount');
-	// }
-
+           
         return(
             <div className="dashboard">
                 <div className="sidebar">
