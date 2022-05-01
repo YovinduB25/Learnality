@@ -9,6 +9,9 @@ name: Deploy to Firebase Hosting on merge
       - front-end
     paths:
       - "front-end/Learnality/my-app/**"
+defaults:
+  run:
+    working-directory: front-end/Learnality/my-app
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
