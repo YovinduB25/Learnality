@@ -72,7 +72,7 @@ export class Conscientiousness extends React.Component{
 
                             <a href="https://www.verywellmind.com/how-conscientiousness-affects-your-behavior-4843763">
                                 <div className="game-one-container">
-                                    <img src={article1} className="game1-pic"/>
+                                    <img src={article1} alt="" className="game1-pic"/>
                                     <h5 className="game-1-heading">Understanding How Conscientiousness Affects Your Behavior</h5>
                                     <p className="game-1-paragraph">People who score high in conscientiousness are diligent and hard-working. </p>
                                 </div>
@@ -80,7 +80,7 @@ export class Conscientiousness extends React.Component{
 
                             <a href="https://www.123test.com/personality-conscientiousness/">
                                 <div className="game-two-container">
-                                    <img src={article2} className="game2-pic"/>
+                                    <img src={article2} alt="" className="game2-pic"/>
                                     <h5 className="game-2-heading">What is Conscientiousness?</h5>
                                     <p className="game-2-paragraph">The Big Five personality trait Conscientiousness is about a high level of self-discipline.</p>
                                 </div>

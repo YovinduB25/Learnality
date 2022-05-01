@@ -81,7 +81,7 @@ export class ReadingWritingLearner extends React.Component{
                             <h4 className="learner-game-heading">Learning Style Improving Excercises</h4>
                             <a href="https://www.mentalup.co/samples/game/game41?referrer=blog-what-is-emotional-intelligence&page=desktop">
                                 <div className="game-five-container">
-                                    <img src={cat} className="game5-pic"/>
+                                    <img src={cat} alt="" className="game5-pic"/>
                                     <h5 className="game-1-heading">Synonym Antonym</h5>
                                     <p className="game-1-paragraph">Get some handy language practice with this fun online game that tests your verbal fluency skills.</p>
                                 </div>
@@ -89,7 +89,7 @@ export class ReadingWritingLearner extends React.Component{
 
                             <a href="https://www.mentalup.co/samples/game/game44?referrer=blog-what-is-emotional-intelligence&page=desktop">
                                 <div className="game-six-container">
-                                    <img src={ circles } className="game6-pic"/>
+                                    <img src={ circles } alt="" className="game6-pic"/>
                                     <h5 className="game-2-heading">Word Combinator</h5>
                                     <p className="game-2-paragraph">This word game is a fun way to learn more about your kid’s skills. It’s also reinforces spelling and vocabulary skills.</p>
                                 </div>

@@ -76,7 +76,7 @@ export class Openness extends React.Component{
 
                             <a href="https://www.verywellmind.com/how-openness-influences-your-behavior-4796351#:~:text=People%20who%20tend%20to%20be,%2C%20experiences%2C%20and%20creative%20endeavors.">
                                 <div className="game-one-container">
-                                    <img src={article1} className="game1-pic"/>
+                                    <img src={article1} alt="" className="game1-pic"/>
                                     <h5 className="game-1-heading">How Does Openness Affect Your Behavior?</h5>
                                     <p className="game-1-paragraph">Openness is one of the Big Five personality traits and involves being creative, curious, and interested in new experiences.</p>
                                 </div>
@@ -84,7 +84,7 @@ export class Openness extends React.Component{
 
                             <a href="https://www.mentalup.co/samples/game-v2/game122?referrer=blog-what-is-emotional-intelligence&page=desktop">
                                 <div className="game-two-container">
-                                    <img src={article2} className="game2-pic"/>
+                                    <img src={article2} alt="" className="game2-pic"/>
                                     <h5 className="game-2-heading">What is Openness?</h5>
                                     <p className="game-2-paragraph">The Big Five personality trait Openness is about being open-minded. </p>
                                 </div>

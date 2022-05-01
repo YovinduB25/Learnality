@@ -6,7 +6,6 @@ import { FaBookReader } from "react-icons/fa"
 import { FaBrain } from "react-icons/fa"
 import { FiRepeat } from "react-icons/fi"
 import "../dashboard.css";
-import { render } from "@testing-library/react";
 
 var axios = require('axios');
 

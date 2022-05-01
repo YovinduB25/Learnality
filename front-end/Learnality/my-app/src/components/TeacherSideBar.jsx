@@ -5,7 +5,6 @@ import Logo from "../images/logo.png"
 import { BiHomeAlt } from "react-icons/bi"
 import { MdOutlineDashboardCustomize } from "react-icons/md"
 import { FaUserEdit } from "react-icons/fa"
-import { HiOutlineDocumentText } from "react-icons/hi"
 import { HiOutlineLogin } from "react-icons/hi"
 import { CgFeed } from "react-icons/cg"
 

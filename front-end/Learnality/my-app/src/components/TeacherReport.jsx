@@ -20,37 +20,34 @@ export default function TeacherReport() {
 
     const [personaDescription, setPersonaDesc] = useState(String);
 
-
-
-
     const getReadMoreLink = (learning) =>{
-        if(learning=="Visual"){
+        if(learning==="Visual"){
             return <Link to="/TeacherVisualLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
-        else if(learning=="Auditory"){
+        else if(learning==="Auditory"){
             return <Link to="/TeacherAuditoryLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
-        else if(learning=="Reading/Writing"){
+        else if(learning==="Reading/Writing"){
             return <Link to="/TeacherReadingWritingLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
-        else if(learning=="Kinesthetic"){
+        else if(learning==="Kinesthetic"){
             return <Link to="/TeacherKinesteticLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
     }
     const getReadMoreLinktwo = (personality) =>{
-        if(personality=="Openness"){
+        if(personality==="Openness"){
             return <Link to="/TeacherOpenness" className="read-more-link">{personality}&nbsp;Personality</Link>;
         }
-        else if(personality=="Conscientiousness"){
+        else if(personality==="Conscientiousness"){
             return <Link to="/TeacherConscientiousness" className="read-more-link">{personality}&nbsp;Personality</Link>;
         }
-        else if(personality=="Extroversion"){
+        else if(personality==="Extroversion"){
             return <Link to="/TeacherExtroversion" className="read-more-link">{personality}&nbsp;Personality</Link>;
         }
-        else if(personality=="Agreeableness"){
+        else if(personality==="Agreeableness"){
             return <Link to="/TeacherAgreeableness" className="read-more-link">{personality}&nbsp;Personality</Link>;
         }
-        else if(personality=="Neuroticism"){
+        else if(personality==="Neuroticism"){
             return <Link to="/TeacherNeuroticism" className="read-more-link">{personality}&nbsp;Personality</Link>;
         }
     }

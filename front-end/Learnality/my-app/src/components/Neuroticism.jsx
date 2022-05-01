@@ -70,7 +70,7 @@ export class Neuroticism extends React.Component{
 
                             <a href="https://www.verywellmind.com/how-neuroticism-affects-your-behavior-4782188">
                                 <div className="game-one-container">
-                                    <img src={article1} className="game1-pic"/>
+                                    <img src={article1} alt="" className="game1-pic"/>
                                     <h5 className="game-1-heading">Understanding the Impact of Neuroticism From the Big Five Traits</h5>
                                     <p className="game-1-paragraph">Neuroticism is one of the Big Five personality factors. Learn more about this factor and how this personality trait might impact your relationships.</p>
                                 </div>
@@ -78,7 +78,7 @@ export class Neuroticism extends React.Component{
 
                             <a href="https://www.123test.com/personality-neuroticism/">
                                 <div className="game-two-container">
-                                    <img src={article2} className="game2-pic"/>
+                                    <img src={article2} alt="" className="game2-pic"/>
                                     <h5 className="game-2-heading">What is Neuroticism?</h5>
                                     <p className="game-2-paragraph">The Big Five personality trait Neuroticism is about being balanced.</p>
                                 </div>
