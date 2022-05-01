@@ -1,0 +1,10 @@
+{
+    "name": "learnality",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "postinstall": "cd back-end/final-be && npm install",
+      "build": "cd back-end/final-be && npm start"
+    }
+  }
+  
