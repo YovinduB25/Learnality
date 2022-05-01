@@ -1,0 +1,177 @@
+{
+  "id": "2f9a5953-d59c-44f7-8622-6ddf7889cd93",
+  "name": "If Learning Style - reading/writing",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "IfLearningStyle-followup"
+  ],
+  "contexts": [
+    "IfLearningStyle-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "ab294416-3d89-4d69-b14f-e6774000184f",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "DefaultWelcomeIntent.DefaultWelcomeIntent-custom.IfLearningStyle-custom",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Read/write learners - learn primarily by reading and writing. They prefer to learn information by reading notes, handouts and textbooks. These learners make use of dictionaries and other reference materials. They also benefit by rewriting notes and rereading notes silently again and again."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "9cbb4e4a-e849-4011-9a62-205bec4f3444",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "c",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "197f1ea2-d997-4f71-8c88-5a2ec1dd656e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "reading or writing",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "eac499f1-839b-4ba8-96e1-fb692997a433",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "read or write",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "3fd74154-b696-48ef-b08b-02b433cb3c8f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "write/read",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "6c917d46-cef0-4254-9929-938c5d44aa2c",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "writing/reading",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f16d867f-1fea-477f-af11-e90088b4d2e8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "writing",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "93c34bb4-6cf7-4b11-a621-2a6ce4cc8aca",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "reading",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "bd5d67ca-8b0a-4e70-b4f0-03d54b66bec7",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "reading/writing",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "8f66daf3-da30-49c3-b4a5-f4e7fd820761",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "read/write",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d00ca4e7-1d97-4ad2-806c-90b220ffbe05",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "write",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "92dfe899-49b4-4a98-abe4-b0d25458a807",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "read",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "4a8792d6-0e4c-4ba7-966f-bb8915af0fb3",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+body{
+  background-color: #153084;
+}
+
+.center-container{
+  position: absolute;
+  width: 1010px;
+  height: 650px;
+  left: 250px;
+  top: 25px;
+  background: #ffffff;
+  border-radius: 44px;
+}
+
+.center-container-main-heading{
+  position:absolute;
+  left:70px;
+  top:25px;
+}
+
+.icon-container{
+  position:absolute;
+  left:850px;
+  top:50px;
+  font-size:25px;
+}
+
+.profile{
+  position:absolute;
+  top:0px;
+  left:50px;
+}
+
+.choose-option-heading{
+  position:absolute;
+  top:120px;
+  left:100px;
+}
+.learning-style-quiz-container{
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  left: 190px;
+  top: 200px;
+  background: #E0E0E0;
+  border: none;
+  border-radius: 50px;
+}
+
+
+.learning-style-quiz-container img{
+  position:absolute;
+  width:550px;
+  height:280px;
+  left:25px;
+  top:80px;
+  
+}
+
+
+
+.learning-style-quiz-heading{
+  position:absolute;
+  top:10px;
+  left:80px;
+  height:10px;
+
+}
+
+
+
+.overlay{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color:#008CBA;
+  overflow:hidden;
+  width:100%;
+  height:0;
+  border-radius:50px;
+  transition:.5s ease;
+}
+
+.learning-style-quiz-container:hover .overlay{
+  height:100%;
+}
+
+
+
+.overlay-text{
+  color:#fff;
+  font-size:19px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay-link button{
+  color:#fff;
+  font-size:19px;
+  position:absolute;
+  background:#242731;
+  border:none;
+  border-radius:50px;
+  padding:10px 25px;
+  top:75%;
+  left:50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay-link button:hover{
+  background:#233774;
+  transition:.5s ease;
+}
+
+.overlay-link button .learning-style-button{
+  text-decoration:none;
+  color:#fff;
+}
+
+.profile .ProfileLink{
+    text-decoration:none;
+    color:#111;
+}

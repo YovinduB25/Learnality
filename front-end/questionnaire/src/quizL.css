@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+* {
+  font-family: "Verdana", cursive, sans-serif;
+  color: #ffffff;
+}
+
+body {
+  background-color: #153084;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.backRectangle {
+  background-color: #ffffff;
+  width: 1500px;
+  height: 800px;
+  left: 231px;
+  top: 50px;
+  border-radius: 44px;
+}
+.headingText{
+  position: absolute;
+  width: 707px;
+  height: 56px;
+  left: 349px;
+  top: 166px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  color: black;
+}
+.para{
+position: absolute;
+width: 339px;
+height: 28px;
+left: 360px;
+top: 229px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+color: #726C6C;
+}
+
+.app {
+  background-color: #EEEDED;
+  position: absolute;
+  width: 1200px;
+  min-height: 300px;
+  height: min-content;
+  left: 360px;
+  top: 300px;
+  border-radius: 35px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.score-section {
+  display: flex;
+  color: black;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* QUESTION/LEFT SECTION */
+.question-section {
+  width: 100%;
+  position: relative;
+}
+
+.question-count {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.question-count span {
+  font-size: 28px;
+  color: black;
+}
+
+.question-text {
+  margin-bottom: 12px;
+  color: black;
+}
+
+/* ANSWERS/RIGHT SECTION */
+.answer-section {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  width: 100%;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #252d4a;
+  border-radius: 15px;
+  display: flex;
+  padding: 7px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid #26527e;
+  cursor: pointer;
+}
+
+.correct {
+  background-color: #2f922f;
+}
+
+.incorrect {
+  background-color: #ff3333;
+}
+
+button:hover {
+  background-color: #555e7d;
+}
+
+button:focus {
+  outline: none;
+}
+
+button svg {
+  margin-right: 5px;
+}
