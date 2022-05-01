@@ -1,3 +1,5 @@
+// https://github.com/hariom282538/NodeJS-CRUD/tree/master/app/controllers
+
 const User = require("../models/user.model");
 const UserLearning = require("../models/userLearning.model");
 const StorePersona = require("../models/userPersona.model");
@@ -102,23 +104,6 @@ exports.teacherLogin = (req, res) => {
         });
 };
 
-exports.findByCourse = (req, res) => {
-    const course = decodeURI(req.query.course);
-    var condition = {
-        course: course,
-        is_teacher: false
-    };
-    User.find(condition)
-        .then(data => {
-            res.send(data);
-        })
-        .catch(err => {
-            res.status(500).send({
-                message: err.message || "Some error occurred while retrieving users."
-            });
-        });
-};
-
 exports.findById = (req, res) => {
     const id = req.query.id;
     User.findById(id)
@@ -135,20 +120,6 @@ exports.findById = (req, res) => {
                 .send({
                     message: "Error retrieving User with id=" + id
                 });
-        });
-};
-
-exports.getUserAnswers = (req, res) => {
-    var id = req.query.userId;
-    User.findById(id)
-        .populate('answers')
-        .then((result) => {
-            res.json(result);
-        })
-        .catch((error) => {
-            res.status(500).json({
-                error
-            });
         });
 };
 
