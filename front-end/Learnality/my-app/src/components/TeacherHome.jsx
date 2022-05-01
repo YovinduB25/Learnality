@@ -5,9 +5,6 @@ import { CgProfile } from "react-icons/cg"
 import LearningStylePic from "../images/HomePage/LearningStylePic.png";
 import { TeacherSideBar } from "../components/TeacherSideBar";
 
-
-
-
 export class TeacherHome extends React.Component{
     componentDidMount() {
         

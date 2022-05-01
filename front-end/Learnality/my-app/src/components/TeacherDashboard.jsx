@@ -7,22 +7,30 @@ import { Chart } from "react-google-charts";
 
 var axios = require('axios');
 
-const TeacherDashboard = () => {
+const TeacherDashboard = () => {  
 
-    // // https://stackoverflow.com/questions/67030873/refresh-the-page-only-once-in-react-class-component
-    // const reloadCount = sessionStorage.getItem('reloadCount');
-    // if (reloadCount < 2) {
-    //     sessionStorage.setItem('reloadCount', String(reloadCount + 1));
-    //     window.location.reload();
-    // } else {
-    //     sessionStorage.removeItem('reloadCount');
-    // }
+    function refreshPage() {
+        // https://stackoverflow.com/questions/67030873/refresh-the-page-only-once-in-react-class-component
+        const reloadCount = sessionStorage.getItem('reloadCount');
+        if(reloadCount < 2) {
+            sessionStorage.setItem('reloadCount', String(reloadCount + 1));
+            window.location.reload();
+        } else {
+            sessionStorage.removeItem('reloadCount');
+        }
+    }
 
+    const [hasRefreshed, setRefreshing] = useState(false);
     const [learn, setLearn] = useState({ visual: '', auditory: '', readingwriting: '', kinesthetic: '' });
     const [persona, setPersonality] = useState({ openness: '', agreeableness: '', conscientiousness: '', extroversion: '', neuroticism: '' });
     const [data, setData] = useState([]);
     const [bardata, setBarData] = useState([]);
     const [isFetchingDone, setIsFetchingDone] = useState(false);
+
+    if(!hasRefreshed){
+        refreshPage();
+        setRefreshing(true);
+    }
 
     const options = {
         title: "VARK Catergoriztion of Students",
@@ -33,7 +41,7 @@ const TeacherDashboard = () => {
         title: "Catergorization Of Personalities",
         chartArea: { width: "89%" }
     };
-
+    
     // const baroptions = {
     //     title: "Catergorization Of Personalities",
     //     chartArea: { width: "80%" },
@@ -57,8 +65,9 @@ const TeacherDashboard = () => {
 
         axios(config)
             .then(function (response) {
-                console.log("setting data");
-                console.log(JSON.stringify(response.data));
+                
+                // console.log("setting data");
+                // console.log(JSON.stringify(response.data));
 
                 //Reset all
                 setLearn({});
@@ -150,7 +159,7 @@ const TeacherDashboard = () => {
                             <option value="Business Data Analytics">BSc (Hons) Business Data Analytics</option>
                         </select>
                     </div>
-
+                    
                     <div className="pie-chart">
                          <Chart
                            chartType="PieChart"
