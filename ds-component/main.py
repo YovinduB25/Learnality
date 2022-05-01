@@ -98,12 +98,12 @@ def personality_model(trainX, trainy, testX, testy):
 
 
 def predict_model(model_type, input_data, le):
-    model = load_model(model_type + '.h5')
+    model = load_model(model_type + '.h5')  # saving models to .h5 file
     print(model.summary())
-    test_input = np.reshape(input_data, (1, 10))
-    test_output = model.predict(test_input, verbose=1)
-    output_data = np.argmax(test_output, 1)
-    output_class = le.inverse_transform(output_data)
+    test_input = np.reshape(input_data, (1, 10))  # reshaping by  numpy
+    test_output = model.predict(test_input, verbose=1)  # predicting output
+    output_data = np.argmax(test_output, 1)  # storing output in numpy argmax
+    output_class = le.inverse_transform(output_data)  # changing output into label encoders requirement
     return output_class[0]
 
 
@@ -113,32 +113,32 @@ if __name__ == "__main__":
 
     # for model training comment new_input_array and predict_model fields
     # for model prediction comment each model
-    @app.route('/learn')
+    @app.route('/learn')  # https://www.geeksforgeeks.org/flask-app-routing/#:~:text=App%20Routing%20means%20mapping%20the,associated%20with%20the%20root%20URL.
     def learningFunction():
         input_list = request.args
-        jsonInput = json.dumps(input_list)
+        jsonInput = json.dumps(input_list)  # https://www.machinelearningplus.com/python-json-guide/
         my_dict = ast.literal_eval(jsonInput)
-        input_array = []
+        input_array = []  # input
         for i in range(10):
             input_array.append(int(my_dict[str(i)]))
-        trainX, trainy, testX, testy, le = prepare_data("Learning-Style")
+        trainX, trainy, testX, testy, le = prepare_data("Learning-Style")  # calling train and test data
         # learning_model(trainX, trainy, testX, testy)
-        predicted_output = predict_model("learning_model", input_array, le)
+        predicted_output = predict_model("learning_model", input_array, le)  # predicting the output and converting to string
         return predicted_output
 
 
-    @app.route('/persona')
+    @app.route('/persona')  # https://www.geeksforgeeks.org/flask-app-routing/#:~:text=App%20Routing%20means%20mapping%20the,associated%20with%20the%20root%20URL.
     def personaFunction():
         input_list = request.args
         jsonInput = json.dumps(input_list)
-        my_dict = ast.literal_eval(jsonInput)
+        my_dict = ast.literal_eval(jsonInput)  # https://www.machinelearningplus.com/python-json-guide/
         input_array = []
         for i in range(10):
             input_array.append(int(my_dict[str(i)]))
-        trainX, trainy, testX, testy, le = prepare_data("Personality-Trait")
+        trainX, trainy, testX, testy, le = prepare_data("Personality-Trait")  # calling train and test data
         # personality_model(trainX, trainy, testX, testy)
-        predicted_output = predict_model("personality_model", input_array, le)
+        predicted_output = predict_model("personality_model", input_array, le)  # predicting the output and converting to string
         return predicted_output
 
 
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)  # https://www.codegrepper.com/code-examples/python/app.run%28host%3D%270.0.0.0%27+port%3D5000+debug%3Dtrue%29
