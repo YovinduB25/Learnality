@@ -23,7 +23,7 @@ export class TeacherFeedback extends React.Component{
                        </div>
 
                        <div className="Teacher-report-container">
-                           <img src={TeacherReportImage} className="Teacher-report-image"/>
+                           <img src={TeacherReportImage} alt="" className="Teacher-report-image"/>
                            <div className="report-overlay">
                                 <div className="report-text">
                                     View Teacher's Report for Learning Style and Perosnality Trait Identification

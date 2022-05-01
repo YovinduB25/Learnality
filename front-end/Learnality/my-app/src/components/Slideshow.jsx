@@ -32,6 +32,7 @@ export default function Slideshow(){
                 {LearningStylePics.map((SlideImage,index)=>(
                     <img
                          className="slide"
+                         alt=""
                          key={index.id}
                          src={SlideImage.image}
                          style={{SlideImage}}

@@ -82,7 +82,7 @@ export class VisualLearner extends React.Component{
 
                             <a href="https://www.mentalup.co/samples/game-v2/game128?referrer=blog-what-is-emotional-intelligence&page=desktop">
                                 <div className="game-student-one-container">
-                                    <img src={heart} className="game1-pic"/>
+                                    <img src={heart} alt="" className="game1-pic"/>
                                     <h5 className="game-1-heading">Let’s Draw</h5>
                                     <p className="game-1-paragraph">There are different ways of learning and drawing is one of them. It improves visual attention, visualization, and spatial perception.</p>
                                 </div>
@@ -90,7 +90,7 @@ export class VisualLearner extends React.Component{
 
                             <a href="https://www.mentalup.co/samples/game-v2/game122?referrer=blog-what-is-emotional-intelligence&page=desktop">
                                 <div className="game-student-two-container">
-                                    <img src={bird} className="game2-pic"/>
+                                    <img src={bird} alt="" className="game2-pic"/>
                                     <h5 className="game-2-heading">Tangram</h5>
                                     <p className="game-2-paragraph">Tangram is one of the most chosen learning techniques for children of all ages. It improves visualization,planning.</p>
                                 </div>
