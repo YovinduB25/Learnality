@@ -263,10 +263,9 @@ export default function TeacherLearningStyleQuiz() {
 			],
 		},
 		{
-			questionText: 'Completed?',
+			questionText: 'Press "Next" to View your Learning Style.',
 			answerOptions: [
-				{ answerText: 'Yes', isCorrect: true },
-				{ answerText: 'No', isCorrect: true },
+				{ answerText: 'Next', isCorrect: true },
 			],
 		},
 	];
