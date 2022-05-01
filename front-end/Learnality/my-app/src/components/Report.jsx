@@ -25,35 +25,35 @@ export default function Report() {
     
 
     const getReadMoreLink = (learning) =>{
-        if(learning=="Visual"){
+        if(learning==="Visual"){
             return <Link to="/VisualLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
-        else if(learning=="Auditory"){
+        else if(learning==="Auditory"){
             return <Link to="/AuditoryLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
-        else if(learning=="Reading/Writing"){
+        else if(learning==="Reading/Writing"){
             return <Link to="/ReadingWritingLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
-        else if(learning=="Kinesthetic"){
+        else if(learning==="Kinesthetic"){
             return <Link to="/KinesteticLearner" className="read-more-link">{learning}&nbsp;Learner</Link>;
         }
     }
 
 
     const getReadMoreLinktwo = (personality) =>{
-        if(personality=="Openness"){
+        if(personality==="Openness"){
             return <Link to="/Openness" className="read-more-link">{personality}&nbsp;Personality</Link>;
         }
-        else if(personality=="Conscientiousness"){
+        else if(personality==="Conscientiousness"){
             return <Link to="/Conscientiousness" className="read-more-link">{personality}&nbsp;Personality</Link>;
         }
-        else if(personality=="Extroversion"){
+        else if(personality==="Extroversion"){
             return <Link to="/Extroversion" className="read-more-link">{personality}&nbsp;Personality</Link>;
         }
-        else if(personality=="Agreeableness"){
+        else if(personality==="Agreeableness"){
             return <Link to="/Agreeableness" className="read-more-link">{personality}&nbsp;Personality</Link>;
         }
-        else if(personality=="Neuroticism"){
+        else if(personality==="Neuroticism"){
             return <Link to="/Neuroticism" className="read-more-link">{personality}&nbsp;Personality</Link>;
         }
     }

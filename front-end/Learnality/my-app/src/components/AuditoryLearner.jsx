@@ -86,7 +86,7 @@ export class AuditoryLearner extends React.Component{
 
                             <a href="https://www.mentalup.co/samples/game-v2/game65?referrer=blog-what-is-emotional-intelligence&page=desktop">
                                 <div className="game-three-container">
-                                    <img src={instruments} className="game3-pic"/>
+                                    <img src={instruments} alt="" className="game3-pic"/>
                                     <h5 className="game-1-heading">My Instruments</h5>
                                     <p className="game-1-paragraph">Instruments are great ways of learning. This fun game will examine your auditory skills besides aural memory and decision-making skills.</p>
                                 </div>
@@ -94,7 +94,7 @@ export class AuditoryLearner extends React.Component{
 
                             <a href="https://www.mentalup.co/samples/game/game8?referrer=blog-what-is-emotional-intelligence&page=desktop">
                                 <div className="game-four-container">
-                                    <img src={bird} className="game4-pic"/>
+                                    <img src={bird} alt="" className="game4-pic"/>
                                     <h5 className="game-2-heading">Birdy</h5>
                                     <p className="game-2-paragraph">Can you keep in mind the bird names, sounds, and images? This game will tell you much about your visual and aural memory skills.</p>
                                 </div>

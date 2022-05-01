@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { SideBar } from "../components/SideBar";
 import { CgProfile } from "react-icons/cg"
 import "../LearningStyleQuiz.css"
 import { TeacherSideBar } from './TeacherSideBar';
@@ -30,6 +29,7 @@ export default function TeacherLearningStyleQuiz() {
 			.then(function (response) {
 				console.log(JSON.stringify(response.data));
 				getLearningStyle();
+				getPersonalityTrait();
 				
 			})
 			.catch(function (error) {

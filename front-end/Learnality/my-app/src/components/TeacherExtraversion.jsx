@@ -73,7 +73,7 @@ export class TeacherExtraversion extends React.Component{
 
                             <a href="https://www.verywellmind.com/what-is-extroversion-2795994">
                                 <div className="game-one-container">
-                                    <img src={article1} className="game1-pic"/>
+                                    <img src={article1} alt="" className="game1-pic"/>
                                     <h5 className="game-1-heading">How Extroversion in Personality Influences Behavior</h5>
                                     <p className="game-1-paragraph">Discover some of the key characteristics of extroversion, and learn how this trait commonly influences behavior.</p>
                                 </div>
@@ -81,7 +81,7 @@ export class TeacherExtraversion extends React.Component{
 
                             <a href="https://www.123test.com/personality-extraversion/">
                                 <div className="game-two-container">
-                                    <img src={article2} className="game2-pic"/>
+                                    <img src={article2} alt="" className="game2-pic"/>
                                     <h5 className="game-2-heading">What is Extraversion?</h5>
                                     <p className="game-2-paragraph">The Big Five personality trait Extraversion is about being outgoing and social. </p>
                                 </div>

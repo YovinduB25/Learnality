@@ -69,7 +69,7 @@ export class TeacherAgreeableness extends React.Component{
 
                             <a href="https://www.verywellmind.com/how-agreeableness-affects-your-behavior-4843762">
                                 <div className="game-one-container">
-                                    <img src={article1} className="game1-pic"/>
+                                    <img src={article1} alt="" className="game1-pic"/>
                                     <h5 className="game-1-heading">Understanding Agreeableness and Its Impact on Your Behavior</h5>
                                     <p className="game-1-paragraph">People who score high in agreeableness are kind, helpful, and well-liked. Learn more about this Big Five characteristic and how it impacts behavior.</p>
                                 </div>
@@ -77,7 +77,7 @@ export class TeacherAgreeableness extends React.Component{
 
                             <a href="https://www.123test.com/personality-agreeableness/">
                                 <div className="game-two-container">
-                                    <img src={article2} className="game2-pic"/>
+                                    <img src={article2} alt="" className="game2-pic"/>
                                     <h5 className="game-2-heading">What is Agreeableness?</h5>
                                     <p className="game-2-paragraph">The Big Five personality trait Agreeableness is about friendliness and tact.</p>
                                 </div>

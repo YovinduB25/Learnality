@@ -108,7 +108,7 @@ export class TeacherKinesteticLearner extends React.Component{
                             <h4 className="learner-game-heading">Learning Style Improving Excercises</h4>
                             <a href="https://www.mentalup.co/samples/game-v2/game73?referrer=blog-what-is-emotional-intelligence&page=desktop">
                                 <div className="game-seven-container">
-                                    <img src={numbers} className="game7-pic"/>
+                                    <img src={numbers} alt="" className="game7-pic"/>
                                     <h5 className="game-1-heading">Find 10</h5>
                                     <p className="game-1-paragraph">This fun learning game is an oldie but goldie. It’s fun to play and improves planning and visual attention skills</p>
                                 </div>
@@ -116,7 +116,7 @@ export class TeacherKinesteticLearner extends React.Component{
 
                             <a href="https://www.mentalup.co/samples/game-v2/game39?referrer=blog-what-is-emotional-intelligence&page=desktop">
                                 <div className="game-eight-container">
-                                    <img src={fox} className="game8-pic"/>
+                                    <img src={fox} alt="" className="game8-pic"/>
                                     <h5 className="game-2-heading">Let's Find It</h5>
                                     <p className="game-2-paragraph">This game encourages kids to teamworking and critically thinking. It also improves visual recognition, conceptualization, and visual attention skills.</p>
                                 </div>
