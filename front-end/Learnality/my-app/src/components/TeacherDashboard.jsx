@@ -29,20 +29,26 @@ const TeacherDashboard = () => {
         chartArea: { width: "89%" }
     };
 
-    const baroptions = {
+    const bar2options = {
         title: "Catergorization Of Personalities",
-        chartArea: { width: "80%" },
-        colors: ["#4169E1"],
-        hAxis: {
-            title: "Total Of Students",
-            minValue: 0
-        },
-        vAxis: {
-            title: "Type Of Personalities"
-        }
+        chartArea: { width: "89%" }
     };
 
+    // const baroptions = {
+    //     title: "Catergorization Of Personalities",
+    //     chartArea: { width: "80%" },
+    //     colors: ["#4169E1"],
+    //     hAxis: {
+    //         title: "Total Of Students",
+    //         minValue: 0
+    //     },
+    //     vAxis: {
+    //         title: "Type Of Personalities"
+    //     }
+    // };
+
     const getGraphs = (course) => {
+        setIsFetchingDone(false)
         var config = {
             method: 'get',
             url: 'https://learnality-api.herokuapp.com/api/user/getDashboard?course=' + course /*+ course*/,
@@ -107,7 +113,7 @@ const TeacherDashboard = () => {
             setBarData(finalbarData);
         }
 
-    }, [isFetchingDone])
+    }, [isFetchingDone, learn, persona])
 
     //useEffect(() => {
         //getGraphs();
@@ -146,7 +152,6 @@ const TeacherDashboard = () => {
                     </div>
 
                     <div className="pie-chart">
-                        {console.log("Dataaaaa pie: "+data)}
                          <Chart
                            chartType="PieChart"
                            data={data}
@@ -157,67 +162,18 @@ const TeacherDashboard = () => {
                     </div>
 
                     <div className="bargraph">
-                        {console.log("Dataaaaa bar: "+baroptions)}
                         <Chart
-                            chartType="BarChart"
-                            width="120%"
-                            height="400px"
+                            chartType="PieChart"
                             data={bardata}
-                            options={baroptions}
+                            options={bar2options}
+                            width="100%"
+                            height="400px"
+                            
                         />
                     </div>
 
                 </div>
         </div>
-                    
-
-                    
-        // <div className="pie-chart">
-        //                             {console.log(data)}
-        //                             <Chart
-        //                             chartType="PieChart"
-        //                                 data={data}
-        //                                 options={options}
-        //                                 width={"100%"}
-        //                                 height={"400px"}
-        //                             />
-        //                         </div>
-                    
-
-        //             {/* <div className="pie-chart">
-        //                 <Chart
-        //                     chartType="PieChart"
-        //                     data={data}
-        //                     options={options}
-        //                     width={"100%"}
-        //                     height={"400px"}
-        //                 />
-        //             </div> */}
-
-                     
-        // <div>
-        //     {!isFetchingDone ? (
-        //         <>
-        //             <p>loading...</p>
-        //         </>
-        //     ) : (
-        //         data.length === 0 ? (
-        //             <p>no data present</p>
-
-        //         ) : (
-        //             <div className="pie-chart">
-        //                 {console.log(data)}
-        //                  <Chart
-        //                    chartType="PieChart"
-        //                     data={data}
-        //                     options={options}
-        //                      width={"100%"}
-        //                     height={"400px"}
-        //                  />
-        //             </div>
-        //         )
-        //     )}
-        // </div>
     )
 }
 
