@@ -14,8 +14,6 @@ This project is conducted to adequate our research on the identification and cla
 
 ![Login Page 1](https://user-images.githubusercontent.com/99184773/166165603-96bf58f4-7d2b-42b9-a239-3b35a1c00be1.PNG)
 
-![Login Page 2](https://user-images.githubusercontent.com/99184773/166165785-45ea0d6d-45db-4316-9435-13f90e695886.PNG)
-
 ![Home page](https://user-images.githubusercontent.com/99184773/166165789-b0049cfd-c876-4316-b257-ac98e4ba907c.PNG)
 
 **Implementation of the data science component**
