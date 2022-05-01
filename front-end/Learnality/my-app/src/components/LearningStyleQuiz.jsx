@@ -29,7 +29,6 @@ export default function LearningStyleQuiz() {
 			.then(function (response) {
 				console.log(JSON.stringify(response.data));
 				getLearningStyle();
-				setAttemptsCount();
 			})
 			.catch(function (error) {
 				alert("An error has occured while storing data.");
@@ -37,10 +36,10 @@ export default function LearningStyleQuiz() {
 	}
 
 	const setAttemptsCount = () => {
-		var attempts = localStorage.getItem('attempts') || 0;
-		attempts++;
-		console.log(attempts);
-		localStorage.setItem("attempts", attempts)
+			var attempts = localStorage.getItem('attempts') || 0;
+			attempts++;
+			console.log(attempts);
+			localStorage.setItem("attempts", attempts);
 	};
 
 	const getLearningStyle = () => {
@@ -275,12 +274,17 @@ export default function LearningStyleQuiz() {
 			setCurrentQuestion(nextQuestion);
 		} else {
 			console.log(ansArray);
+			if(!showResult){
+				setAttemptsCount();
+			}
 			setShowResult(true);
 			handleEndQuiz(true);
 			handleEndQuiz(false);
 		}
 	};
+	 
 	return (
+
 		<div className="LearningQuiz">
 			<div className="sidebar">
 				<SideBar />

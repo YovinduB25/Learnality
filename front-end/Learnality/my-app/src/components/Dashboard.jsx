@@ -106,10 +106,21 @@ export default function Dashboard(){
     }
 
     //setCounter(attempts);
+    console.log("fucking atempts: " + counter);
 
     const handleClick = () => {
         
     }
+
+    // // https://stackoverflow.com/questions/67030873/refresh-the-page-only-once-in-react-class-component
+	// const reloadCount = sessionStorage.getItem('reloadCount');
+	// if(reloadCount < 2) {
+	// 	sessionStorage.setItem('reloadCount', String(reloadCount + 1));
+	// 	window.location.reload();
+	// } else {
+	// 	sessionStorage.removeItem('reloadCount');
+	// }
+
         return(
             <div className="dashboard">
                 <div className="sidebar">
