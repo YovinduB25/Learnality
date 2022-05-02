@@ -26,6 +26,15 @@ This project is conducted to adequate our research on the identification and cla
 
 ![Edit Profile Page](https://user-images.githubusercontent.com/90927224/166182811-1c91cc0d-d999-4535-8d50-4d0c54ad25ea.png)
 
+**Built With** 
 
+Learnality has been implemented using the following frameworks.
 
+* Python
+* React.js
+* Node.js
+* MongoDB
+* Express.js
+
+**Project Link**: https://learnality.web.app/
 
